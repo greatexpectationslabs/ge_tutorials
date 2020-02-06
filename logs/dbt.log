@@ -9281,3 +9281,264 @@ drop view if exists "demo_db"."public"."count_specialties__dbt_backup" cascade
 Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
 2020-02-04 17:35:38,710181 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11de90c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dc4fb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dc4f0d0>]}
 2020-02-04 17:35:38,829213 (MainThread): Flushing usage events
+2020-02-05 15:26:24,449831 (MainThread): Running with dbt=0.15.1
+2020-02-05 15:26:24,489289 (MainThread): The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+2020-02-05 15:26:24,533583 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.generate.GenerateTask'>, compile=True, debug=False, exclude=None, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method='docs.generate', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='generate', write_json=True)
+2020-02-05 15:26:24,534454 (MainThread): Tracking: tracking
+2020-02-05 15:26:24,569107 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12925ce90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128f449d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12925ca50>]}
+2020-02-05 15:26:24,802521 (MainThread): Partial parsing not enabled
+2020-02-05 15:26:24,805398 (MainThread): Parsing macros/core.sql
+2020-02-05 15:26:24,808667 (MainThread): Parsing macros/materializations/helpers.sql
+2020-02-05 15:26:24,814660 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-02-05 15:26:24,816894 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-02-05 15:26:24,831211 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-02-05 15:26:24,848370 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-02-05 15:26:24,861935 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-02-05 15:26:24,863777 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-02-05 15:26:24,869461 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-02-05 15:26:24,875516 (MainThread): Parsing macros/materializations/table/table.sql
+2020-02-05 15:26:24,881051 (MainThread): Parsing macros/materializations/view/view.sql
+2020-02-05 15:26:24,885850 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-02-05 15:26:24,889965 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-02-05 15:26:24,891205 (MainThread): Parsing macros/etc/query.sql
+2020-02-05 15:26:24,892326 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-02-05 15:26:24,893823 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-02-05 15:26:24,895845 (MainThread): Parsing macros/etc/datetime.sql
+2020-02-05 15:26:24,905177 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-02-05 15:26:24,907185 (MainThread): Parsing macros/adapters/common.sql
+2020-02-05 15:26:24,931505 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-02-05 15:26:24,932903 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-02-05 15:26:24,934128 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-02-05 15:26:24,935503 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-02-05 15:26:24,938148 (MainThread): Parsing macros/catalog.sql
+2020-02-05 15:26:24,939720 (MainThread): Parsing macros/relations.sql
+2020-02-05 15:26:24,941073 (MainThread): Parsing macros/adapters.sql
+2020-02-05 15:26:24,950694 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-02-05 15:26:24,970528 (MainThread): Partial parsing not enabled
+2020-02-05 15:26:24,985268 (MainThread): Acquiring new postgres connection "model.demo_pipeline.count_specialties".
+2020-02-05 15:26:24,985420 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,4648 (MainThread): Acquiring new postgres connection "model.demo_pipeline.npi_with_crosswalks".
+2020-02-05 15:26:25,4788 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,12091 (MainThread): Acquiring new postgres connection "model.demo_pipeline.stg_npi".
+2020-02-05 15:26:25,12274 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,18387 (MainThread): Acquiring new postgres connection "model.demo_pipeline.stg_state_crosswalk".
+2020-02-05 15:26:25,18513 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,24647 (MainThread): Acquiring new postgres connection "model.demo_pipeline.stg_taxonomy".
+2020-02-05 15:26:25,24840 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,37697 (MainThread): Acquiring new postgres connection "model.demo_pipeline.my_first_dbt_model".
+2020-02-05 15:26:25,37851 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,43124 (MainThread): Acquiring new postgres connection "model.demo_pipeline.my_second_dbt_model".
+2020-02-05 15:26:25,43245 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,82154 (MainThread): Acquiring new postgres connection "test.demo_pipeline.unique_my_first_dbt_model_id".
+2020-02-05 15:26:25,82389 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,92809 (MainThread): Acquiring new postgres connection "test.demo_pipeline.not_null_my_first_dbt_model_id".
+2020-02-05 15:26:25,92941 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,107859 (MainThread): Acquiring new postgres connection "test.demo_pipeline.unique_my_second_dbt_model_id".
+2020-02-05 15:26:25,108032 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,115315 (MainThread): Acquiring new postgres connection "test.demo_pipeline.not_null_my_second_dbt_model_id".
+2020-02-05 15:26:25,115457 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,187396 (MainThread): Found 7 models, 4 tests, 0 snapshots, 0 analyses, 125 macros, 0 operations, 3 seed files, 0 sources
+2020-02-05 15:26:25,193380 (MainThread): 
+2020-02-05 15:26:25,193588 (MainThread): 10:26:25 | Concurrency: 1 threads (target='dev')
+2020-02-05 15:26:25,193754 (MainThread): 10:26:25 | 
+2020-02-05 15:26:25,195745 (Thread-1): Began running node seed.demo_pipeline.HEALTHCARE_PROVIDER_TAXONOMY
+2020-02-05 15:26:25,196159 (Thread-1): Acquiring new postgres connection "seed.demo_pipeline.HEALTHCARE_PROVIDER_TAXONOMY".
+2020-02-05 15:26:25,196258 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,196354 (Thread-1): Compiling seed.demo_pipeline.HEALTHCARE_PROVIDER_TAXONOMY
+2020-02-05 15:26:25,208919 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,209493 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,210263 (Thread-1): Finished running node seed.demo_pipeline.HEALTHCARE_PROVIDER_TAXONOMY
+2020-02-05 15:26:25,210433 (Thread-1): Began running node seed.demo_pipeline.abbr-name-list
+2020-02-05 15:26:25,210812 (Thread-1): Acquiring new postgres connection "seed.demo_pipeline.abbr-name-list".
+2020-02-05 15:26:25,210959 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,211073 (Thread-1): Compiling seed.demo_pipeline.abbr-name-list
+2020-02-05 15:26:25,216229 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,216758 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,217160 (Thread-1): Finished running node seed.demo_pipeline.abbr-name-list
+2020-02-05 15:26:25,217373 (Thread-1): Began running node seed.demo_pipeline.npi_small_2019
+2020-02-05 15:26:25,217922 (Thread-1): Acquiring new postgres connection "seed.demo_pipeline.npi_small_2019".
+2020-02-05 15:26:25,218168 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,218379 (Thread-1): Compiling seed.demo_pipeline.npi_small_2019
+2020-02-05 15:26:25,223588 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,223872 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,224233 (Thread-1): Finished running node seed.demo_pipeline.npi_small_2019
+2020-02-05 15:26:25,224353 (Thread-1): Began running node model.demo_pipeline.my_first_dbt_model
+2020-02-05 15:26:25,224825 (Thread-1): Acquiring new postgres connection "model.demo_pipeline.my_first_dbt_model".
+2020-02-05 15:26:25,224943 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,225037 (Thread-1): Compiling model.demo_pipeline.my_first_dbt_model
+2020-02-05 15:26:25,239997 (Thread-1): Writing injected SQL for node "model.demo_pipeline.my_first_dbt_model"
+2020-02-05 15:26:25,240529 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,241087 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,241719 (Thread-1): Finished running node model.demo_pipeline.my_first_dbt_model
+2020-02-05 15:26:25,241844 (Thread-1): Began running node model.demo_pipeline.stg_taxonomy
+2020-02-05 15:26:25,242401 (Thread-1): Acquiring new postgres connection "model.demo_pipeline.stg_taxonomy".
+2020-02-05 15:26:25,242878 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,243571 (Thread-1): Compiling model.demo_pipeline.stg_taxonomy
+2020-02-05 15:26:25,250166 (Thread-1): Writing injected SQL for node "model.demo_pipeline.stg_taxonomy"
+2020-02-05 15:26:25,250772 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,251249 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,251748 (Thread-1): Finished running node model.demo_pipeline.stg_taxonomy
+2020-02-05 15:26:25,251876 (Thread-1): Began running node model.demo_pipeline.stg_state_crosswalk
+2020-02-05 15:26:25,252147 (Thread-1): Acquiring new postgres connection "model.demo_pipeline.stg_state_crosswalk".
+2020-02-05 15:26:25,252249 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,252338 (Thread-1): Compiling model.demo_pipeline.stg_state_crosswalk
+2020-02-05 15:26:25,257955 (Thread-1): Writing injected SQL for node "model.demo_pipeline.stg_state_crosswalk"
+2020-02-05 15:26:25,258318 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,258539 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,258924 (Thread-1): Finished running node model.demo_pipeline.stg_state_crosswalk
+2020-02-05 15:26:25,259054 (Thread-1): Began running node model.demo_pipeline.stg_npi
+2020-02-05 15:26:25,259525 (Thread-1): Acquiring new postgres connection "model.demo_pipeline.stg_npi".
+2020-02-05 15:26:25,259627 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,259711 (Thread-1): Compiling model.demo_pipeline.stg_npi
+2020-02-05 15:26:25,268201 (Thread-1): Writing injected SQL for node "model.demo_pipeline.stg_npi"
+2020-02-05 15:26:25,268857 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,269466 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,269983 (Thread-1): Finished running node model.demo_pipeline.stg_npi
+2020-02-05 15:26:25,270130 (Thread-1): Began running node model.demo_pipeline.my_second_dbt_model
+2020-02-05 15:26:25,270362 (Thread-1): Acquiring new postgres connection "model.demo_pipeline.my_second_dbt_model".
+2020-02-05 15:26:25,270606 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,270782 (Thread-1): Compiling model.demo_pipeline.my_second_dbt_model
+2020-02-05 15:26:25,277133 (Thread-1): Writing injected SQL for node "model.demo_pipeline.my_second_dbt_model"
+2020-02-05 15:26:25,277509 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,277729 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,278141 (Thread-1): Finished running node model.demo_pipeline.my_second_dbt_model
+2020-02-05 15:26:25,278271 (Thread-1): Began running node test.demo_pipeline.not_null_my_first_dbt_model_id
+2020-02-05 15:26:25,278577 (Thread-1): Acquiring new postgres connection "test.demo_pipeline.not_null_my_first_dbt_model_id".
+2020-02-05 15:26:25,278695 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,278959 (Thread-1): Compiling test.demo_pipeline.not_null_my_first_dbt_model_id
+2020-02-05 15:26:25,292795 (Thread-1): Writing injected SQL for node "test.demo_pipeline.not_null_my_first_dbt_model_id"
+2020-02-05 15:26:25,293269 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,293540 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,293865 (Thread-1): Finished running node test.demo_pipeline.not_null_my_first_dbt_model_id
+2020-02-05 15:26:25,293983 (Thread-1): Began running node test.demo_pipeline.unique_my_first_dbt_model_id
+2020-02-05 15:26:25,294223 (Thread-1): Acquiring new postgres connection "test.demo_pipeline.unique_my_first_dbt_model_id".
+2020-02-05 15:26:25,294495 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,294630 (Thread-1): Compiling test.demo_pipeline.unique_my_first_dbt_model_id
+2020-02-05 15:26:25,303149 (Thread-1): Writing injected SQL for node "test.demo_pipeline.unique_my_first_dbt_model_id"
+2020-02-05 15:26:25,303645 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,304023 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,304601 (Thread-1): Finished running node test.demo_pipeline.unique_my_first_dbt_model_id
+2020-02-05 15:26:25,304959 (Thread-1): Began running node model.demo_pipeline.npi_with_crosswalks
+2020-02-05 15:26:25,305578 (Thread-1): Acquiring new postgres connection "model.demo_pipeline.npi_with_crosswalks".
+2020-02-05 15:26:25,306143 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,306336 (Thread-1): Compiling model.demo_pipeline.npi_with_crosswalks
+2020-02-05 15:26:25,316378 (Thread-1): Writing injected SQL for node "model.demo_pipeline.npi_with_crosswalks"
+2020-02-05 15:26:25,316916 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,317462 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,318036 (Thread-1): Finished running node model.demo_pipeline.npi_with_crosswalks
+2020-02-05 15:26:25,318356 (Thread-1): Began running node test.demo_pipeline.not_null_my_second_dbt_model_id
+2020-02-05 15:26:25,318679 (Thread-1): Acquiring new postgres connection "test.demo_pipeline.not_null_my_second_dbt_model_id".
+2020-02-05 15:26:25,318763 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,318843 (Thread-1): Compiling test.demo_pipeline.not_null_my_second_dbt_model_id
+2020-02-05 15:26:25,327645 (Thread-1): Writing injected SQL for node "test.demo_pipeline.not_null_my_second_dbt_model_id"
+2020-02-05 15:26:25,328645 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,328999 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,329385 (Thread-1): Finished running node test.demo_pipeline.not_null_my_second_dbt_model_id
+2020-02-05 15:26:25,329506 (Thread-1): Began running node test.demo_pipeline.unique_my_second_dbt_model_id
+2020-02-05 15:26:25,329727 (Thread-1): Acquiring new postgres connection "test.demo_pipeline.unique_my_second_dbt_model_id".
+2020-02-05 15:26:25,329810 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,329888 (Thread-1): Compiling test.demo_pipeline.unique_my_second_dbt_model_id
+2020-02-05 15:26:25,337328 (Thread-1): Writing injected SQL for node "test.demo_pipeline.unique_my_second_dbt_model_id"
+2020-02-05 15:26:25,337668 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,337960 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,338308 (Thread-1): Finished running node test.demo_pipeline.unique_my_second_dbt_model_id
+2020-02-05 15:26:25,338422 (Thread-1): Began running node model.demo_pipeline.count_specialties
+2020-02-05 15:26:25,338714 (Thread-1): Acquiring new postgres connection "model.demo_pipeline.count_specialties".
+2020-02-05 15:26:25,338931 (Thread-1): Opening a new connection, currently in state init
+2020-02-05 15:26:25,339039 (Thread-1): Compiling model.demo_pipeline.count_specialties
+2020-02-05 15:26:25,345094 (Thread-1): Writing injected SQL for node "model.demo_pipeline.count_specialties"
+2020-02-05 15:26:25,345899 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,346373 (Thread-1): finished collecting timing info
+2020-02-05 15:26:25,346847 (Thread-1): Finished running node model.demo_pipeline.count_specialties
+2020-02-05 15:26:25,408577 (MainThread): Connection 'test.demo_pipeline.not_null_my_second_dbt_model_id' was properly closed.
+2020-02-05 15:26:25,408882 (MainThread): Connection 'model.demo_pipeline.count_specialties' was properly closed.
+2020-02-05 15:26:25,440961 (MainThread): 10:26:25 | Done.
+2020-02-05 15:26:25,447154 (MainThread): Acquiring new postgres connection "generate_catalog".
+2020-02-05 15:26:25,447336 (MainThread): Opening a new connection, currently in state init
+2020-02-05 15:26:25,447542 (MainThread): 10:26:25 | Building catalog
+2020-02-05 15:26:25,617741 (MainThread): Using postgres connection "generate_catalog".
+2020-02-05 15:26:25,617985 (MainThread): On generate_catalog: BEGIN
+2020-02-05 15:26:25,640258 (MainThread): SQL status: BEGIN in 0.02 seconds
+2020-02-05 15:26:25,640452 (MainThread): Using postgres connection "generate_catalog".
+2020-02-05 15:26:25,640539 (MainThread): On generate_catalog: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "demo_pipeline", "target_name": "dev", "connection_name": "generate_catalog"} */
+
+    
+    
+
+    select
+        'demo_db' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        null::text as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        null::text as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+
+    where sch.nspname != 'information_schema'
+      and sch.nspname not like 'pg\_%' -- avoid postgres system schemas, '_' is a wildcard so escape it
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence = 'p' -- [p]ermanent table. Other values are [u]nlogged table, [t]emporary table
+      and tbl.relkind in ('r', 'v', 'f', 'p') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table, [m]aterialized view
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+2020-02-05 15:26:25,653317 (MainThread): SQL status: SELECT 47 in 0.01 seconds
+2020-02-05 15:26:25,672668 (MainThread): On generate_catalog: ROLLBACK
+2020-02-05 15:26:25,763338 (MainThread): 10:26:25 | Catalog written to /Users/sam/code/demo_pipeline/target/catalog.json
+2020-02-05 15:26:25,763879 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1293c9810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a468f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a411050>]}
+2020-02-05 15:26:25,896567 (MainThread): Flushing usage events
+2020-02-05 15:26:25,896799 (MainThread): Connection 'generate_catalog' was left open.
+2020-02-05 15:26:25,896889 (MainThread): On generate_catalog: Close
+2020-02-05 15:26:54,434156 (MainThread): Running with dbt=0.15.1
+2020-02-05 15:26:54,458705 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.serve.ServeTask'>, debug=False, log_cache_events=False, log_format='default', partial_parse=None, port=8080, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, strict=False, target=None, test_new_parser=False, use_cache=True, vars='{}', warn_error=False, which='serve', write_json=True)
+2020-02-05 15:26:54,459061 (MainThread): Tracking: tracking
+2020-02-05 15:26:54,475459 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12203d310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d1bb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122016250>]}
+2020-02-05 15:26:54,607739 (MainThread): Serving docs at 0.0.0.0:8080
+2020-02-05 15:26:54,607934 (MainThread): To access from your browser, navigate to http://localhost:8080.
+2020-02-05 15:26:54,608027 (MainThread): Press Ctrl+C to exit.
+
+
+2020-02-05 15:26:54,608607 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1217c2d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12205b890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12205b910>]}
+2020-02-05 15:26:54,734817 (MainThread): Flushing usage events
+2020-02-05 15:26:54,735066 (MainThread): Encountered an error:
+2020-02-05 15:26:54,735179 (MainThread): [Errno 48] Address already in use
+2020-02-05 15:26:54,738643 (MainThread): Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 80, in main
+    results, succeeded = handle_and_check(args)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 158, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 210, in run_from_args
+    results = task.run()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/serve.py", line 30, in run
+    SimpleHTTPRequestHandler
+  File "/opt/miniconda3/lib/python3.7/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/opt/miniconda3/lib/python3.7/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 48] Address already in use
+
+2020-02-05 15:30:15,372650 (MainThread): Running with dbt=0.15.1
+2020-02-05 15:30:15,402057 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.serve.ServeTask'>, debug=False, log_cache_events=False, log_format='default', partial_parse=None, port=8080, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, strict=False, target=None, test_new_parser=False, use_cache=True, vars='{}', warn_error=False, which='serve', write_json=True)
+2020-02-05 15:30:15,403004 (MainThread): Tracking: tracking
+2020-02-05 15:30:15,424775 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1200ca710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120105290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1200d1f90>]}
+2020-02-05 15:30:15,619780 (MainThread): Serving docs at 0.0.0.0:8080
+2020-02-05 15:30:15,620087 (MainThread): To access from your browser, navigate to http://localhost:8080.
+2020-02-05 15:30:15,620245 (MainThread): Press Ctrl+C to exit.
+
+
+2020-02-05 15:53:22,74797 (MainThread): Flushing usage events
+2020-02-05 15:53:22,75633 (MainThread): ctrl-c

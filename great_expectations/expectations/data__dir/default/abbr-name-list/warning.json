@@ -1,1 +1,1 @@
-{"data_asset_name": "data__dir/default/abbr-name-list", "expectation_suite_name": "warning", "meta": {"great_expectations.__version__": "0.8.7"}, "expectations": [{"expectation_type": "expect_column_values_to_be_unique", "kwargs": {"column": "name"}}, {"expectation_type": "expect_column_values_to_be_unique", "kwargs": {"column": "abbreviation"}}], "data_asset_type": "Dataset"}
+{"data_asset_name": "data__dir/default/abbr-name-list", "expectation_suite_name": "warning", "meta": {"great_expectations.__version__": "0.8.7"}, "expectations": []}
