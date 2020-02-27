@@ -10,6 +10,11 @@ import os
 from great_expectations import DataContext
 from great_expectations.datasource.types import BatchKwargs
 
+
+GE_TUTORIAL_DB_URL = os.getenv('GE_TUTORIAL_DB_URL')
+GE_TUTORIAL_PROJECT_PATH = os.getenv('GE_TUTORIAL_PROJECT_PATH')
+
+
 default_args = {
     "owner": "Airflow",
     "start_date": airflow.utils.dates.days_ago(1)
@@ -26,11 +31,9 @@ def load_files_into_db(ds, **kwargs):
     import pandas as pd
     from sqlalchemy import create_engine
 
-    db_url = os.getenv('GE_TUTORIAL_DB_URL')
-    input_dir_path = os.getenv('GE_TUTORIAL_PROJECT_PATH')
-    engine = create_engine(db_url)
+    engine = create_engine(GE_TUTORIAL_DB_URL)
 
-    df_npi_small = pd.read_csv(os.path.join(input_dir_path, "data/npi_small.csv"))
+    df_npi_small = pd.read_csv(os.path.join(GE_TUTORIAL_PROJECT_PATH, "data/npi_small.csv"))
     column_rename_dict = {old_column_name: old_column_name.lower() for old_column_name in df_npi_small.columns}
     df_npi_small.rename(columns=column_rename_dict, inplace=True)
     df_npi_small.to_sql("npi_small", engine,
@@ -41,7 +44,7 @@ def load_files_into_db(ds, **kwargs):
                         chunksize=None,
                         dtype=None)
 
-    df_state_abbreviations = pd.read_csv(os.path.join(input_dir_path, "data/state_abbreviations.csv"))
+    df_state_abbreviations = pd.read_csv(os.path.join(GE_TUTORIAL_PROJECT_PATH, "data/state_abbreviations.csv"))
     df_state_abbreviations.to_sql("state_abbreviations", engine,
                                   schema=None,
                                   if_exists='replace',
@@ -63,9 +66,27 @@ task_load_files_into_db = PythonOperator(
 
 task_dbt = BashOperator(
     task_id='task_dbt',
-    bash_command='cd /Users/eugenemandel/projects/ge_tutorials/; dbt run', # maybe we should pass in --project-dir <project_dir>
+    bash_command='dbt run --project-dir {}'.format(GE_TUTORIAL_PROJECT_PATH),
     dag=dag)
 
+
+def publish_to_prod():
+
+    import psycopg2
+    conn_string = GE_TUTORIAL_DB_URL
+
+    conn = psycopg2.connect(conn_string)
+    cursor = conn.cursor()
+    try:
+        cursor.execute("drop table if exists prod_count_providers_by_state;")
+        cursor.execute("alter table count_providers_by_state rename to prod_count_providers_by_state;")
+    except:
+        raise
+
+task_publish = PythonOperator(
+    task_id='task_publish',
+    python_callable=publish_to_prod,
+    dag=dag)
 
 # def validate(expectation_suite_name, batch_kwargs):
 #     """
@@ -81,8 +102,8 @@ task_dbt = BashOperator(
 
 # Validation task - this is a v1 to only run one suite on a single batch
 # I would probably make a single task to validate all staging tables and generate batch kwargs
-# task_validation = PythonOperator(
-#     task_id='validation',
+# task_validate = PythonOperator(
+#     task_id='task_validate',
 #     python_callable=validate,
 #     op_kwargs={
 #         'expectation_suite_name': 'stg_npi.warning',
@@ -95,6 +116,15 @@ task_dbt = BashOperator(
 #     dag=dag,
 # )
 
+task_validate_source_data_load = BashOperator(
+    task_id='task_validate_source_data_load',
+    bash_command='', 
+    dag=dag)
+
+task_validate_analytical_output = BashOperator(
+    task_id='task_validate_analytical_output',
+    bash_command='', 
+    dag=dag)
 
 # Dependencies
-task_load_files_into_db >> task_dbt
+task_load_files_into_db >> task_validate_source_data_load >> task_dbt >> task_validate_analytical_output >> task_publish
