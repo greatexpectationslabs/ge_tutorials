@@ -89,6 +89,47 @@ task_publish = PythonOperator(
     dag=dag)
 
 
+def validate_source_data_load(ds, **kwargs):
+
+    # Data Context is a GE object that represents your project.
+    # Your project's great_expectations.yml contains all the config
+    # options for the project's GE Data Context.
+    context = ge.data_context.DataContext()
+
+    datasource_name_file = "input_files"
+    expectation_suite_name_file = "npi_small_file.critical"
+    batch_kwargs_file = {"path": os.path.join(GE_TUTORIAL_PROJECT_PATH, "data/npi_small.csv"),
+                         'datasource': datasource_name_file}
+    batch_file = context.get_batch(batch_kwargs_file, expectation_suite_name_file)
+
+    expectation_suite_name_db = "npi_small_db_table.critical"
+    datasource_name_file_db = "datawarehouse"
+
+    # If you would like to validate an entire table or view in your database's default schema:
+    batch_kwargs_db = {'table': "npi_small", 'datasource': datasource_name_file_db}
+
+    # # If you would like to validate an entire table or view from a non-default schema in your database:
+    # batch_kwargs = {'table': "YOUR_TABLE", "schema": "YOUR_SCHEMA", 'datasource': datasource_name}
+
+    # If you would like to validate the result set of a query:
+    # batch_kwargs = {'query': 'SELECT YOUR_ROWS FROM YOUR_TABLE', 'datasource': datasource_name}
+
+    batch_db = context.get_batch(batch_kwargs_db, expectation_suite_name_db)
+
+    # Call a validation operator to validate the batch.
+    # The operator will evaluate the data against the expectations
+    # and perform a list of actions, such as saving the validation
+    # result, updating Data Docs, and firing a notification (e.g., Slack).
+    run_id = datetime.utcnow().strftime("%Y%m%dT%H%M%S.%fZ")
+    run_id = "airflow:" + kwargs['dag_run'].run_id + ":" + str(kwargs['dag_run'].start_date)
+    results = context.run_validation_operator(
+        "action_list_operator",
+        assets_to_validate=[batch_file, batch_db],
+        run_id=run_id)  # e.g., Airflow run id or some run identifier that your pipeline uses.
+
+    if not results["success"]:
+        raise AirflowException("Validation of the source data loading is not successful ")
+
 
 
 def validate_analytical_output(ds, **kwargs):
@@ -166,9 +207,10 @@ def validate_analytical_output(ds, **kwargs):
 #     dag=dag,
 # )
 
-task_validate_source_data_load = BashOperator(
+task_validate_source_data_load = PythonOperator(
     task_id='task_validate_source_data_load',
-    bash_command='', 
+    python_callable=validate_source_data_load,
+    provide_context=True,
     dag=dag)
 
 task_validate_analytical_output = PythonOperator(
