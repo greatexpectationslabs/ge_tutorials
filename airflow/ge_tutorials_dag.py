@@ -1,5 +1,4 @@
 from datetime import datetime
-
 import airflow
 from airflow import AirflowException
 from airflow.operators.bash_operator import BashOperator
@@ -8,12 +7,10 @@ from airflow import DAG
 import os
 import pandas as pd
 from sqlalchemy import create_engine
-
 import great_expectations as ge
-from great_expectations import DataContext
-from great_expectations.datasource.types import BatchKwargs
 
 
+# Global variables that are set using environment varaiables
 GE_TUTORIAL_DB_URL = os.getenv('GE_TUTORIAL_DB_URL')
 GE_TUTORIAL_PROJECT_PATH = os.getenv('GE_TUTORIAL_PROJECT_PATH')
 
@@ -23,6 +20,8 @@ default_args = {
     "start_date": airflow.utils.dates.days_ago(1)
 }
 
+
+# The DAG definition
 dag = DAG(
     dag_id='ge_tutorials_dag',
     default_args=default_args,
@@ -31,6 +30,9 @@ dag = DAG(
 
 
 def load_files_into_db(ds, **kwargs):
+    """
+        A method to simply load CSV files into a database using SQLAlchemy.
+    """
 
     engine = create_engine(GE_TUTORIAL_DB_URL)
 
@@ -59,34 +61,6 @@ def load_files_into_db(ds, **kwargs):
                                       dtype=None)
 
     return 'Loaded files into the database'
-
-
-task_load_files_into_db = PythonOperator(
-    task_id='task_load_files_into_db',
-    provide_context=True,
-    python_callable=load_files_into_db,
-    dag=dag,
-)
-
-
-task_dbt = BashOperator(
-    task_id='task_dbt',
-    bash_command='dbt run --project-dir {}'.format(GE_TUTORIAL_PROJECT_PATH),
-    dag=dag)
-
-
-def publish_to_prod():
-    engine = create_engine(GE_TUTORIAL_DB_URL)
-
-    with engine.connect() as conn:
-        conn.execute("drop table if exists prod_count_providers_by_state")
-        conn.execute("alter table count_providers_by_state rename to prod_count_providers_by_state")
-
-
-task_publish = PythonOperator(
-    task_id='task_publish',
-    python_callable=publish_to_prod,
-    dag=dag)
 
 
 def validate_source_data_load(ds, **kwargs):
@@ -176,36 +150,23 @@ def validate_analytical_output(ds, **kwargs):
         raise AirflowException("The analytical output does not meet the expectations in the suite: {0:s}".format(expectation_suite_name))
 
 
-# Decide what your pipeline should do in case the data does not
-# meet your expectations.
+def publish_to_prod():
+    """
+        A method to simply "promote' a table in a database by renaming it using SQLAlchemy.
+    """
+    engine = create_engine(GE_TUTORIAL_DB_URL)
 
-# def validate(expectation_suite_name, batch_kwargs):
-#     """
-#     Perform validations of the previously defined data assets according to their respective expectation suites.
-#     """
-#     context = DataContext()
-#     batch = context.get_batch(batch_kwargs, expectation_suite_name)
-#     run_id=datetime.utcnow().strftime("%Y%m%dT%H%M%S.%fZ")
-#     validation_result = batch.validate(run_id=run_id)
-#     if not validation_result["success"]:
-#         raise AirflowException(str(validation_result))
-#
+    with engine.connect() as conn:
+        conn.execute("drop table if exists prod_count_providers_by_state")
+        conn.execute("alter table count_providers_by_state rename to prod_count_providers_by_state")
 
-# Validation task - this is a v1 to only run one suite on a single batch
-# I would probably make a single task to validate all staging tables and generate batch kwargs
-# task_validate = PythonOperator(
-#     task_id='task_validate',
-#     python_callable=validate,
-#     op_kwargs={
-#         'expectation_suite_name': 'stg_npi.warning',
-#         'batch_kwargs': BatchKwargs(
-#             table='stg_npi',
-#             schema='public',
-#             datasource='ge_tutorials',
-#         )
-#     },
-#     dag=dag,
-# )
+
+task_load_files_into_db = PythonOperator(
+    task_id='task_load_files_into_db',
+    provide_context=True,
+    python_callable=load_files_into_db,
+    dag=dag,
+)
 
 task_validate_source_data_load = PythonOperator(
     task_id='task_validate_source_data_load',
@@ -213,11 +174,24 @@ task_validate_source_data_load = PythonOperator(
     provide_context=True,
     dag=dag)
 
+task_dbt = BashOperator(
+    task_id='task_dbt',
+    bash_command='dbt run --project-dir {}'.format(GE_TUTORIAL_PROJECT_PATH),
+    dag=dag)
+
+
 task_validate_analytical_output = PythonOperator(
     task_id='task_validate_analytical_output',
     python_callable=validate_analytical_output,
     provide_context=True,
     dag=dag)
 
-# Dependencies
+
+task_publish = PythonOperator(
+    task_id='task_publish',
+    python_callable=publish_to_prod,
+    dag=dag)
+
+
+# DAG dependencies
 task_load_files_into_db >> task_validate_source_data_load >> task_dbt >> task_validate_analytical_output >> task_publish
