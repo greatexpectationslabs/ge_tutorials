@@ -1,4 +1,2 @@
-# demo_pipeline
-Simple end-to-end project with dbt, GE, airflow, for learning purposes.
-
-Details and workflow here: https://docs.google.com/document/d/1iqxO-F2WchyDNZjlydLHNjAxjFLLIHSDAXfd6VdxsqI/edit
+# Great Expectations Pipeline Tutorials
+This is a simple end-to-end project with dbt, GE, airflow to demo different patterns of implementing Great Expectations.

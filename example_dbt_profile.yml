@@ -1,0 +1,27 @@
+# This is an example dbt_profile.yml file that should live in your .dbt
+# directory that's set up during `dbt init`. It is only included in this repo as an example.
+
+# For more information on how to configure this file, please see:
+# https://docs.getdbt.com/docs/profile
+
+ge_tutorials:
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: 127.0.0.1
+      port: 5432
+      user: my_user
+      pass: my_password 
+      dbname: tutorials_db
+      schema: public
+    prod:
+      type: postgres
+      threads: 1
+      host: 127.0.0.1
+      port: 5432
+      user: my_user
+      pass: my_password
+      dbname: tutorials_db
+      schema: public
+  target: dev
