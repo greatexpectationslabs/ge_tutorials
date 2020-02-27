@@ -9542,3 +9542,2427 @@ OSError: [Errno 48] Address already in use
 
 2020-02-05 15:53:22,74797 (MainThread): Flushing usage events
 2020-02-05 15:53:22,75633 (MainThread): ctrl-c
+2020-02-27 05:26:20,797383 (MainThread): Running with dbt=0.15.1
+2020-02-27 05:26:20,874212 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-02-27 05:26:20,874646 (MainThread): Tracking: tracking
+2020-02-27 05:26:20,893031 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12829e590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11be70450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12829e990>]}
+2020-02-27 05:26:21,608500 (MainThread): Partial parsing not enabled
+2020-02-27 05:26:21,615496 (MainThread): Parsing macros/core.sql
+2020-02-27 05:26:21,621600 (MainThread): Parsing macros/materializations/helpers.sql
+2020-02-27 05:26:21,628863 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-02-27 05:26:21,631394 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-02-27 05:26:21,643824 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-02-27 05:26:21,656523 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-02-27 05:26:21,668950 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-02-27 05:26:21,670593 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-02-27 05:26:21,675232 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-02-27 05:26:21,680194 (MainThread): Parsing macros/materializations/table/table.sql
+2020-02-27 05:26:21,684815 (MainThread): Parsing macros/materializations/view/view.sql
+2020-02-27 05:26:21,690047 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-02-27 05:26:21,693964 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-02-27 05:26:21,695045 (MainThread): Parsing macros/etc/query.sql
+2020-02-27 05:26:21,696313 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-02-27 05:26:21,697910 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-02-27 05:26:21,699534 (MainThread): Parsing macros/etc/datetime.sql
+2020-02-27 05:26:21,705157 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-02-27 05:26:21,707089 (MainThread): Parsing macros/adapters/common.sql
+2020-02-27 05:26:21,725908 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-02-27 05:26:21,726976 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-02-27 05:26:21,727892 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-02-27 05:26:21,728878 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-02-27 05:26:21,730789 (MainThread): Parsing macros/catalog.sql
+2020-02-27 05:26:21,732614 (MainThread): Parsing macros/relations.sql
+2020-02-27 05:26:21,734351 (MainThread): Parsing macros/adapters.sql
+2020-02-27 05:26:21,741817 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-02-27 05:26:21,755082 (MainThread): Partial parsing not enabled
+2020-02-27 05:26:21,764392 (MainThread): Acquiring new postgres connection "model.demo_pipeline.count_specialties".
+2020-02-27 05:26:21,764471 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:26:21,776043 (MainThread): Acquiring new postgres connection "model.demo_pipeline.npi_with_crosswalks".
+2020-02-27 05:26:21,776135 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:26:21,781379 (MainThread): Acquiring new postgres connection "model.demo_pipeline.stg_npi".
+2020-02-27 05:26:21,781453 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:26:21,785524 (MainThread): Acquiring new postgres connection "model.demo_pipeline.stg_state_crosswalk".
+2020-02-27 05:26:21,785637 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:26:21,789574 (MainThread): Acquiring new postgres connection "model.demo_pipeline.stg_taxonomy".
+2020-02-27 05:26:21,789651 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:26:21,812930 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1283b4210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1283d9f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1283e5890>]}
+2020-02-27 05:26:22,174383 (MainThread): Flushing usage events
+2020-02-27 05:26:22,174720 (MainThread): Connection 'model.demo_pipeline.stg_taxonomy' was properly closed.
+2020-02-27 05:26:22,174940 (MainThread): Encountered an error:
+2020-02-27 05:26:22,175174 (MainThread): Compilation Error in model stg_npi (models/staging/stg_npi.sql)
+  Model 'model.demo_pipeline.stg_npi' depends on model 'npi_small_2019' which was not found or is disabled
+2020-02-27 05:26:22,180649 (MainThread): Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 80, in main
+    results, succeeded = handle_and_check(args)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 158, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 210, in run_from_args
+    results = task.run()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 300, in run
+    self._runtime_initialize()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 81, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 54, in _runtime_initialize
+    self.load_manifest()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 46, in load_manifest
+    self.manifest = get_full_manifest(self.config)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/perf_utils.py", line 23, in get_full_manifest
+    return load_manifest(config, internal, set_header)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/manifest.py", line 441, in load_manifest
+    return ManifestLoader.load_all(config, internal_manifest, macro_hook)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/manifest.py", line 331, in load_all
+    manifest = loader.create_manifest()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/manifest.py", line 312, in create_manifest
+    manifest, self.root_project.project_name
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/util.py", line 224, in process_refs
+    cls.process_refs_for_node(manifest, current_project, node)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/util.py", line 206, in process_refs_for_node
+    disabled=(target_model is cls.DISABLED)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/utils.py", line 411, in invalid_ref_fail_unless_test
+    target_model_package)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/exceptions.py", line 479, in ref_target_not_found
+    raise_compiler_error(msg, model)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/exceptions.py", line 357, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model stg_npi (models/staging/stg_npi.sql)
+  Model 'model.demo_pipeline.stg_npi' depends on model 'npi_small_2019' which was not found or is disabled
+
+2020-02-27 05:29:59,600537 (MainThread): Running with dbt=0.15.1
+2020-02-27 05:29:59,671139 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-02-27 05:29:59,671612 (MainThread): Tracking: tracking
+2020-02-27 05:29:59,687313 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122b75490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122b75c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122b75e90>]}
+2020-02-27 05:30:00,103068 (MainThread): Partial parsing not enabled
+2020-02-27 05:30:00,109355 (MainThread): Parsing macros/core.sql
+2020-02-27 05:30:00,114523 (MainThread): Parsing macros/materializations/helpers.sql
+2020-02-27 05:30:00,121399 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-02-27 05:30:00,123072 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-02-27 05:30:00,136954 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-02-27 05:30:00,153882 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-02-27 05:30:00,170521 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-02-27 05:30:00,172398 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-02-27 05:30:00,179950 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-02-27 05:30:00,186734 (MainThread): Parsing macros/materializations/table/table.sql
+2020-02-27 05:30:00,192571 (MainThread): Parsing macros/materializations/view/view.sql
+2020-02-27 05:30:00,197614 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-02-27 05:30:00,201577 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-02-27 05:30:00,202395 (MainThread): Parsing macros/etc/query.sql
+2020-02-27 05:30:00,203343 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-02-27 05:30:00,204670 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-02-27 05:30:00,206213 (MainThread): Parsing macros/etc/datetime.sql
+2020-02-27 05:30:00,211857 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-02-27 05:30:00,213273 (MainThread): Parsing macros/adapters/common.sql
+2020-02-27 05:30:00,231677 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-02-27 05:30:00,232544 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-02-27 05:30:00,233259 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-02-27 05:30:00,234075 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-02-27 05:30:00,235724 (MainThread): Parsing macros/catalog.sql
+2020-02-27 05:30:00,236989 (MainThread): Parsing macros/relations.sql
+2020-02-27 05:30:00,238123 (MainThread): Parsing macros/adapters.sql
+2020-02-27 05:30:00,244801 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-02-27 05:30:00,258109 (MainThread): Partial parsing not enabled
+2020-02-27 05:30:00,267764 (MainThread): Acquiring new postgres connection "model.demo_pipeline.count_specialties".
+2020-02-27 05:30:00,267858 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:30:00,279898 (MainThread): Acquiring new postgres connection "model.demo_pipeline.npi_with_crosswalks".
+2020-02-27 05:30:00,279996 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:30:00,285344 (MainThread): Acquiring new postgres connection "model.demo_pipeline.stg_npi".
+2020-02-27 05:30:00,285420 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:30:00,289098 (MainThread): Acquiring new postgres connection "model.demo_pipeline.stg_state_crosswalk".
+2020-02-27 05:30:00,289172 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:30:00,292837 (MainThread): Acquiring new postgres connection "model.demo_pipeline.stg_taxonomy".
+2020-02-27 05:30:00,292915 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:30:00,312037 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123c45a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123c45a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123c80e50>]}
+2020-02-27 05:30:00,678218 (MainThread): Flushing usage events
+2020-02-27 05:30:00,678558 (MainThread): Connection 'model.demo_pipeline.stg_taxonomy' was properly closed.
+2020-02-27 05:30:00,678776 (MainThread): Encountered an error:
+2020-02-27 05:30:00,679019 (MainThread): Compilation Error in model stg_state_crosswalk (models/staging/stg_state_crosswalk.sql)
+  Model 'model.demo_pipeline.stg_state_crosswalk' depends on model 'state_abbreviatons' which was not found or is disabled
+2020-02-27 05:30:00,682138 (MainThread): Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 80, in main
+    results, succeeded = handle_and_check(args)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 158, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 210, in run_from_args
+    results = task.run()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 300, in run
+    self._runtime_initialize()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 81, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 54, in _runtime_initialize
+    self.load_manifest()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 46, in load_manifest
+    self.manifest = get_full_manifest(self.config)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/perf_utils.py", line 23, in get_full_manifest
+    return load_manifest(config, internal, set_header)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/manifest.py", line 441, in load_manifest
+    return ManifestLoader.load_all(config, internal_manifest, macro_hook)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/manifest.py", line 331, in load_all
+    manifest = loader.create_manifest()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/manifest.py", line 312, in create_manifest
+    manifest, self.root_project.project_name
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/util.py", line 224, in process_refs
+    cls.process_refs_for_node(manifest, current_project, node)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/util.py", line 206, in process_refs_for_node
+    disabled=(target_model is cls.DISABLED)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/utils.py", line 411, in invalid_ref_fail_unless_test
+    target_model_package)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/exceptions.py", line 479, in ref_target_not_found
+    raise_compiler_error(msg, model)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/exceptions.py", line 357, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model stg_state_crosswalk (models/staging/stg_state_crosswalk.sql)
+  Model 'model.demo_pipeline.stg_state_crosswalk' depends on model 'state_abbreviatons' which was not found or is disabled
+
+2020-02-27 05:31:11,375957 (MainThread): Running with dbt=0.15.1
+2020-02-27 05:31:11,439627 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-02-27 05:31:11,440075 (MainThread): Tracking: tracking
+2020-02-27 05:31:11,453043 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120ccaa10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120ccad10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120ccac50>]}
+2020-02-27 05:31:11,852670 (MainThread): Partial parsing not enabled
+2020-02-27 05:31:11,854291 (MainThread): Parsing macros/core.sql
+2020-02-27 05:31:11,857301 (MainThread): Parsing macros/materializations/helpers.sql
+2020-02-27 05:31:11,861886 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-02-27 05:31:11,863032 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-02-27 05:31:11,873638 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-02-27 05:31:11,886019 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-02-27 05:31:11,897197 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-02-27 05:31:11,898398 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-02-27 05:31:11,902254 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-02-27 05:31:11,906505 (MainThread): Parsing macros/materializations/table/table.sql
+2020-02-27 05:31:11,910171 (MainThread): Parsing macros/materializations/view/view.sql
+2020-02-27 05:31:11,914026 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-02-27 05:31:11,917488 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-02-27 05:31:11,918124 (MainThread): Parsing macros/etc/query.sql
+2020-02-27 05:31:11,918859 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-02-27 05:31:11,919972 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-02-27 05:31:11,921311 (MainThread): Parsing macros/etc/datetime.sql
+2020-02-27 05:31:11,926985 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-02-27 05:31:11,928221 (MainThread): Parsing macros/adapters/common.sql
+2020-02-27 05:31:11,945589 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-02-27 05:31:11,946429 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-02-27 05:31:11,947072 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-02-27 05:31:11,947800 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-02-27 05:31:11,949212 (MainThread): Parsing macros/catalog.sql
+2020-02-27 05:31:11,950324 (MainThread): Parsing macros/relations.sql
+2020-02-27 05:31:11,951339 (MainThread): Parsing macros/adapters.sql
+2020-02-27 05:31:11,957772 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-02-27 05:31:11,970588 (MainThread): Partial parsing not enabled
+2020-02-27 05:31:11,980240 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:31:11,980334 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:31:11,992113 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:31:11,992207 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:31:11,997473 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:31:11,997547 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:31:12,1741 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:31:12,1820 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:31:12,5527 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:31:12,5601 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:31:12,22672 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120d62990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120dcd410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120d99810>]}
+2020-02-27 05:31:12,393314 (MainThread): Flushing usage events
+2020-02-27 05:31:12,393653 (MainThread): Connection 'model.ge_tutorials.stg_taxonomy' was properly closed.
+2020-02-27 05:31:12,393878 (MainThread): Encountered an error:
+2020-02-27 05:31:12,394125 (MainThread): Compilation Error in model stg_state_crosswalk (models/staging/stg_state_crosswalk.sql)
+  Model 'model.ge_tutorials.stg_state_crosswalk' depends on model 'state_abbreviatons' which was not found or is disabled
+2020-02-27 05:31:12,397303 (MainThread): Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 80, in main
+    results, succeeded = handle_and_check(args)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 158, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 210, in run_from_args
+    results = task.run()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 300, in run
+    self._runtime_initialize()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 81, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 54, in _runtime_initialize
+    self.load_manifest()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 46, in load_manifest
+    self.manifest = get_full_manifest(self.config)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/perf_utils.py", line 23, in get_full_manifest
+    return load_manifest(config, internal, set_header)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/manifest.py", line 441, in load_manifest
+    return ManifestLoader.load_all(config, internal_manifest, macro_hook)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/manifest.py", line 331, in load_all
+    manifest = loader.create_manifest()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/manifest.py", line 312, in create_manifest
+    manifest, self.root_project.project_name
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/util.py", line 224, in process_refs
+    cls.process_refs_for_node(manifest, current_project, node)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/parser/util.py", line 206, in process_refs_for_node
+    disabled=(target_model is cls.DISABLED)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/utils.py", line 411, in invalid_ref_fail_unless_test
+    target_model_package)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/exceptions.py", line 479, in ref_target_not_found
+    raise_compiler_error(msg, model)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/exceptions.py", line 357, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model stg_state_crosswalk (models/staging/stg_state_crosswalk.sql)
+  Model 'model.ge_tutorials.stg_state_crosswalk' depends on model 'state_abbreviatons' which was not found or is disabled
+
+2020-02-27 05:31:30,791643 (MainThread): Running with dbt=0.15.1
+2020-02-27 05:31:30,856670 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-02-27 05:31:30,857129 (MainThread): Tracking: tracking
+2020-02-27 05:31:30,869968 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b588290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b588f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b588e10>]}
+2020-02-27 05:31:31,361459 (MainThread): Partial parsing not enabled
+2020-02-27 05:31:31,363191 (MainThread): Parsing macros/core.sql
+2020-02-27 05:31:31,366556 (MainThread): Parsing macros/materializations/helpers.sql
+2020-02-27 05:31:31,371413 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-02-27 05:31:31,372594 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-02-27 05:31:31,383732 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-02-27 05:31:31,396618 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-02-27 05:31:31,408425 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-02-27 05:31:31,409743 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-02-27 05:31:31,413884 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-02-27 05:31:31,418659 (MainThread): Parsing macros/materializations/table/table.sql
+2020-02-27 05:31:31,422723 (MainThread): Parsing macros/materializations/view/view.sql
+2020-02-27 05:31:31,426406 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-02-27 05:31:31,429639 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-02-27 05:31:31,430279 (MainThread): Parsing macros/etc/query.sql
+2020-02-27 05:31:31,431030 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-02-27 05:31:31,432146 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-02-27 05:31:31,433613 (MainThread): Parsing macros/etc/datetime.sql
+2020-02-27 05:31:31,439710 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-02-27 05:31:31,440984 (MainThread): Parsing macros/adapters/common.sql
+2020-02-27 05:31:31,458315 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-02-27 05:31:31,459124 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-02-27 05:31:31,459776 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-02-27 05:31:31,460517 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-02-27 05:31:31,461973 (MainThread): Parsing macros/catalog.sql
+2020-02-27 05:31:31,463110 (MainThread): Parsing macros/relations.sql
+2020-02-27 05:31:31,464141 (MainThread): Parsing macros/adapters.sql
+2020-02-27 05:31:31,470535 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-02-27 05:31:31,483904 (MainThread): Partial parsing not enabled
+2020-02-27 05:31:31,494355 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:31:31,494485 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:31:31,506680 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:31:31,506776 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:31:31,512551 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:31:31,512644 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:31:31,516625 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:31:31,516705 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:31:31,520496 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:31:31,520572 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:31:31,539994 (MainThread): WARNING: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ge_tutorials.example
+
+2020-02-27 05:31:31,576071 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a35f110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c6ddc90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c6dde90>]}
+2020-02-27 05:31:32,71952 (MainThread): Flushing usage events
+2020-02-27 05:31:32,72236 (MainThread): Connection 'model.ge_tutorials.stg_taxonomy' was properly closed.
+2020-02-27 05:31:32,72414 (MainThread): Encountered an error:
+2020-02-27 05:31:32,72562 (MainThread): Found a cycle: model.ge_tutorials.stg_taxonomy --> model.ge_tutorials.stg_taxonomy
+2020-02-27 05:31:32,74286 (MainThread): Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 80, in main
+    results, succeeded = handle_and_check(args)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 158, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/main.py", line 210, in run_from_args
+    results = task.run()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 300, in run
+    self._runtime_initialize()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 81, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 55, in _runtime_initialize
+    self.compile_manifest()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/task/runnable.py", line 50, in compile_manifest
+    self.linker = compile_manifest(self.config, self.manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/compilation.py", line 219, in compile_manifest
+    return compiler.compile(manifest, write=write)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/compilation.py", line 200, in compile
+    self.link_graph(linker, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/compilation.py", line 195, in link_graph
+    raise RuntimeError("Found a cycle: {}".format(cycle))
+RuntimeError: Found a cycle: model.ge_tutorials.stg_taxonomy --> model.ge_tutorials.stg_taxonomy
+
+2020-02-27 05:34:40,522847 (MainThread): Running with dbt=0.15.1
+2020-02-27 05:34:40,589680 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-02-27 05:34:40,590193 (MainThread): Tracking: tracking
+2020-02-27 05:34:40,604415 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122237490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122237d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122237e10>]}
+2020-02-27 05:34:41,434065 (MainThread): Partial parsing not enabled
+2020-02-27 05:34:41,435776 (MainThread): Parsing macros/core.sql
+2020-02-27 05:34:41,438952 (MainThread): Parsing macros/materializations/helpers.sql
+2020-02-27 05:34:41,443882 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-02-27 05:34:41,445066 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-02-27 05:34:41,455824 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-02-27 05:34:41,468259 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-02-27 05:34:41,479958 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-02-27 05:34:41,481405 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-02-27 05:34:41,485792 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-02-27 05:34:41,490498 (MainThread): Parsing macros/materializations/table/table.sql
+2020-02-27 05:34:41,494668 (MainThread): Parsing macros/materializations/view/view.sql
+2020-02-27 05:34:41,498354 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-02-27 05:34:41,501400 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-02-27 05:34:41,502114 (MainThread): Parsing macros/etc/query.sql
+2020-02-27 05:34:41,502873 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-02-27 05:34:41,504000 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-02-27 05:34:41,505310 (MainThread): Parsing macros/etc/datetime.sql
+2020-02-27 05:34:41,511266 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-02-27 05:34:41,512533 (MainThread): Parsing macros/adapters/common.sql
+2020-02-27 05:34:41,531846 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-02-27 05:34:41,532765 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-02-27 05:34:41,533504 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-02-27 05:34:41,534326 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-02-27 05:34:41,535928 (MainThread): Parsing macros/catalog.sql
+2020-02-27 05:34:41,537179 (MainThread): Parsing macros/relations.sql
+2020-02-27 05:34:41,538312 (MainThread): Parsing macros/adapters.sql
+2020-02-27 05:34:41,546233 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-02-27 05:34:41,560477 (MainThread): Partial parsing not enabled
+2020-02-27 05:34:41,570477 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:34:41,570639 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:34:41,583516 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:34:41,583633 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:34:41,589056 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:34:41,589134 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:34:41,593033 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:34:41,593113 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:34:41,596822 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:34:41,596896 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:34:41,615082 (MainThread): WARNING: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ge_tutorials.example
+
+2020-02-27 05:34:41,649808 (MainThread): Found 5 models, 0 tests, 0 snapshots, 0 analyses, 125 macros, 0 operations, 3 seed files, 0 sources
+2020-02-27 05:34:41,652294 (MainThread): 
+2020-02-27 05:34:41,652569 (MainThread): Acquiring new postgres connection "master".
+2020-02-27 05:34:41,652646 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:34:41,722240 (MainThread): Using postgres connection "master".
+2020-02-27 05:34:41,722400 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+
+    select distinct nspname from pg_namespace
+  
+2020-02-27 05:34:41,824818 (MainThread): SQL status: SELECT 7 in 0.10 seconds
+2020-02-27 05:34:41,854615 (MainThread): Using postgres connection "master".
+2020-02-27 05:34:41,854781 (MainThread): On master: BEGIN
+2020-02-27 05:34:41,855841 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:34:41,856062 (MainThread): Using postgres connection "master".
+2020-02-27 05:34:41,856171 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+select
+      'demo_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'demo_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2020-02-27 05:34:41,884682 (MainThread): SQL status: SELECT 12 in 0.03 seconds
+2020-02-27 05:34:41,918972 (MainThread): Using postgres connection "master".
+2020-02-27 05:34:41,919100 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2020-02-27 05:34:41,958409 (MainThread): SQL status: SELECT 8 in 0.04 seconds
+2020-02-27 05:34:41,967116 (MainThread): On master: ROLLBACK
+2020-02-27 05:34:41,967391 (MainThread): Using postgres connection "master".
+2020-02-27 05:34:41,967477 (MainThread): On master: BEGIN
+2020-02-27 05:34:41,967701 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:34:41,967804 (MainThread): On master: COMMIT
+2020-02-27 05:34:41,967890 (MainThread): Using postgres connection "master".
+2020-02-27 05:34:41,967962 (MainThread): On master: COMMIT
+2020-02-27 05:34:41,968144 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:34:41,968446 (MainThread): 21:34:41 | Concurrency: 1 threads (target='dev')
+2020-02-27 05:34:41,968584 (MainThread): 21:34:41 | 
+2020-02-27 05:34:41,970432 (Thread-1): Began running node model.ge_tutorials.stg_npi
+2020-02-27 05:34:41,970587 (Thread-1): 21:34:41 | 1 of 5 START view model public.stg_npi............................... [RUN]
+2020-02-27 05:34:41,970863 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:34:41,970952 (Thread-1): Opening a new connection, currently in state init
+2020-02-27 05:34:41,971049 (Thread-1): Compiling model.ge_tutorials.stg_npi
+2020-02-27 05:34:41,981920 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_npi"
+2020-02-27 05:34:41,982518 (Thread-1): finished collecting timing info
+2020-02-27 05:34:42,9429 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:34:42,9724 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "demo_db"."public"."stg_npi__dbt_tmp" cascade
+2020-02-27 05:34:42,15021 (Thread-1): SQL status: DROP VIEW in 0.01 seconds
+2020-02-27 05:34:42,17141 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:34:42,17244 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "demo_db"."public"."stg_npi__dbt_backup" cascade
+2020-02-27 05:34:42,17426 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:34:42,18610 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_npi"
+2020-02-27 05:34:42,19030 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:34:42,19114 (Thread-1): On model.ge_tutorials.stg_npi: BEGIN
+2020-02-27 05:34:42,19287 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:34:42,19366 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:34:42,19431 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+
+  
+  create view "demo_db"."public"."stg_npi__dbt_tmp" as (
+    select 
+	npi,
+	entity_type_code,
+	organization_name,
+	last_name,
+	first_name,
+	state,
+	taxonomy_code
+from "demo_db"."public"."npi_small"
+  );
+
+2020-02-27 05:34:42,19768 (Thread-1): Postgres error: relation "public.npi_small" does not exist
+LINE 13: from "demo_db"."public"."npi_small"
+              ^
+
+2020-02-27 05:34:42,19869 (Thread-1): On model.ge_tutorials.stg_npi: ROLLBACK
+2020-02-27 05:34:42,20051 (Thread-1): finished collecting timing info
+2020-02-27 05:34:42,20394 (Thread-1): Database Error in model stg_npi (models/staging/stg_npi.sql)
+  relation "public.npi_small" does not exist
+  LINE 13: from "demo_db"."public"."npi_small"
+                ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_npi.sql
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 44, in exception_handler
+    yield
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 74, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.UndefinedTable: relation "public.npi_small" does not exist
+LINE 13: from "demo_db"."public"."npi_small"
+              ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 218, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 161, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 260, in run
+    return self.execute(compiled_node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 436, in execute
+    result = materialization_macro.generator(context)()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 59, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 40, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 276, in execute
+    fetch=fetch
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 116, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 82, in add_query
+    return connection, cursor
+  File "/opt/miniconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model stg_npi (models/staging/stg_npi.sql)
+  relation "public.npi_small" does not exist
+  LINE 13: from "demo_db"."public"."npi_small"
+                ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_npi.sql
+2020-02-27 05:34:42,28170 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4a0776ef-18c0-41bc-b373-b203aa5e84d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122396710>]}
+2020-02-27 05:34:42,408142 (Thread-1): 21:34:42 | 1 of 5 ERROR creating view model public.stg_npi...................... [ERROR in 0.06s]
+2020-02-27 05:34:42,408486 (Thread-1): Finished running node model.ge_tutorials.stg_npi
+2020-02-27 05:34:42,408768 (Thread-1): Began running node model.ge_tutorials.stg_state_crosswalk
+2020-02-27 05:34:42,409033 (Thread-1): 21:34:42 | 2 of 5 START view model public.stg_state_crosswalk................... [RUN]
+2020-02-27 05:34:42,409627 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:34:42,409775 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_npi).
+2020-02-27 05:34:42,409911 (Thread-1): Compiling model.ge_tutorials.stg_state_crosswalk
+2020-02-27 05:34:42,417448 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_state_crosswalk"
+2020-02-27 05:34:42,417905 (Thread-1): finished collecting timing info
+2020-02-27 05:34:42,424529 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:34:42,424647 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_crosswalk"} */
+drop view if exists "demo_db"."public"."stg_state_crosswalk__dbt_tmp" cascade
+2020-02-27 05:34:42,425052 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:34:42,427237 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:34:42,427369 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_crosswalk"} */
+drop view if exists "demo_db"."public"."stg_state_crosswalk__dbt_backup" cascade
+2020-02-27 05:34:42,427632 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:34:42,429366 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_state_crosswalk"
+2020-02-27 05:34:42,429896 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:34:42,430010 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: BEGIN
+2020-02-27 05:34:42,430291 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:34:42,430396 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:34:42,430480 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_crosswalk"} */
+
+  
+  create view "demo_db"."public"."stg_state_crosswalk__dbt_tmp" as (
+    select 
+	name as state,
+	abbreviation as state_abbrev
+from "demo_db"."public"."state_abbreviations"
+  );
+
+2020-02-27 05:34:42,430763 (Thread-1): Postgres error: relation "public.state_abbreviations" does not exist
+LINE 8: from "demo_db"."public"."state_abbreviations"
+             ^
+
+2020-02-27 05:34:42,430868 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: ROLLBACK
+2020-02-27 05:34:42,431084 (Thread-1): finished collecting timing info
+2020-02-27 05:34:42,431537 (Thread-1): Database Error in model stg_state_crosswalk (models/staging/stg_state_crosswalk.sql)
+  relation "public.state_abbreviations" does not exist
+  LINE 8: from "demo_db"."public"."state_abbreviations"
+               ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_state_crosswalk.sql
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 44, in exception_handler
+    yield
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 74, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.UndefinedTable: relation "public.state_abbreviations" does not exist
+LINE 8: from "demo_db"."public"."state_abbreviations"
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 218, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 161, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 260, in run
+    return self.execute(compiled_node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 436, in execute
+    result = materialization_macro.generator(context)()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 59, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 40, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 276, in execute
+    fetch=fetch
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 116, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 82, in add_query
+    return connection, cursor
+  File "/opt/miniconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model stg_state_crosswalk (models/staging/stg_state_crosswalk.sql)
+  relation "public.state_abbreviations" does not exist
+  LINE 8: from "demo_db"."public"."state_abbreviations"
+               ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_state_crosswalk.sql
+2020-02-27 05:34:42,432096 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4a0776ef-18c0-41bc-b373-b203aa5e84d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1237cd090>]}
+2020-02-27 05:34:42,806115 (Thread-1): 21:34:42 | 2 of 5 ERROR creating view model public.stg_state_crosswalk.......... [ERROR in 0.02s]
+2020-02-27 05:34:42,806463 (Thread-1): Finished running node model.ge_tutorials.stg_state_crosswalk
+2020-02-27 05:34:42,806819 (Thread-1): Began running node model.ge_tutorials.stg_taxonomy
+2020-02-27 05:34:42,807415 (Thread-1): 21:34:42 | 3 of 5 START view model public.stg_taxonomy.......................... [RUN]
+2020-02-27 05:34:42,808123 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:34:42,808268 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_state_crosswalk).
+2020-02-27 05:34:42,808403 (Thread-1): Compiling model.ge_tutorials.stg_taxonomy
+2020-02-27 05:34:42,816544 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_taxonomy"
+2020-02-27 05:34:42,817055 (Thread-1): finished collecting timing info
+2020-02-27 05:34:42,824880 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:34:42,825023 (Thread-1): On model.ge_tutorials.stg_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_taxonomy"} */
+drop view if exists "demo_db"."public"."stg_taxonomy__dbt_tmp" cascade
+2020-02-27 05:34:42,825543 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:34:42,828185 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:34:42,828375 (Thread-1): On model.ge_tutorials.stg_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_taxonomy"} */
+drop view if exists "demo_db"."public"."stg_taxonomy__dbt_backup" cascade
+2020-02-27 05:34:42,828752 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:34:42,831173 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_taxonomy"
+2020-02-27 05:34:42,832912 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:34:42,833123 (Thread-1): On model.ge_tutorials.stg_taxonomy: BEGIN
+2020-02-27 05:34:42,833453 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:34:42,833586 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:34:42,833683 (Thread-1): On model.ge_tutorials.stg_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_taxonomy"} */
+
+  
+  create view "demo_db"."public"."stg_taxonomy__dbt_tmp" as (
+    select 
+	medicare_specialty_code,
+	medicare_provider_supplier_type_description,
+	provider_taxonomy_code,
+	provider_taxonomy_description
+from "demo_db"."public"."healthcare_provider_taxonomy"
+  );
+
+2020-02-27 05:34:42,833971 (Thread-1): Postgres error: relation "public.healthcare_provider_taxonomy" does not exist
+LINE 10: from "demo_db"."public"."healthcare_provider_taxonomy"
+              ^
+
+2020-02-27 05:34:42,834085 (Thread-1): On model.ge_tutorials.stg_taxonomy: ROLLBACK
+2020-02-27 05:34:42,834326 (Thread-1): finished collecting timing info
+2020-02-27 05:34:42,834824 (Thread-1): Database Error in model stg_taxonomy (models/staging/stg_taxonomy.sql)
+  relation "public.healthcare_provider_taxonomy" does not exist
+  LINE 10: from "demo_db"."public"."healthcare_provider_taxonomy"
+                ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_taxonomy.sql
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 44, in exception_handler
+    yield
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 74, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.UndefinedTable: relation "public.healthcare_provider_taxonomy" does not exist
+LINE 10: from "demo_db"."public"."healthcare_provider_taxonomy"
+              ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 218, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 161, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 260, in run
+    return self.execute(compiled_node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 436, in execute
+    result = materialization_macro.generator(context)()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 59, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 40, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 276, in execute
+    fetch=fetch
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 116, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 82, in add_query
+    return connection, cursor
+  File "/opt/miniconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model stg_taxonomy (models/staging/stg_taxonomy.sql)
+  relation "public.healthcare_provider_taxonomy" does not exist
+  LINE 10: from "demo_db"."public"."healthcare_provider_taxonomy"
+                ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_taxonomy.sql
+2020-02-27 05:34:42,835433 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4a0776ef-18c0-41bc-b373-b203aa5e84d4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123528fd0>]}
+2020-02-27 05:34:43,200137 (Thread-1): 21:34:43 | 3 of 5 ERROR creating view model public.stg_taxonomy................. [ERROR in 0.03s]
+2020-02-27 05:34:43,200482 (Thread-1): Finished running node model.ge_tutorials.stg_taxonomy
+2020-02-27 05:34:43,200973 (Thread-1): Began running node model.ge_tutorials.npi_with_crosswalks
+2020-02-27 05:34:43,201172 (Thread-1): 21:34:43 | 4 of 5 SKIP relation public.npi_with_crosswalks...................... [SKIP]
+2020-02-27 05:34:43,201337 (Thread-1): Finished running node model.ge_tutorials.npi_with_crosswalks
+2020-02-27 05:34:43,201668 (Thread-1): Began running node model.ge_tutorials.count_specialties
+2020-02-27 05:34:43,201869 (Thread-1): 21:34:43 | 5 of 5 SKIP relation public.count_specialties........................ [SKIP]
+2020-02-27 05:34:43,202035 (Thread-1): Finished running node model.ge_tutorials.count_specialties
+2020-02-27 05:34:43,209994 (MainThread): Using postgres connection "master".
+2020-02-27 05:34:43,210398 (MainThread): On master: BEGIN
+2020-02-27 05:34:43,210988 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:34:43,211189 (MainThread): On master: COMMIT
+2020-02-27 05:34:43,211349 (MainThread): Using postgres connection "master".
+2020-02-27 05:34:43,211495 (MainThread): On master: COMMIT
+2020-02-27 05:34:43,211865 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:34:43,212262 (MainThread): 21:34:43 | 
+2020-02-27 05:34:43,212443 (MainThread): 21:34:43 | Finished running 5 view models in 1.56s.
+2020-02-27 05:34:43,212592 (MainThread): Connection 'master' was left open.
+2020-02-27 05:34:43,212710 (MainThread): On master: Close
+2020-02-27 05:34:43,212853 (MainThread): Connection 'model.ge_tutorials.stg_taxonomy' was left open.
+2020-02-27 05:34:43,212963 (MainThread): On model.ge_tutorials.stg_taxonomy: Close
+2020-02-27 05:34:43,224708 (MainThread): 
+2020-02-27 05:34:43,224928 (MainThread): Completed with 3 errors and 0 warnings:
+2020-02-27 05:34:43,225187 (MainThread): 
+2020-02-27 05:34:43,225352 (MainThread): Database Error in model stg_npi (models/staging/stg_npi.sql)
+2020-02-27 05:34:43,225482 (MainThread):   relation "public.npi_small" does not exist
+2020-02-27 05:34:43,225618 (MainThread):   LINE 13: from "demo_db"."public"."npi_small"
+2020-02-27 05:34:43,225726 (MainThread):                 ^
+2020-02-27 05:34:43,225819 (MainThread):   compiled SQL at target/run/ge_tutorials/staging/stg_npi.sql
+2020-02-27 05:34:43,225914 (MainThread): 
+2020-02-27 05:34:43,226015 (MainThread): Database Error in model stg_state_crosswalk (models/staging/stg_state_crosswalk.sql)
+2020-02-27 05:34:43,226106 (MainThread):   relation "public.state_abbreviations" does not exist
+2020-02-27 05:34:43,226190 (MainThread):   LINE 8: from "demo_db"."public"."state_abbreviations"
+2020-02-27 05:34:43,226271 (MainThread):                ^
+2020-02-27 05:34:43,226352 (MainThread):   compiled SQL at target/run/ge_tutorials/staging/stg_state_crosswalk.sql
+2020-02-27 05:34:43,226440 (MainThread): 
+2020-02-27 05:34:43,226534 (MainThread): Database Error in model stg_taxonomy (models/staging/stg_taxonomy.sql)
+2020-02-27 05:34:43,226621 (MainThread):   relation "public.healthcare_provider_taxonomy" does not exist
+2020-02-27 05:34:43,226702 (MainThread):   LINE 10: from "demo_db"."public"."healthcare_provider_taxonomy"
+2020-02-27 05:34:43,226811 (MainThread):                 ^
+2020-02-27 05:34:43,226890 (MainThread):   compiled SQL at target/run/ge_tutorials/staging/stg_taxonomy.sql
+2020-02-27 05:34:43,226983 (MainThread): 
+Done. PASS=2 WARN=0 ERROR=3 SKIP=0 TOTAL=5
+2020-02-27 05:34:43,227168 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12352cfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12352c150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12352c3d0>]}
+2020-02-27 05:34:43,591321 (MainThread): Flushing usage events
+2020-02-27 05:35:11,308312 (MainThread): Running with dbt=0.15.1
+2020-02-27 05:35:11,369964 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-02-27 05:35:11,370404 (MainThread): Tracking: tracking
+2020-02-27 05:35:11,383051 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12508bcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1161531d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12559f690>]}
+2020-02-27 05:35:11,775480 (MainThread): Partial parsing not enabled
+2020-02-27 05:35:11,777010 (MainThread): Parsing macros/core.sql
+2020-02-27 05:35:11,779767 (MainThread): Parsing macros/materializations/helpers.sql
+2020-02-27 05:35:11,784214 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-02-27 05:35:11,785363 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-02-27 05:35:11,796358 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-02-27 05:35:11,808766 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-02-27 05:35:11,820182 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-02-27 05:35:11,821426 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-02-27 05:35:11,825432 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-02-27 05:35:11,829768 (MainThread): Parsing macros/materializations/table/table.sql
+2020-02-27 05:35:11,834149 (MainThread): Parsing macros/materializations/view/view.sql
+2020-02-27 05:35:11,839262 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-02-27 05:35:11,842667 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-02-27 05:35:11,843370 (MainThread): Parsing macros/etc/query.sql
+2020-02-27 05:35:11,844197 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-02-27 05:35:11,845436 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-02-27 05:35:11,846865 (MainThread): Parsing macros/etc/datetime.sql
+2020-02-27 05:35:11,852822 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-02-27 05:35:11,854068 (MainThread): Parsing macros/adapters/common.sql
+2020-02-27 05:35:11,870601 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-02-27 05:35:11,871371 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-02-27 05:35:11,872005 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-02-27 05:35:11,872733 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-02-27 05:35:11,874261 (MainThread): Parsing macros/catalog.sql
+2020-02-27 05:35:11,875457 (MainThread): Parsing macros/relations.sql
+2020-02-27 05:35:11,876466 (MainThread): Parsing macros/adapters.sql
+2020-02-27 05:35:11,883120 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-02-27 05:35:11,897002 (MainThread): Partial parsing not enabled
+2020-02-27 05:35:11,906617 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:35:11,906705 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:11,919297 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:35:11,919438 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:11,925115 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:35:11,925190 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:11,928936 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:35:11,929008 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:11,932707 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:35:11,932777 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:11,979360 (MainThread): Found 5 models, 0 tests, 0 snapshots, 0 analyses, 125 macros, 0 operations, 3 seed files, 0 sources
+2020-02-27 05:35:11,983423 (MainThread): 
+2020-02-27 05:35:11,983858 (MainThread): Acquiring new postgres connection "master".
+2020-02-27 05:35:11,984017 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:12,57442 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:12,57579 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+
+    select distinct nspname from pg_namespace
+  
+2020-02-27 05:35:12,102086 (MainThread): SQL status: SELECT 7 in 0.04 seconds
+2020-02-27 05:35:12,131488 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:12,131624 (MainThread): On master: BEGIN
+2020-02-27 05:35:12,131947 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:35:12,132018 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:12,132074 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+select
+      'demo_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'demo_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2020-02-27 05:35:12,133870 (MainThread): SQL status: SELECT 12 in 0.00 seconds
+2020-02-27 05:35:12,162491 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:12,162611 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2020-02-27 05:35:12,177629 (MainThread): SQL status: SELECT 8 in 0.01 seconds
+2020-02-27 05:35:12,187147 (MainThread): On master: ROLLBACK
+2020-02-27 05:35:12,187453 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:12,187551 (MainThread): On master: BEGIN
+2020-02-27 05:35:12,187792 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:35:12,187895 (MainThread): On master: COMMIT
+2020-02-27 05:35:12,187972 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:12,188039 (MainThread): On master: COMMIT
+2020-02-27 05:35:12,188194 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:35:12,188475 (MainThread): 21:35:12 | Concurrency: 1 threads (target='dev')
+2020-02-27 05:35:12,188590 (MainThread): 21:35:12 | 
+2020-02-27 05:35:12,190201 (Thread-1): Began running node model.ge_tutorials.stg_npi
+2020-02-27 05:35:12,190442 (Thread-1): 21:35:12 | 1 of 5 START view model public.stg_npi............................... [RUN]
+2020-02-27 05:35:12,190717 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:35:12,190797 (Thread-1): Opening a new connection, currently in state init
+2020-02-27 05:35:12,190878 (Thread-1): Compiling model.ge_tutorials.stg_npi
+2020-02-27 05:35:12,200945 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_npi"
+2020-02-27 05:35:12,201269 (Thread-1): finished collecting timing info
+2020-02-27 05:35:12,228898 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:35:12,229054 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "demo_db"."public"."stg_npi__dbt_tmp" cascade
+2020-02-27 05:35:12,232408 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:35:12,234671 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:35:12,234814 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "demo_db"."public"."stg_npi__dbt_backup" cascade
+2020-02-27 05:35:12,235101 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:35:12,236623 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_npi"
+2020-02-27 05:35:12,237063 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:35:12,237152 (Thread-1): On model.ge_tutorials.stg_npi: BEGIN
+2020-02-27 05:35:12,237397 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:35:12,237548 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:35:12,237666 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+
+  
+  create view "demo_db"."public"."stg_npi__dbt_tmp" as (
+    select 
+	npi,
+	entity_type_code,
+	organization_name,
+	last_name,
+	first_name,
+	state,
+	taxonomy_code
+from "demo_db"."public"."npi_small"
+  );
+
+2020-02-27 05:35:12,238464 (Thread-1): Postgres error: relation "public.npi_small" does not exist
+LINE 13: from "demo_db"."public"."npi_small"
+              ^
+
+2020-02-27 05:35:12,239543 (Thread-1): On model.ge_tutorials.stg_npi: ROLLBACK
+2020-02-27 05:35:12,240816 (Thread-1): finished collecting timing info
+2020-02-27 05:35:12,241403 (Thread-1): Database Error in model stg_npi (models/staging/stg_npi.sql)
+  relation "public.npi_small" does not exist
+  LINE 13: from "demo_db"."public"."npi_small"
+                ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_npi.sql
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 44, in exception_handler
+    yield
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 74, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.UndefinedTable: relation "public.npi_small" does not exist
+LINE 13: from "demo_db"."public"."npi_small"
+              ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 218, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 161, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 260, in run
+    return self.execute(compiled_node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 436, in execute
+    result = materialization_macro.generator(context)()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 59, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 40, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 276, in execute
+    fetch=fetch
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 116, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 82, in add_query
+    return connection, cursor
+  File "/opt/miniconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model stg_npi (models/staging/stg_npi.sql)
+  relation "public.npi_small" does not exist
+  LINE 13: from "demo_db"."public"."npi_small"
+                ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_npi.sql
+2020-02-27 05:35:12,242932 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '16350c0a-cd9e-4b2c-ae75-7c6df1403918', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126765690>]}
+2020-02-27 05:35:12,612109 (Thread-1): 21:35:12 | 1 of 5 ERROR creating view model public.stg_npi...................... [ERROR in 0.05s]
+2020-02-27 05:35:12,612437 (Thread-1): Finished running node model.ge_tutorials.stg_npi
+2020-02-27 05:35:12,612775 (Thread-1): Began running node model.ge_tutorials.stg_state_crosswalk
+2020-02-27 05:35:12,613358 (Thread-1): 21:35:12 | 2 of 5 START view model public.stg_state_crosswalk................... [RUN]
+2020-02-27 05:35:12,613990 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:35:12,614280 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_npi).
+2020-02-27 05:35:12,614435 (Thread-1): Compiling model.ge_tutorials.stg_state_crosswalk
+2020-02-27 05:35:12,623085 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_state_crosswalk"
+2020-02-27 05:35:12,623684 (Thread-1): finished collecting timing info
+2020-02-27 05:35:12,630279 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:35:12,630396 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_crosswalk"} */
+drop view if exists "demo_db"."public"."stg_state_crosswalk__dbt_tmp" cascade
+2020-02-27 05:35:12,630820 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:35:12,633664 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:35:12,633857 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_crosswalk"} */
+drop view if exists "demo_db"."public"."stg_state_crosswalk__dbt_backup" cascade
+2020-02-27 05:35:12,634286 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:35:12,636871 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_state_crosswalk"
+2020-02-27 05:35:12,637605 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:35:12,637786 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: BEGIN
+2020-02-27 05:35:12,638085 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:35:12,638192 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:35:12,638272 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_crosswalk"} */
+
+  
+  create view "demo_db"."public"."stg_state_crosswalk__dbt_tmp" as (
+    select 
+	name as state,
+	abbreviation as state_abbrev
+from "demo_db"."public"."state_abbreviations"
+  );
+
+2020-02-27 05:35:12,638615 (Thread-1): Postgres error: relation "public.state_abbreviations" does not exist
+LINE 8: from "demo_db"."public"."state_abbreviations"
+             ^
+
+2020-02-27 05:35:12,638783 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: ROLLBACK
+2020-02-27 05:35:12,639135 (Thread-1): finished collecting timing info
+2020-02-27 05:35:12,639645 (Thread-1): Database Error in model stg_state_crosswalk (models/staging/stg_state_crosswalk.sql)
+  relation "public.state_abbreviations" does not exist
+  LINE 8: from "demo_db"."public"."state_abbreviations"
+               ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_state_crosswalk.sql
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 44, in exception_handler
+    yield
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 74, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.UndefinedTable: relation "public.state_abbreviations" does not exist
+LINE 8: from "demo_db"."public"."state_abbreviations"
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 218, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 161, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 260, in run
+    return self.execute(compiled_node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 436, in execute
+    result = materialization_macro.generator(context)()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 59, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 40, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 276, in execute
+    fetch=fetch
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 116, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 82, in add_query
+    return connection, cursor
+  File "/opt/miniconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model stg_state_crosswalk (models/staging/stg_state_crosswalk.sql)
+  relation "public.state_abbreviations" does not exist
+  LINE 8: from "demo_db"."public"."state_abbreviations"
+               ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_state_crosswalk.sql
+2020-02-27 05:35:12,640230 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '16350c0a-cd9e-4b2c-ae75-7c6df1403918', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12686a490>]}
+2020-02-27 05:35:13,19246 (Thread-1): 21:35:13 | 2 of 5 ERROR creating view model public.stg_state_crosswalk.......... [ERROR in 0.03s]
+2020-02-27 05:35:13,19579 (Thread-1): Finished running node model.ge_tutorials.stg_state_crosswalk
+2020-02-27 05:35:13,19837 (Thread-1): Began running node model.ge_tutorials.stg_taxonomy
+2020-02-27 05:35:13,20091 (Thread-1): 21:35:13 | 3 of 5 START view model public.stg_taxonomy.......................... [RUN]
+2020-02-27 05:35:13,20553 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:35:13,20676 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_state_crosswalk).
+2020-02-27 05:35:13,20798 (Thread-1): Compiling model.ge_tutorials.stg_taxonomy
+2020-02-27 05:35:13,28236 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_taxonomy"
+2020-02-27 05:35:13,28804 (Thread-1): finished collecting timing info
+2020-02-27 05:35:13,36506 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:35:13,36659 (Thread-1): On model.ge_tutorials.stg_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_taxonomy"} */
+drop view if exists "demo_db"."public"."stg_taxonomy__dbt_tmp" cascade
+2020-02-27 05:35:13,37111 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:35:13,40431 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:35:13,40666 (Thread-1): On model.ge_tutorials.stg_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_taxonomy"} */
+drop view if exists "demo_db"."public"."stg_taxonomy__dbt_backup" cascade
+2020-02-27 05:35:13,41094 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:35:13,42940 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_taxonomy"
+2020-02-27 05:35:13,43511 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:35:13,43630 (Thread-1): On model.ge_tutorials.stg_taxonomy: BEGIN
+2020-02-27 05:35:13,44012 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:35:13,44133 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:35:13,44219 (Thread-1): On model.ge_tutorials.stg_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_taxonomy"} */
+
+  
+  create view "demo_db"."public"."stg_taxonomy__dbt_tmp" as (
+    select 
+	medicare_specialty_code,
+	medicare_provider_supplier_type_description,
+	provider_taxonomy_code,
+	provider_taxonomy_description
+from "demo_db"."public"."healthcare_provider_taxonomy"
+  );
+
+2020-02-27 05:35:13,44510 (Thread-1): Postgres error: relation "public.healthcare_provider_taxonomy" does not exist
+LINE 10: from "demo_db"."public"."healthcare_provider_taxonomy"
+              ^
+
+2020-02-27 05:35:13,44613 (Thread-1): On model.ge_tutorials.stg_taxonomy: ROLLBACK
+2020-02-27 05:35:13,44849 (Thread-1): finished collecting timing info
+2020-02-27 05:35:13,45323 (Thread-1): Database Error in model stg_taxonomy (models/staging/stg_taxonomy.sql)
+  relation "public.healthcare_provider_taxonomy" does not exist
+  LINE 10: from "demo_db"."public"."healthcare_provider_taxonomy"
+                ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_taxonomy.sql
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 44, in exception_handler
+    yield
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 74, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.UndefinedTable: relation "public.healthcare_provider_taxonomy" does not exist
+LINE 10: from "demo_db"."public"."healthcare_provider_taxonomy"
+              ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 218, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 161, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 260, in run
+    return self.execute(compiled_node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 436, in execute
+    result = materialization_macro.generator(context)()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 59, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 40, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 276, in execute
+    fetch=fetch
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 116, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 82, in add_query
+    return connection, cursor
+  File "/opt/miniconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/postgres/connections.py", line 56, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model stg_taxonomy (models/staging/stg_taxonomy.sql)
+  relation "public.healthcare_provider_taxonomy" does not exist
+  LINE 10: from "demo_db"."public"."healthcare_provider_taxonomy"
+                ^
+  compiled SQL at target/run/ge_tutorials/staging/stg_taxonomy.sql
+2020-02-27 05:35:13,46119 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '16350c0a-cd9e-4b2c-ae75-7c6df1403918', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12687ec10>]}
+2020-02-27 05:35:13,410187 (Thread-1): 21:35:13 | 3 of 5 ERROR creating view model public.stg_taxonomy................. [ERROR in 0.03s]
+2020-02-27 05:35:13,410517 (Thread-1): Finished running node model.ge_tutorials.stg_taxonomy
+2020-02-27 05:35:13,411171 (Thread-1): Began running node model.ge_tutorials.npi_with_crosswalks
+2020-02-27 05:35:13,411380 (Thread-1): 21:35:13 | 4 of 5 SKIP relation public.npi_with_crosswalks...................... [SKIP]
+2020-02-27 05:35:13,411545 (Thread-1): Finished running node model.ge_tutorials.npi_with_crosswalks
+2020-02-27 05:35:13,411879 (Thread-1): Began running node model.ge_tutorials.count_specialties
+2020-02-27 05:35:13,412073 (Thread-1): 21:35:13 | 5 of 5 SKIP relation public.count_specialties........................ [SKIP]
+2020-02-27 05:35:13,412235 (Thread-1): Finished running node model.ge_tutorials.count_specialties
+2020-02-27 05:35:13,416797 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:13,417045 (MainThread): On master: BEGIN
+2020-02-27 05:35:13,417392 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:35:13,417542 (MainThread): On master: COMMIT
+2020-02-27 05:35:13,417656 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:13,417759 (MainThread): On master: COMMIT
+2020-02-27 05:35:13,418025 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:35:13,418402 (MainThread): 21:35:13 | 
+2020-02-27 05:35:13,418583 (MainThread): 21:35:13 | Finished running 5 view models in 1.43s.
+2020-02-27 05:35:13,418701 (MainThread): Connection 'master' was left open.
+2020-02-27 05:35:13,418789 (MainThread): On master: Close
+2020-02-27 05:35:13,418899 (MainThread): Connection 'model.ge_tutorials.stg_taxonomy' was left open.
+2020-02-27 05:35:13,418983 (MainThread): On model.ge_tutorials.stg_taxonomy: Close
+2020-02-27 05:35:13,429984 (MainThread): 
+2020-02-27 05:35:13,430260 (MainThread): Completed with 3 errors and 0 warnings:
+2020-02-27 05:35:13,430390 (MainThread): 
+2020-02-27 05:35:13,430552 (MainThread): Database Error in model stg_npi (models/staging/stg_npi.sql)
+2020-02-27 05:35:13,430688 (MainThread):   relation "public.npi_small" does not exist
+2020-02-27 05:35:13,430783 (MainThread):   LINE 13: from "demo_db"."public"."npi_small"
+2020-02-27 05:35:13,430868 (MainThread):                 ^
+2020-02-27 05:35:13,430953 (MainThread):   compiled SQL at target/run/ge_tutorials/staging/stg_npi.sql
+2020-02-27 05:35:13,431044 (MainThread): 
+2020-02-27 05:35:13,431148 (MainThread): Database Error in model stg_state_crosswalk (models/staging/stg_state_crosswalk.sql)
+2020-02-27 05:35:13,431235 (MainThread):   relation "public.state_abbreviations" does not exist
+2020-02-27 05:35:13,431313 (MainThread):   LINE 8: from "demo_db"."public"."state_abbreviations"
+2020-02-27 05:35:13,431429 (MainThread):                ^
+2020-02-27 05:35:13,431567 (MainThread):   compiled SQL at target/run/ge_tutorials/staging/stg_state_crosswalk.sql
+2020-02-27 05:35:13,431674 (MainThread): 
+2020-02-27 05:35:13,431795 (MainThread): Database Error in model stg_taxonomy (models/staging/stg_taxonomy.sql)
+2020-02-27 05:35:13,431896 (MainThread):   relation "public.healthcare_provider_taxonomy" does not exist
+2020-02-27 05:35:13,432052 (MainThread):   LINE 10: from "demo_db"."public"."healthcare_provider_taxonomy"
+2020-02-27 05:35:13,432155 (MainThread):                 ^
+2020-02-27 05:35:13,432244 (MainThread):   compiled SQL at target/run/ge_tutorials/staging/stg_taxonomy.sql
+2020-02-27 05:35:13,432345 (MainThread): 
+Done. PASS=2 WARN=0 ERROR=3 SKIP=0 TOTAL=5
+2020-02-27 05:35:13,432539 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x125033850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126888e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126888c90>]}
+2020-02-27 05:35:13,811362 (MainThread): Flushing usage events
+2020-02-27 05:35:24,638504 (MainThread): Running with dbt=0.15.1
+2020-02-27 05:35:24,702132 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.seed.SeedTask'>, debug=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method='seed', show=False, single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='seed', write_json=True)
+2020-02-27 05:35:24,702581 (MainThread): Tracking: tracking
+2020-02-27 05:35:24,716634 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fd22490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e5b1290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fd22ed0>]}
+2020-02-27 05:35:25,113696 (MainThread): Partial parsing not enabled
+2020-02-27 05:35:25,115256 (MainThread): Parsing macros/core.sql
+2020-02-27 05:35:25,118090 (MainThread): Parsing macros/materializations/helpers.sql
+2020-02-27 05:35:25,122717 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-02-27 05:35:25,123876 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-02-27 05:35:25,134772 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-02-27 05:35:25,147397 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-02-27 05:35:25,158216 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-02-27 05:35:25,159535 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-02-27 05:35:25,163462 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-02-27 05:35:25,168119 (MainThread): Parsing macros/materializations/table/table.sql
+2020-02-27 05:35:25,171939 (MainThread): Parsing macros/materializations/view/view.sql
+2020-02-27 05:35:25,175969 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-02-27 05:35:25,179329 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-02-27 05:35:25,179986 (MainThread): Parsing macros/etc/query.sql
+2020-02-27 05:35:25,180725 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-02-27 05:35:25,181836 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-02-27 05:35:25,183132 (MainThread): Parsing macros/etc/datetime.sql
+2020-02-27 05:35:25,189044 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-02-27 05:35:25,190315 (MainThread): Parsing macros/adapters/common.sql
+2020-02-27 05:35:25,206791 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-02-27 05:35:25,207565 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-02-27 05:35:25,208514 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-02-27 05:35:25,209259 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-02-27 05:35:25,210732 (MainThread): Parsing macros/catalog.sql
+2020-02-27 05:35:25,211854 (MainThread): Parsing macros/relations.sql
+2020-02-27 05:35:25,212963 (MainThread): Parsing macros/adapters.sql
+2020-02-27 05:35:25,219507 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-02-27 05:35:25,232420 (MainThread): Partial parsing not enabled
+2020-02-27 05:35:25,242018 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:35:25,242110 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:25,254309 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:35:25,254416 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:25,260131 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:35:25,260213 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:25,263893 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:35:25,263966 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:25,267602 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:35:25,267674 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:25,315531 (MainThread): Found 5 models, 0 tests, 0 snapshots, 0 analyses, 125 macros, 0 operations, 3 seed files, 0 sources
+2020-02-27 05:35:25,320007 (MainThread): 
+2020-02-27 05:35:25,320360 (MainThread): Acquiring new postgres connection "master".
+2020-02-27 05:35:25,320449 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:35:25,392035 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:25,392197 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+
+    select distinct nspname from pg_namespace
+  
+2020-02-27 05:35:25,396668 (MainThread): SQL status: SELECT 7 in 0.00 seconds
+2020-02-27 05:35:25,424328 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:25,424467 (MainThread): On master: BEGIN
+2020-02-27 05:35:25,424779 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:35:25,424851 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:25,424908 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+select
+      'demo_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'demo_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2020-02-27 05:35:25,426688 (MainThread): SQL status: SELECT 12 in 0.00 seconds
+2020-02-27 05:35:25,454873 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:25,454980 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2020-02-27 05:35:25,473106 (MainThread): SQL status: SELECT 8 in 0.02 seconds
+2020-02-27 05:35:25,481605 (MainThread): On master: ROLLBACK
+2020-02-27 05:35:25,481901 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:25,482008 (MainThread): On master: BEGIN
+2020-02-27 05:35:25,482422 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:35:25,482524 (MainThread): On master: COMMIT
+2020-02-27 05:35:25,482593 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:25,482653 (MainThread): On master: COMMIT
+2020-02-27 05:35:25,482852 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:35:25,483120 (MainThread): 21:35:25 | Concurrency: 1 threads (target='dev')
+2020-02-27 05:35:25,483224 (MainThread): 21:35:25 | 
+2020-02-27 05:35:25,484931 (Thread-1): Began running node seed.ge_tutorials.healthcare_provider_taxonomy
+2020-02-27 05:35:25,485111 (Thread-1): 21:35:25 | 1 of 3 START seed file public.healthcare_provider_taxonomy........... [RUN]
+2020-02-27 05:35:25,485412 (Thread-1): Acquiring new postgres connection "seed.ge_tutorials.healthcare_provider_taxonomy".
+2020-02-27 05:35:25,485490 (Thread-1): Opening a new connection, currently in state init
+2020-02-27 05:35:25,485588 (Thread-1): finished collecting timing info
+2020-02-27 05:35:25,519763 (Thread-1): finished collecting timing info
+2020-02-27 05:35:25,520167 (Thread-1): Compilation Error in seed healthcare_provider_taxonomy (data/healthcare_provider_taxonomy.csv)
+  When searching for a relation, dbt found an approximate match. Instead of guessing 
+  which relation to use, dbt will move on. Please delete "demo_db"."public"."HEALTHCARE_PROVIDER_TAXONOMY", or rename it to be less ambiguous.
+  Searched for: "demo_db"."public"."healthcare_provider_taxonomy"
+  Found: "demo_db"."public"."HEALTHCARE_PROVIDER_TAXONOMY"
+  
+  > in macro materialization_seed_default (macros/materializations/seed/seed.sql)
+  > called by seed healthcare_provider_taxonomy (data/healthcare_provider_taxonomy.csv)
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 218, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 161, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 260, in run
+    return self.execute(compiled_node, manifest)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/node_runners.py", line 436, in execute
+    result = materialization_macro.generator(context)()
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 155, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 570, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 110, in _invoke
+    return original_invoke(self, arguments, autoescape)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 574, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 376, in macro
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 440, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 732, in get_relation
+    identifier)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 720, in _make_match
+    if relation.matches(**search):
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/adapters/base/relation.py", line 207, in matches
+    dbt.exceptions.approximate_relation_match(target, self)
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/exceptions.py", line 636, in approximate_relation_match
+    relation=relation))
+  File "/opt/miniconda3/lib/python3.7/site-packages/dbt/exceptions.py", line 357, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in seed healthcare_provider_taxonomy (data/healthcare_provider_taxonomy.csv)
+  When searching for a relation, dbt found an approximate match. Instead of guessing 
+  which relation to use, dbt will move on. Please delete "demo_db"."public"."HEALTHCARE_PROVIDER_TAXONOMY", or rename it to be less ambiguous.
+  Searched for: "demo_db"."public"."healthcare_provider_taxonomy"
+  Found: "demo_db"."public"."HEALTHCARE_PROVIDER_TAXONOMY"
+  
+  > in macro materialization_seed_default (macros/materializations/seed/seed.sql)
+  > called by seed healthcare_provider_taxonomy (data/healthcare_provider_taxonomy.csv)
+2020-02-27 05:35:25,522173 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3d108857-38aa-43e0-9328-1afb6d74c09d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120ef8850>]}
+2020-02-27 05:35:25,886943 (Thread-1): 21:35:25 | 1 of 3 ERROR loading seed file public.healthcare_provider_taxonomy... [ERROR in 0.04s]
+2020-02-27 05:35:25,887285 (Thread-1): Finished running node seed.ge_tutorials.healthcare_provider_taxonomy
+2020-02-27 05:35:25,887548 (Thread-1): Began running node seed.ge_tutorials.npi_small
+2020-02-27 05:35:25,887817 (Thread-1): 21:35:25 | 2 of 3 START seed file public.npi_small.............................. [RUN]
+2020-02-27 05:35:25,888221 (Thread-1): Acquiring new postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:35:25,888353 (Thread-1): Opening a new connection, currently in state init
+2020-02-27 05:35:25,888497 (Thread-1): finished collecting timing info
+2020-02-27 05:35:26,326202 (Thread-1): * Deprecation Warning: 
+    The quote_columns parameter was not set for seeds, so the default value of
+    False was chosen. The default will change to True in a future release.
+
+    For more information, see:
+    https://docs.getdbt.com/v0.15/docs/seeds#section-specify-column-quoting
+    
+
+2020-02-27 05:35:26,356100 (Thread-1): Using postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:35:26,356255 (Thread-1): On seed.ge_tutorials.npi_small: BEGIN
+2020-02-27 05:35:26,360519 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:35:26,360776 (Thread-1): Using postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:35:26,360867 (Thread-1): On seed.ge_tutorials.npi_small: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "seed.ge_tutorials.npi_small"} */
+
+    create table "demo_db"."public"."npi_small" (NPI integer,Entity_Type_Code integer,Organization_Name text,Last_Name text,First_Name text,State text,Taxonomy_Code text)
+  
+2020-02-27 05:35:26,375307 (Thread-1): SQL status: CREATE TABLE in 0.01 seconds
+2020-02-27 05:35:26,650150 (Thread-1): Using postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:35:26,650313 (Thread-1): On seed.ge_tutorials.npi_small: 
+            insert into "demo_db"."public"."npi_small" (NPI, Entity_Type_Code, Organization_Name, Last_Name, First_Name, State, Taxonomy_Code) values
+            (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,...
+2020-02-27 05:35:26,777061 (Thread-1): SQL status: INSERT 0 10000 in 0.13 seconds
+2020-02-27 05:35:27,5477 (Thread-1): Using postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:35:27,5639 (Thread-1): On seed.ge_tutorials.npi_small: 
+            insert into "demo_db"."public"."npi_small" (NPI, Entity_Type_Code, Organization_Name, Last_Name, First_Name, State, Taxonomy_Code) values
+            (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,...
+2020-02-27 05:35:27,99197 (Thread-1): SQL status: INSERT 0 8649 in 0.09 seconds
+2020-02-27 05:35:27,100463 (Thread-1): Writing runtime SQL for node "seed.ge_tutorials.npi_small"
+2020-02-27 05:35:27,101709 (Thread-1): On seed.ge_tutorials.npi_small: COMMIT
+2020-02-27 05:35:27,101823 (Thread-1): Using postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:35:27,101907 (Thread-1): On seed.ge_tutorials.npi_small: COMMIT
+2020-02-27 05:35:27,107146 (Thread-1): SQL status: COMMIT in 0.01 seconds
+2020-02-27 05:35:27,110150 (Thread-1): finished collecting timing info
+2020-02-27 05:35:27,110783 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3d108857-38aa-43e0-9328-1afb6d74c09d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120e9bb50>]}
+2020-02-27 05:35:27,475718 (Thread-1): 21:35:27 | 2 of 3 OK loaded seed file public.npi_small.......................... [INSERT 18649 in 1.22s]
+2020-02-27 05:35:27,476051 (Thread-1): Finished running node seed.ge_tutorials.npi_small
+2020-02-27 05:35:27,476401 (Thread-1): Began running node seed.ge_tutorials.state_abbreviations
+2020-02-27 05:35:27,476911 (Thread-1): 21:35:27 | 3 of 3 START seed file public.state_abbreviations.................... [RUN]
+2020-02-27 05:35:27,478062 (Thread-1): Acquiring new postgres connection "seed.ge_tutorials.state_abbreviations".
+2020-02-27 05:35:27,478340 (Thread-1): Re-using an available connection from the pool (formerly seed.ge_tutorials.npi_small).
+2020-02-27 05:35:27,478664 (Thread-1): finished collecting timing info
+2020-02-27 05:35:27,485071 (Thread-1): Using postgres connection "seed.ge_tutorials.state_abbreviations".
+2020-02-27 05:35:27,485266 (Thread-1): On seed.ge_tutorials.state_abbreviations: BEGIN
+2020-02-27 05:35:27,485775 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:35:27,485903 (Thread-1): Using postgres connection "seed.ge_tutorials.state_abbreviations".
+2020-02-27 05:35:27,486005 (Thread-1): On seed.ge_tutorials.state_abbreviations: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "seed.ge_tutorials.state_abbreviations"} */
+
+    create table "demo_db"."public"."state_abbreviations" (name text,abbreviation text)
+  
+2020-02-27 05:35:27,487579 (Thread-1): SQL status: CREATE TABLE in 0.00 seconds
+2020-02-27 05:35:27,490435 (Thread-1): Using postgres connection "seed.ge_tutorials.state_abbreviations".
+2020-02-27 05:35:27,490553 (Thread-1): On seed.ge_tutorials.state_abbreviations: 
+            insert into "demo_db"."public"."state_abbreviations" (name, abbreviation) values
+            (%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s...
+2020-02-27 05:35:27,491172 (Thread-1): SQL status: INSERT 0 59 in 0.00 seconds
+2020-02-27 05:35:27,491466 (Thread-1): Writing runtime SQL for node "seed.ge_tutorials.state_abbreviations"
+2020-02-27 05:35:27,492516 (Thread-1): On seed.ge_tutorials.state_abbreviations: COMMIT
+2020-02-27 05:35:27,492625 (Thread-1): Using postgres connection "seed.ge_tutorials.state_abbreviations".
+2020-02-27 05:35:27,492713 (Thread-1): On seed.ge_tutorials.state_abbreviations: COMMIT
+2020-02-27 05:35:27,497157 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:35:27,502606 (Thread-1): finished collecting timing info
+2020-02-27 05:35:27,503445 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3d108857-38aa-43e0-9328-1afb6d74c09d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1211633d0>]}
+2020-02-27 05:35:27,874981 (Thread-1): 21:35:27 | 3 of 3 OK loaded seed file public.state_abbreviations................ [INSERT 59 in 0.03s]
+2020-02-27 05:35:27,875314 (Thread-1): Finished running node seed.ge_tutorials.state_abbreviations
+2020-02-27 05:35:27,971629 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:27,972020 (MainThread): On master: BEGIN
+2020-02-27 05:35:27,972648 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:35:27,972994 (MainThread): On master: COMMIT
+2020-02-27 05:35:27,973246 (MainThread): Using postgres connection "master".
+2020-02-27 05:35:27,973472 (MainThread): On master: COMMIT
+2020-02-27 05:35:27,974063 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:35:27,974801 (MainThread): 21:35:27 | 
+2020-02-27 05:35:27,975158 (MainThread): 21:35:27 | Finished running 3 seeds in 2.65s.
+2020-02-27 05:35:27,975458 (MainThread): Connection 'master' was left open.
+2020-02-27 05:35:27,975974 (MainThread): On master: Close
+2020-02-27 05:35:27,976506 (MainThread): Connection 'seed.ge_tutorials.state_abbreviations' was left open.
+2020-02-27 05:35:27,976974 (MainThread): On seed.ge_tutorials.state_abbreviations: Close
+2020-02-27 05:35:27,990741 (MainThread): 
+2020-02-27 05:35:27,990936 (MainThread): Completed with 1 error and 0 warnings:
+2020-02-27 05:35:27,991058 (MainThread): 
+2020-02-27 05:35:27,991167 (MainThread): Compilation Error in seed healthcare_provider_taxonomy (data/healthcare_provider_taxonomy.csv)
+2020-02-27 05:35:27,991264 (MainThread):   When searching for a relation, dbt found an approximate match. Instead of guessing 
+2020-02-27 05:35:27,991354 (MainThread):   which relation to use, dbt will move on. Please delete "demo_db"."public"."HEALTHCARE_PROVIDER_TAXONOMY", or rename it to be less ambiguous.
+2020-02-27 05:35:27,991441 (MainThread):   Searched for: "demo_db"."public"."healthcare_provider_taxonomy"
+2020-02-27 05:35:27,991532 (MainThread):   Found: "demo_db"."public"."HEALTHCARE_PROVIDER_TAXONOMY"
+2020-02-27 05:35:27,991620 (MainThread):   
+2020-02-27 05:35:27,991704 (MainThread):   > in macro materialization_seed_default (macros/materializations/seed/seed.sql)
+2020-02-27 05:35:27,991788 (MainThread):   > called by seed healthcare_provider_taxonomy (data/healthcare_provider_taxonomy.csv)
+2020-02-27 05:35:27,991880 (MainThread): 
+Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+2020-02-27 05:35:27,992148 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121168050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12117c850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121163050>]}
+2020-02-27 05:35:28,355841 (MainThread): Flushing usage events
+2020-02-27 05:37:58,670543 (MainThread): Running with dbt=0.15.1
+2020-02-27 05:37:58,733033 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.seed.SeedTask'>, debug=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method='seed', show=False, single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='seed', write_json=True)
+2020-02-27 05:37:58,733484 (MainThread): Tracking: tracking
+2020-02-27 05:37:58,748373 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127abc950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127abce50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127abccd0>]}
+2020-02-27 05:38:00,202833 (MainThread): Partial parsing not enabled
+2020-02-27 05:38:00,204957 (MainThread): Parsing macros/core.sql
+2020-02-27 05:38:00,209260 (MainThread): Parsing macros/materializations/helpers.sql
+2020-02-27 05:38:00,216107 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-02-27 05:38:00,217790 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-02-27 05:38:00,232134 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-02-27 05:38:00,245345 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-02-27 05:38:00,256816 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-02-27 05:38:00,258249 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-02-27 05:38:00,262703 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-02-27 05:38:00,267733 (MainThread): Parsing macros/materializations/table/table.sql
+2020-02-27 05:38:00,271979 (MainThread): Parsing macros/materializations/view/view.sql
+2020-02-27 05:38:00,276222 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-02-27 05:38:00,279556 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-02-27 05:38:00,280252 (MainThread): Parsing macros/etc/query.sql
+2020-02-27 05:38:00,281069 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-02-27 05:38:00,282286 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-02-27 05:38:00,283705 (MainThread): Parsing macros/etc/datetime.sql
+2020-02-27 05:38:00,289764 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-02-27 05:38:00,291368 (MainThread): Parsing macros/adapters/common.sql
+2020-02-27 05:38:00,310034 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-02-27 05:38:00,310992 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-02-27 05:38:00,311720 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-02-27 05:38:00,312536 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-02-27 05:38:00,314234 (MainThread): Parsing macros/catalog.sql
+2020-02-27 05:38:00,315489 (MainThread): Parsing macros/relations.sql
+2020-02-27 05:38:00,316628 (MainThread): Parsing macros/adapters.sql
+2020-02-27 05:38:00,323325 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-02-27 05:38:00,336494 (MainThread): Partial parsing not enabled
+2020-02-27 05:38:00,346082 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:38:00,346173 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:00,357599 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:38:00,357684 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:00,362996 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:38:00,363071 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:00,367062 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:38:00,367143 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:00,370865 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:38:00,370938 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:00,419375 (MainThread): Found 5 models, 0 tests, 0 snapshots, 0 analyses, 125 macros, 0 operations, 3 seed files, 0 sources
+2020-02-27 05:38:00,423617 (MainThread): 
+2020-02-27 05:38:00,424003 (MainThread): Acquiring new postgres connection "master".
+2020-02-27 05:38:00,424208 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:00,494551 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:00,494707 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+
+    select distinct nspname from pg_namespace
+  
+2020-02-27 05:38:00,550035 (MainThread): Got an error when attempting to open a postgres connection: 'FATAL:  database "demo_db" does not exist
+'
+2020-02-27 05:38:00,550261 (MainThread): Error running SQL: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+
+    select distinct nspname from pg_namespace
+  
+2020-02-27 05:38:00,550372 (MainThread): Rolling back transaction.
+2020-02-27 05:38:00,550495 (MainThread): On master: No close available on handle
+2020-02-27 05:38:00,550862 (MainThread): Connection 'master' was properly closed.
+2020-02-27 05:38:00,551004 (MainThread): ERROR: Database Error
+  FATAL:  database "demo_db" does not exist
+  
+2020-02-27 05:38:00,551187 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12754cf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127b67c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128c96e10>]}
+2020-02-27 05:38:00,905953 (MainThread): Flushing usage events
+2020-02-27 05:38:38,251877 (MainThread): Running with dbt=0.15.1
+2020-02-27 05:38:38,314386 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.seed.SeedTask'>, debug=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method='seed', show=False, single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='seed', write_json=True)
+2020-02-27 05:38:38,314808 (MainThread): Tracking: tracking
+2020-02-27 05:38:38,328019 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12711e490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127658050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127658150>]}
+2020-02-27 05:38:38,728284 (MainThread): Partial parsing not enabled
+2020-02-27 05:38:38,729822 (MainThread): Parsing macros/core.sql
+2020-02-27 05:38:38,732615 (MainThread): Parsing macros/materializations/helpers.sql
+2020-02-27 05:38:38,737081 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-02-27 05:38:38,738242 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-02-27 05:38:38,749030 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-02-27 05:38:38,761453 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-02-27 05:38:38,771952 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-02-27 05:38:38,773810 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-02-27 05:38:38,777978 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-02-27 05:38:38,782333 (MainThread): Parsing macros/materializations/table/table.sql
+2020-02-27 05:38:38,786103 (MainThread): Parsing macros/materializations/view/view.sql
+2020-02-27 05:38:38,790071 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-02-27 05:38:38,793131 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-02-27 05:38:38,793789 (MainThread): Parsing macros/etc/query.sql
+2020-02-27 05:38:38,794530 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-02-27 05:38:38,795635 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-02-27 05:38:38,797496 (MainThread): Parsing macros/etc/datetime.sql
+2020-02-27 05:38:38,803244 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-02-27 05:38:38,804582 (MainThread): Parsing macros/adapters/common.sql
+2020-02-27 05:38:38,821985 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-02-27 05:38:38,822924 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-02-27 05:38:38,823576 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-02-27 05:38:38,824319 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-02-27 05:38:38,825776 (MainThread): Parsing macros/catalog.sql
+2020-02-27 05:38:38,826916 (MainThread): Parsing macros/relations.sql
+2020-02-27 05:38:38,827953 (MainThread): Parsing macros/adapters.sql
+2020-02-27 05:38:38,834739 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-02-27 05:38:38,848121 (MainThread): Partial parsing not enabled
+2020-02-27 05:38:38,857772 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:38:38,857857 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:38,870021 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:38:38,870112 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:38,875623 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:38:38,875703 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:38,879446 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:38:38,879517 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:38,883217 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:38:38,883287 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:38,930650 (MainThread): Found 5 models, 0 tests, 0 snapshots, 0 analyses, 125 macros, 0 operations, 3 seed files, 0 sources
+2020-02-27 05:38:38,934746 (MainThread): 
+2020-02-27 05:38:38,935124 (MainThread): Acquiring new postgres connection "master".
+2020-02-27 05:38:38,935220 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:39,5248 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:39,5405 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+
+    select distinct nspname from pg_namespace
+  
+2020-02-27 05:38:39,50853 (MainThread): SQL status: SELECT 6 in 0.05 seconds
+2020-02-27 05:38:39,78972 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:39,79112 (MainThread): On master: BEGIN
+2020-02-27 05:38:39,79447 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:39,79519 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:39,79575 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+select
+      'ge_tutorials' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'ge_tutorials' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2020-02-27 05:38:39,81678 (MainThread): SQL status: SELECT 0 in 0.00 seconds
+2020-02-27 05:38:39,103676 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:39,103769 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2020-02-27 05:38:39,105732 (MainThread): SQL status: SELECT 0 in 0.00 seconds
+2020-02-27 05:38:39,106338 (MainThread): On master: ROLLBACK
+2020-02-27 05:38:39,106575 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:39,106644 (MainThread): On master: BEGIN
+2020-02-27 05:38:39,106882 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:39,106957 (MainThread): On master: COMMIT
+2020-02-27 05:38:39,107018 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:39,107073 (MainThread): On master: COMMIT
+2020-02-27 05:38:39,107356 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:39,107575 (MainThread): 21:38:39 | Concurrency: 1 threads (target='dev')
+2020-02-27 05:38:39,107692 (MainThread): 21:38:39 | 
+2020-02-27 05:38:39,109413 (Thread-1): Began running node seed.ge_tutorials.healthcare_provider_taxonomy
+2020-02-27 05:38:39,109540 (Thread-1): 21:38:39 | 1 of 3 START seed file public.healthcare_provider_taxonomy........... [RUN]
+2020-02-27 05:38:39,109878 (Thread-1): Acquiring new postgres connection "seed.ge_tutorials.healthcare_provider_taxonomy".
+2020-02-27 05:38:39,109946 (Thread-1): Opening a new connection, currently in state init
+2020-02-27 05:38:39,110031 (Thread-1): finished collecting timing info
+2020-02-27 05:38:39,156732 (Thread-1): * Deprecation Warning: 
+    The quote_columns parameter was not set for seeds, so the default value of
+    False was chosen. The default will change to True in a future release.
+
+    For more information, see:
+    https://docs.getdbt.com/v0.15/docs/seeds#section-specify-column-quoting
+    
+
+2020-02-27 05:38:39,157113 (Thread-1): Using postgres connection "seed.ge_tutorials.healthcare_provider_taxonomy".
+2020-02-27 05:38:39,157196 (Thread-1): On seed.ge_tutorials.healthcare_provider_taxonomy: BEGIN
+2020-02-27 05:38:39,160514 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:39,160661 (Thread-1): Using postgres connection "seed.ge_tutorials.healthcare_provider_taxonomy".
+2020-02-27 05:38:39,160733 (Thread-1): On seed.ge_tutorials.healthcare_provider_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "seed.ge_tutorials.healthcare_provider_taxonomy"} */
+
+    create table "ge_tutorials"."public"."healthcare_provider_taxonomy" (MEDICARE_SPECIALTY_CODE text,MEDICARE_PROVIDER_SUPPLIER_TYPE_DESCRIPTION text,PROVIDER_TAXONOMY_CODE text,PROVIDER_TAXONOMY_DESCRIPTION text)
+  
+2020-02-27 05:38:39,165683 (Thread-1): SQL status: CREATE TABLE in 0.00 seconds
+2020-02-27 05:38:39,177842 (Thread-1): Using postgres connection "seed.ge_tutorials.healthcare_provider_taxonomy".
+2020-02-27 05:38:39,178021 (Thread-1): On seed.ge_tutorials.healthcare_provider_taxonomy: 
+            insert into "ge_tutorials"."public"."healthcare_provider_taxonomy" (MEDICARE_SPECIALTY_CODE, MEDICARE_PROVIDER_SUPPLIER_TYPE_DESCRIPTION, PROVIDER_TAXONOMY_CODE, PROVIDER_TAXONOMY_DESCRIPTION) values
+            (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,...
+2020-02-27 05:38:39,182177 (Thread-1): SQL status: INSERT 0 521 in 0.00 seconds
+2020-02-27 05:38:39,182506 (Thread-1): Writing runtime SQL for node "seed.ge_tutorials.healthcare_provider_taxonomy"
+2020-02-27 05:38:39,183389 (Thread-1): On seed.ge_tutorials.healthcare_provider_taxonomy: COMMIT
+2020-02-27 05:38:39,183473 (Thread-1): Using postgres connection "seed.ge_tutorials.healthcare_provider_taxonomy".
+2020-02-27 05:38:39,183538 (Thread-1): On seed.ge_tutorials.healthcare_provider_taxonomy: COMMIT
+2020-02-27 05:38:39,187542 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:39,190365 (Thread-1): finished collecting timing info
+2020-02-27 05:38:39,190949 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '542266ff-ba99-422e-9664-243afeca04e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12885ffd0>]}
+2020-02-27 05:38:39,557603 (Thread-1): 21:38:39 | 1 of 3 OK loaded seed file public.healthcare_provider_taxonomy....... [INSERT 521 in 0.08s]
+2020-02-27 05:38:39,557872 (Thread-1): Finished running node seed.ge_tutorials.healthcare_provider_taxonomy
+2020-02-27 05:38:39,558144 (Thread-1): Began running node seed.ge_tutorials.npi_small
+2020-02-27 05:38:39,558439 (Thread-1): 21:38:39 | 2 of 3 START seed file public.npi_small.............................. [RUN]
+2020-02-27 05:38:39,558890 (Thread-1): Acquiring new postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:38:39,559011 (Thread-1): Re-using an available connection from the pool (formerly seed.ge_tutorials.healthcare_provider_taxonomy).
+2020-02-27 05:38:39,559136 (Thread-1): finished collecting timing info
+2020-02-27 05:38:40,3575 (Thread-1): Using postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:38:40,3756 (Thread-1): On seed.ge_tutorials.npi_small: BEGIN
+2020-02-27 05:38:40,4224 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:40,4305 (Thread-1): Using postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:38:40,4367 (Thread-1): On seed.ge_tutorials.npi_small: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "seed.ge_tutorials.npi_small"} */
+
+    create table "ge_tutorials"."public"."npi_small" (NPI integer,Entity_Type_Code integer,Organization_Name text,Last_Name text,First_Name text,State text,Taxonomy_Code text)
+  
+2020-02-27 05:38:40,6019 (Thread-1): SQL status: CREATE TABLE in 0.00 seconds
+2020-02-27 05:38:40,248061 (Thread-1): Using postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:38:40,248239 (Thread-1): On seed.ge_tutorials.npi_small: 
+            insert into "ge_tutorials"."public"."npi_small" (NPI, Entity_Type_Code, Organization_Name, Last_Name, First_Name, State, Taxonomy_Code) values
+            (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s)...
+2020-02-27 05:38:40,381671 (Thread-1): SQL status: INSERT 0 10000 in 0.13 seconds
+2020-02-27 05:38:40,608682 (Thread-1): Using postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:38:40,608832 (Thread-1): On seed.ge_tutorials.npi_small: 
+            insert into "ge_tutorials"."public"."npi_small" (NPI, Entity_Type_Code, Organization_Name, Last_Name, First_Name, State, Taxonomy_Code) values
+            (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s)...
+2020-02-27 05:38:40,707080 (Thread-1): SQL status: INSERT 0 8649 in 0.10 seconds
+2020-02-27 05:38:40,708732 (Thread-1): Writing runtime SQL for node "seed.ge_tutorials.npi_small"
+2020-02-27 05:38:40,710153 (Thread-1): On seed.ge_tutorials.npi_small: COMMIT
+2020-02-27 05:38:40,710363 (Thread-1): Using postgres connection "seed.ge_tutorials.npi_small".
+2020-02-27 05:38:40,710494 (Thread-1): On seed.ge_tutorials.npi_small: COMMIT
+2020-02-27 05:38:40,714340 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:40,717298 (Thread-1): finished collecting timing info
+2020-02-27 05:38:40,719256 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '542266ff-ba99-422e-9664-243afeca04e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128c29bd0>]}
+2020-02-27 05:38:41,85435 (Thread-1): 21:38:41 | 2 of 3 OK loaded seed file public.npi_small.......................... [INSERT 18649 in 1.16s]
+2020-02-27 05:38:41,85759 (Thread-1): Finished running node seed.ge_tutorials.npi_small
+2020-02-27 05:38:41,86077 (Thread-1): Began running node seed.ge_tutorials.state_abbreviations
+2020-02-27 05:38:41,86754 (Thread-1): 21:38:41 | 3 of 3 START seed file public.state_abbreviations.................... [RUN]
+2020-02-27 05:38:41,87827 (Thread-1): Acquiring new postgres connection "seed.ge_tutorials.state_abbreviations".
+2020-02-27 05:38:41,88063 (Thread-1): Re-using an available connection from the pool (formerly seed.ge_tutorials.npi_small).
+2020-02-27 05:38:41,88271 (Thread-1): finished collecting timing info
+2020-02-27 05:38:41,93078 (Thread-1): Using postgres connection "seed.ge_tutorials.state_abbreviations".
+2020-02-27 05:38:41,93214 (Thread-1): On seed.ge_tutorials.state_abbreviations: BEGIN
+2020-02-27 05:38:41,93720 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:41,93852 (Thread-1): Using postgres connection "seed.ge_tutorials.state_abbreviations".
+2020-02-27 05:38:41,93956 (Thread-1): On seed.ge_tutorials.state_abbreviations: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "seed.ge_tutorials.state_abbreviations"} */
+
+    create table "ge_tutorials"."public"."state_abbreviations" (name text,abbreviation text)
+  
+2020-02-27 05:38:41,95495 (Thread-1): SQL status: CREATE TABLE in 0.00 seconds
+2020-02-27 05:38:41,97875 (Thread-1): Using postgres connection "seed.ge_tutorials.state_abbreviations".
+2020-02-27 05:38:41,97984 (Thread-1): On seed.ge_tutorials.state_abbreviations: 
+            insert into "ge_tutorials"."public"."state_abbreviations" (name, abbreviation) values
+            (%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(...
+2020-02-27 05:38:41,98531 (Thread-1): SQL status: INSERT 0 59 in 0.00 seconds
+2020-02-27 05:38:41,98779 (Thread-1): Writing runtime SQL for node "seed.ge_tutorials.state_abbreviations"
+2020-02-27 05:38:41,99689 (Thread-1): On seed.ge_tutorials.state_abbreviations: COMMIT
+2020-02-27 05:38:41,99779 (Thread-1): Using postgres connection "seed.ge_tutorials.state_abbreviations".
+2020-02-27 05:38:41,99865 (Thread-1): On seed.ge_tutorials.state_abbreviations: COMMIT
+2020-02-27 05:38:41,104396 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:41,108152 (Thread-1): finished collecting timing info
+2020-02-27 05:38:41,108875 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '542266ff-ba99-422e-9664-243afeca04e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128c30a10>]}
+2020-02-27 05:38:41,472652 (Thread-1): 21:38:41 | 3 of 3 OK loaded seed file public.state_abbreviations................ [INSERT 59 in 0.02s]
+2020-02-27 05:38:41,472982 (Thread-1): Finished running node seed.ge_tutorials.state_abbreviations
+2020-02-27 05:38:41,561742 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:41,561963 (MainThread): On master: BEGIN
+2020-02-27 05:38:41,562306 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:41,562488 (MainThread): On master: COMMIT
+2020-02-27 05:38:41,562611 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:41,562735 (MainThread): On master: COMMIT
+2020-02-27 05:38:41,562960 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:41,563259 (MainThread): 21:38:41 | 
+2020-02-27 05:38:41,563399 (MainThread): 21:38:41 | Finished running 3 seeds in 2.63s.
+2020-02-27 05:38:41,563567 (MainThread): Connection 'master' was left open.
+2020-02-27 05:38:41,563671 (MainThread): On master: Close
+2020-02-27 05:38:41,563815 (MainThread): Connection 'seed.ge_tutorials.state_abbreviations' was left open.
+2020-02-27 05:38:41,563941 (MainThread): On seed.ge_tutorials.state_abbreviations: Close
+2020-02-27 05:38:41,572795 (MainThread): 
+2020-02-27 05:38:41,572965 (MainThread): Completed successfully
+2020-02-27 05:38:41,573082 (MainThread): 
+Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+2020-02-27 05:38:41,573269 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128c38490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128a7f5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128a85f10>]}
+2020-02-27 05:38:41,937140 (MainThread): Flushing usage events
+2020-02-27 05:38:55,861315 (MainThread): Running with dbt=0.15.1
+2020-02-27 05:38:55,924245 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/sam/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-02-27 05:38:55,924737 (MainThread): Tracking: tracking
+2020-02-27 05:38:55,938494 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cc93450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cc93d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cc93c50>]}
+2020-02-27 05:38:56,376082 (MainThread): Partial parsing not enabled
+2020-02-27 05:38:56,377521 (MainThread): Parsing macros/core.sql
+2020-02-27 05:38:56,380304 (MainThread): Parsing macros/materializations/helpers.sql
+2020-02-27 05:38:56,384732 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-02-27 05:38:56,385893 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-02-27 05:38:56,396746 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-02-27 05:38:56,409232 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-02-27 05:38:56,420170 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-02-27 05:38:56,421364 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-02-27 05:38:56,426048 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-02-27 05:38:56,430319 (MainThread): Parsing macros/materializations/table/table.sql
+2020-02-27 05:38:56,435571 (MainThread): Parsing macros/materializations/view/view.sql
+2020-02-27 05:38:56,439579 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-02-27 05:38:56,442674 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-02-27 05:38:56,443326 (MainThread): Parsing macros/etc/query.sql
+2020-02-27 05:38:56,444095 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-02-27 05:38:56,445222 (MainThread): Parsing macros/etc/get_relation_comment.sql
+2020-02-27 05:38:56,446531 (MainThread): Parsing macros/etc/datetime.sql
+2020-02-27 05:38:56,452165 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-02-27 05:38:56,453416 (MainThread): Parsing macros/adapters/common.sql
+2020-02-27 05:38:56,470626 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-02-27 05:38:56,471503 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-02-27 05:38:56,472144 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-02-27 05:38:56,472877 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-02-27 05:38:56,474313 (MainThread): Parsing macros/catalog.sql
+2020-02-27 05:38:56,475432 (MainThread): Parsing macros/relations.sql
+2020-02-27 05:38:56,476452 (MainThread): Parsing macros/adapters.sql
+2020-02-27 05:38:56,482699 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2020-02-27 05:38:56,495627 (MainThread): Partial parsing not enabled
+2020-02-27 05:38:56,505067 (MainThread): Acquiring new postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:38:56,505148 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:56,518079 (MainThread): Acquiring new postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:38:56,518218 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:56,523729 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:38:56,523810 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:56,527699 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:38:56,527776 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:56,531447 (MainThread): Acquiring new postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:38:56,531521 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:56,578942 (MainThread): Found 5 models, 0 tests, 0 snapshots, 0 analyses, 125 macros, 0 operations, 3 seed files, 0 sources
+2020-02-27 05:38:56,583188 (MainThread): 
+2020-02-27 05:38:56,583636 (MainThread): Acquiring new postgres connection "master".
+2020-02-27 05:38:56,583801 (MainThread): Opening a new connection, currently in state init
+2020-02-27 05:38:56,660581 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:56,660764 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+
+    select distinct nspname from pg_namespace
+  
+2020-02-27 05:38:56,706125 (MainThread): SQL status: SELECT 6 in 0.05 seconds
+2020-02-27 05:38:56,734726 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:56,734880 (MainThread): On master: BEGIN
+2020-02-27 05:38:56,735222 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:56,735300 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:56,735360 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+select
+      'ge_tutorials' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'ge_tutorials' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2020-02-27 05:38:56,737123 (MainThread): SQL status: SELECT 3 in 0.00 seconds
+2020-02-27 05:38:56,761242 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:56,761361 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2020-02-27 05:38:56,764662 (MainThread): SQL status: SELECT 0 in 0.00 seconds
+2020-02-27 05:38:56,765700 (MainThread): On master: ROLLBACK
+2020-02-27 05:38:56,765917 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:56,766013 (MainThread): On master: BEGIN
+2020-02-27 05:38:56,766304 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:56,766423 (MainThread): On master: COMMIT
+2020-02-27 05:38:56,766519 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:56,766599 (MainThread): On master: COMMIT
+2020-02-27 05:38:56,766774 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:56,767077 (MainThread): 21:38:56 | Concurrency: 1 threads (target='dev')
+2020-02-27 05:38:56,767213 (MainThread): 21:38:56 | 
+2020-02-27 05:38:56,768838 (Thread-1): Began running node model.ge_tutorials.stg_npi
+2020-02-27 05:38:56,769011 (Thread-1): 21:38:56 | 1 of 5 START view model public.stg_npi............................... [RUN]
+2020-02-27 05:38:56,769280 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:38:56,769377 (Thread-1): Opening a new connection, currently in state init
+2020-02-27 05:38:56,769482 (Thread-1): Compiling model.ge_tutorials.stg_npi
+2020-02-27 05:38:56,779929 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_npi"
+2020-02-27 05:38:56,780271 (Thread-1): finished collecting timing info
+2020-02-27 05:38:56,808482 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:38:56,808647 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "ge_tutorials"."public"."stg_npi__dbt_tmp" cascade
+2020-02-27 05:38:56,811962 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:56,813938 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:38:56,814042 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "ge_tutorials"."public"."stg_npi__dbt_backup" cascade
+2020-02-27 05:38:56,814313 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:56,815480 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_npi"
+2020-02-27 05:38:56,815835 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:38:56,815916 (Thread-1): On model.ge_tutorials.stg_npi: BEGIN
+2020-02-27 05:38:56,816092 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:56,816170 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:38:56,816235 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+
+  
+  create view "ge_tutorials"."public"."stg_npi__dbt_tmp" as (
+    select 
+	npi,
+	entity_type_code,
+	organization_name,
+	last_name,
+	first_name,
+	state,
+	taxonomy_code
+from "ge_tutorials"."public"."npi_small"
+  );
+
+2020-02-27 05:38:56,817831 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-02-27 05:38:56,819571 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:38:56,819654 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+alter table "ge_tutorials"."public"."stg_npi__dbt_tmp" rename to "stg_npi"
+2020-02-27 05:38:56,819977 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-02-27 05:38:56,820603 (Thread-1): On model.ge_tutorials.stg_npi: COMMIT
+2020-02-27 05:38:56,820687 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:38:56,820754 (Thread-1): On model.ge_tutorials.stg_npi: COMMIT
+2020-02-27 05:38:56,821410 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:56,824698 (Thread-1): Using postgres connection "model.ge_tutorials.stg_npi".
+2020-02-27 05:38:56,824903 (Thread-1): On model.ge_tutorials.stg_npi: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_npi"} */
+drop view if exists "ge_tutorials"."public"."stg_npi__dbt_backup" cascade
+2020-02-27 05:38:56,825385 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:56,828982 (Thread-1): finished collecting timing info
+2020-02-27 05:38:56,829817 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0432b65a-edea-46fc-b791-cfc91efc069f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11de7e510>]}
+2020-02-27 05:38:57,195509 (Thread-1): 21:38:57 | 1 of 5 OK created view model public.stg_npi.......................... [CREATE VIEW in 0.06s]
+2020-02-27 05:38:57,195851 (Thread-1): Finished running node model.ge_tutorials.stg_npi
+2020-02-27 05:38:57,196185 (Thread-1): Began running node model.ge_tutorials.stg_state_crosswalk
+2020-02-27 05:38:57,196685 (Thread-1): 21:38:57 | 2 of 5 START view model public.stg_state_crosswalk................... [RUN]
+2020-02-27 05:38:57,197377 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:38:57,197609 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_npi).
+2020-02-27 05:38:57,197789 (Thread-1): Compiling model.ge_tutorials.stg_state_crosswalk
+2020-02-27 05:38:57,206058 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_state_crosswalk"
+2020-02-27 05:38:57,206558 (Thread-1): finished collecting timing info
+2020-02-27 05:38:57,213245 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:38:57,213387 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_crosswalk"} */
+drop view if exists "ge_tutorials"."public"."stg_state_crosswalk__dbt_tmp" cascade
+2020-02-27 05:38:57,213726 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:57,216309 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:38:57,216455 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_crosswalk"} */
+drop view if exists "ge_tutorials"."public"."stg_state_crosswalk__dbt_backup" cascade
+2020-02-27 05:38:57,216846 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:57,221123 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_state_crosswalk"
+2020-02-27 05:38:57,221732 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:38:57,221909 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: BEGIN
+2020-02-27 05:38:57,222181 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:57,222308 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:38:57,222411 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_crosswalk"} */
+
+  
+  create view "ge_tutorials"."public"."stg_state_crosswalk__dbt_tmp" as (
+    select 
+	name as state,
+	abbreviation as state_abbrev
+from "ge_tutorials"."public"."state_abbreviations"
+  );
+
+2020-02-27 05:38:57,223292 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-02-27 05:38:57,226755 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:38:57,226940 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_crosswalk"} */
+alter table "ge_tutorials"."public"."stg_state_crosswalk__dbt_tmp" rename to "stg_state_crosswalk"
+2020-02-27 05:38:57,227472 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-02-27 05:38:57,228439 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: COMMIT
+2020-02-27 05:38:57,228554 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:38:57,228644 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: COMMIT
+2020-02-27 05:38:57,229057 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:57,230773 (Thread-1): Using postgres connection "model.ge_tutorials.stg_state_crosswalk".
+2020-02-27 05:38:57,230881 (Thread-1): On model.ge_tutorials.stg_state_crosswalk: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_state_crosswalk"} */
+drop view if exists "ge_tutorials"."public"."stg_state_crosswalk__dbt_backup" cascade
+2020-02-27 05:38:57,231098 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:57,233559 (Thread-1): finished collecting timing info
+2020-02-27 05:38:57,234142 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0432b65a-edea-46fc-b791-cfc91efc069f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e22bf10>]}
+2020-02-27 05:38:57,608176 (Thread-1): 21:38:57 | 2 of 5 OK created view model public.stg_state_crosswalk.............. [CREATE VIEW in 0.04s]
+2020-02-27 05:38:57,608505 (Thread-1): Finished running node model.ge_tutorials.stg_state_crosswalk
+2020-02-27 05:38:57,608769 (Thread-1): Began running node model.ge_tutorials.stg_taxonomy
+2020-02-27 05:38:57,609176 (Thread-1): 21:38:57 | 3 of 5 START view model public.stg_taxonomy.......................... [RUN]
+2020-02-27 05:38:57,609644 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:38:57,609773 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_state_crosswalk).
+2020-02-27 05:38:57,609896 (Thread-1): Compiling model.ge_tutorials.stg_taxonomy
+2020-02-27 05:38:57,617297 (Thread-1): Writing injected SQL for node "model.ge_tutorials.stg_taxonomy"
+2020-02-27 05:38:57,617746 (Thread-1): finished collecting timing info
+2020-02-27 05:38:57,624271 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:38:57,624395 (Thread-1): On model.ge_tutorials.stg_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_taxonomy"} */
+drop view if exists "ge_tutorials"."public"."stg_taxonomy__dbt_tmp" cascade
+2020-02-27 05:38:57,624762 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:57,627065 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:38:57,627219 (Thread-1): On model.ge_tutorials.stg_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_taxonomy"} */
+drop view if exists "ge_tutorials"."public"."stg_taxonomy__dbt_backup" cascade
+2020-02-27 05:38:57,627525 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:57,629223 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.stg_taxonomy"
+2020-02-27 05:38:57,629752 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:38:57,629893 (Thread-1): On model.ge_tutorials.stg_taxonomy: BEGIN
+2020-02-27 05:38:57,630201 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:57,630336 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:38:57,630431 (Thread-1): On model.ge_tutorials.stg_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_taxonomy"} */
+
+  
+  create view "ge_tutorials"."public"."stg_taxonomy__dbt_tmp" as (
+    select 
+	medicare_specialty_code,
+	medicare_provider_supplier_type_description,
+	provider_taxonomy_code,
+	provider_taxonomy_description
+from "ge_tutorials"."public"."healthcare_provider_taxonomy"
+  );
+
+2020-02-27 05:38:57,631337 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-02-27 05:38:57,633908 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:38:57,634089 (Thread-1): On model.ge_tutorials.stg_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_taxonomy"} */
+alter table "ge_tutorials"."public"."stg_taxonomy__dbt_tmp" rename to "stg_taxonomy"
+2020-02-27 05:38:57,634559 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-02-27 05:38:57,635528 (Thread-1): On model.ge_tutorials.stg_taxonomy: COMMIT
+2020-02-27 05:38:57,635655 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:38:57,635757 (Thread-1): On model.ge_tutorials.stg_taxonomy: COMMIT
+2020-02-27 05:38:57,636191 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:57,638119 (Thread-1): Using postgres connection "model.ge_tutorials.stg_taxonomy".
+2020-02-27 05:38:57,638277 (Thread-1): On model.ge_tutorials.stg_taxonomy: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.stg_taxonomy"} */
+drop view if exists "ge_tutorials"."public"."stg_taxonomy__dbt_backup" cascade
+2020-02-27 05:38:57,638542 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:57,640923 (Thread-1): finished collecting timing info
+2020-02-27 05:38:57,641552 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0432b65a-edea-46fc-b791-cfc91efc069f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dfe9950>]}
+2020-02-27 05:38:57,996963 (Thread-1): 21:38:57 | 3 of 5 OK created view model public.stg_taxonomy..................... [CREATE VIEW in 0.03s]
+2020-02-27 05:38:57,997310 (Thread-1): Finished running node model.ge_tutorials.stg_taxonomy
+2020-02-27 05:38:57,997893 (Thread-1): Began running node model.ge_tutorials.npi_with_crosswalks
+2020-02-27 05:38:57,998180 (Thread-1): 21:38:57 | 4 of 5 START view model public.npi_with_crosswalks................... [RUN]
+2020-02-27 05:38:57,998591 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:38:57,998718 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.stg_taxonomy).
+2020-02-27 05:38:57,998842 (Thread-1): Compiling model.ge_tutorials.npi_with_crosswalks
+2020-02-27 05:38:58,9397 (Thread-1): Writing injected SQL for node "model.ge_tutorials.npi_with_crosswalks"
+2020-02-27 05:38:58,9794 (Thread-1): finished collecting timing info
+2020-02-27 05:38:58,15556 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:38:58,15673 (Thread-1): On model.ge_tutorials.npi_with_crosswalks: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_crosswalks"} */
+drop view if exists "ge_tutorials"."public"."npi_with_crosswalks__dbt_tmp" cascade
+2020-02-27 05:38:58,16000 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:58,18165 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:38:58,18323 (Thread-1): On model.ge_tutorials.npi_with_crosswalks: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_crosswalks"} */
+drop view if exists "ge_tutorials"."public"."npi_with_crosswalks__dbt_backup" cascade
+2020-02-27 05:38:58,18624 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:58,20017 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.npi_with_crosswalks"
+2020-02-27 05:38:58,20499 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:38:58,20653 (Thread-1): On model.ge_tutorials.npi_with_crosswalks: BEGIN
+2020-02-27 05:38:58,20944 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:58,21083 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:38:58,21168 (Thread-1): On model.ge_tutorials.npi_with_crosswalks: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_crosswalks"} */
+
+  
+  create view "ge_tutorials"."public"."npi_with_crosswalks__dbt_tmp" as (
+    select 
+	n.*,
+	t.provider_taxonomy_description,
+	s.state as state_name
+from "ge_tutorials"."public"."stg_npi" n
+left join "ge_tutorials"."public"."stg_taxonomy" t
+	on n.taxonomy_code = t.provider_taxonomy_code
+left join "ge_tutorials"."public"."stg_state_crosswalk" s
+	on n.state = s.state_abbrev
+  );
+
+2020-02-27 05:38:58,22615 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-02-27 05:38:58,25037 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:38:58,25215 (Thread-1): On model.ge_tutorials.npi_with_crosswalks: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_crosswalks"} */
+alter table "ge_tutorials"."public"."npi_with_crosswalks__dbt_tmp" rename to "npi_with_crosswalks"
+2020-02-27 05:38:58,25662 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-02-27 05:38:58,26556 (Thread-1): On model.ge_tutorials.npi_with_crosswalks: COMMIT
+2020-02-27 05:38:58,26682 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:38:58,26765 (Thread-1): On model.ge_tutorials.npi_with_crosswalks: COMMIT
+2020-02-27 05:38:58,27307 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:58,28984 (Thread-1): Using postgres connection "model.ge_tutorials.npi_with_crosswalks".
+2020-02-27 05:38:58,29126 (Thread-1): On model.ge_tutorials.npi_with_crosswalks: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.npi_with_crosswalks"} */
+drop view if exists "ge_tutorials"."public"."npi_with_crosswalks__dbt_backup" cascade
+2020-02-27 05:38:58,29401 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:58,31638 (Thread-1): finished collecting timing info
+2020-02-27 05:38:58,32295 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0432b65a-edea-46fc-b791-cfc91efc069f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11de6e350>]}
+2020-02-27 05:38:58,390295 (Thread-1): 21:38:58 | 4 of 5 OK created view model public.npi_with_crosswalks.............. [CREATE VIEW in 0.03s]
+2020-02-27 05:38:58,390634 (Thread-1): Finished running node model.ge_tutorials.npi_with_crosswalks
+2020-02-27 05:38:58,391277 (Thread-1): Began running node model.ge_tutorials.count_specialties
+2020-02-27 05:38:58,391646 (Thread-1): 21:38:58 | 5 of 5 START view model public.count_specialties..................... [RUN]
+2020-02-27 05:38:58,392291 (Thread-1): Acquiring new postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:38:58,392517 (Thread-1): Re-using an available connection from the pool (formerly model.ge_tutorials.npi_with_crosswalks).
+2020-02-27 05:38:58,392687 (Thread-1): Compiling model.ge_tutorials.count_specialties
+2020-02-27 05:38:58,400198 (Thread-1): Writing injected SQL for node "model.ge_tutorials.count_specialties"
+2020-02-27 05:38:58,400620 (Thread-1): finished collecting timing info
+2020-02-27 05:38:58,406183 (Thread-1): Using postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:38:58,406282 (Thread-1): On model.ge_tutorials.count_specialties: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_specialties"} */
+drop view if exists "ge_tutorials"."public"."count_specialties__dbt_tmp" cascade
+2020-02-27 05:38:58,406618 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:58,408408 (Thread-1): Using postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:38:58,408499 (Thread-1): On model.ge_tutorials.count_specialties: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_specialties"} */
+drop view if exists "ge_tutorials"."public"."count_specialties__dbt_backup" cascade
+2020-02-27 05:38:58,408709 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:58,411588 (Thread-1): Writing runtime SQL for node "model.ge_tutorials.count_specialties"
+2020-02-27 05:38:58,412409 (Thread-1): Using postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:38:58,412685 (Thread-1): On model.ge_tutorials.count_specialties: BEGIN
+2020-02-27 05:38:58,413058 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:58,413283 (Thread-1): Using postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:38:58,413402 (Thread-1): On model.ge_tutorials.count_specialties: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_specialties"} */
+
+  
+  create view "ge_tutorials"."public"."count_specialties__dbt_tmp" as (
+    select 
+	provider_taxonomy_description,
+	state_name,
+	count(distinct npi)
+from "ge_tutorials"."public"."npi_with_crosswalks" n
+group by 1, 2
+  );
+
+2020-02-27 05:38:58,414895 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2020-02-27 05:38:58,417055 (Thread-1): Using postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:38:58,417181 (Thread-1): On model.ge_tutorials.count_specialties: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_specialties"} */
+alter table "ge_tutorials"."public"."count_specialties__dbt_tmp" rename to "count_specialties"
+2020-02-27 05:38:58,417594 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2020-02-27 05:38:58,419782 (Thread-1): On model.ge_tutorials.count_specialties: COMMIT
+2020-02-27 05:38:58,420130 (Thread-1): Using postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:38:58,420235 (Thread-1): On model.ge_tutorials.count_specialties: COMMIT
+2020-02-27 05:38:58,420730 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:58,422458 (Thread-1): Using postgres connection "model.ge_tutorials.count_specialties".
+2020-02-27 05:38:58,422595 (Thread-1): On model.ge_tutorials.count_specialties: /* {"app": "dbt", "dbt_version": "0.15.1", "profile_name": "ge_tutorials", "target_name": "dev", "node_id": "model.ge_tutorials.count_specialties"} */
+drop view if exists "ge_tutorials"."public"."count_specialties__dbt_backup" cascade
+2020-02-27 05:38:58,423084 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2020-02-27 05:38:58,425883 (Thread-1): finished collecting timing info
+2020-02-27 05:38:58,426675 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0432b65a-edea-46fc-b791-cfc91efc069f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11df969d0>]}
+2020-02-27 05:38:58,801815 (Thread-1): 21:38:58 | 5 of 5 OK created view model public.count_specialties................ [CREATE VIEW in 0.03s]
+2020-02-27 05:38:58,802157 (Thread-1): Finished running node model.ge_tutorials.count_specialties
+2020-02-27 05:38:58,821569 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:58,821875 (MainThread): On master: BEGIN
+2020-02-27 05:38:58,822390 (MainThread): SQL status: BEGIN in 0.00 seconds
+2020-02-27 05:38:58,822632 (MainThread): On master: COMMIT
+2020-02-27 05:38:58,822805 (MainThread): Using postgres connection "master".
+2020-02-27 05:38:58,822960 (MainThread): On master: COMMIT
+2020-02-27 05:38:58,823389 (MainThread): SQL status: COMMIT in 0.00 seconds
+2020-02-27 05:38:58,823978 (MainThread): 21:38:58 | 
+2020-02-27 05:38:58,824169 (MainThread): 21:38:58 | Finished running 5 view models in 2.24s.
+2020-02-27 05:38:58,824332 (MainThread): Connection 'master' was left open.
+2020-02-27 05:38:58,824452 (MainThread): On master: Close
+2020-02-27 05:38:58,824599 (MainThread): Connection 'model.ge_tutorials.count_specialties' was left open.
+2020-02-27 05:38:58,824711 (MainThread): On model.ge_tutorials.count_specialties: Close
+2020-02-27 05:38:58,838615 (MainThread): 
+2020-02-27 05:38:58,838801 (MainThread): Completed successfully
+2020-02-27 05:38:58,838923 (MainThread): 
+Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+2020-02-27 05:38:58,839147 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b7f5c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dfac310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dfacb10>]}
+2020-02-27 05:38:59,213204 (MainThread): Flushing usage events
