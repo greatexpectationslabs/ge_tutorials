@@ -33,3 +33,8 @@ The pipeline simply takes two data input files and processes them in a WAP (writ
 The entire pipeline is orchestrated with the following airflow DAG:
 ![The airflow DAG](airflow_dag.png)
 
+## Running the pipeline
+
+You can run each individual task in the airflow DAG with `airflow test ge_tutorials_dag <task_name>`.
+In order to run the entire DAG, use `airflow backfill ge_tutorials_dag -s <start_date> -e <end_date>`.
+
