@@ -9,7 +9,7 @@ import os
 import pandas as pd
 from sqlalchemy import create_engine
 
-
+import great_expectations as ge
 from great_expectations import DataContext
 from great_expectations.datasource.types import BatchKwargs
 
@@ -88,6 +88,56 @@ task_publish = PythonOperator(
     python_callable=publish_to_prod,
     dag=dag)
 
+
+
+
+def validate_analytical_output(ds, **kwargs):
+
+    # Data Context is a GE object that represents your project.
+    # Your project's great_expectations.yml contains all the config
+    # options for the project's GE Data Context.
+    context = ge.data_context.DataContext()
+
+    datasource_name = "datawarehouse"  # a datasource configured in your great_expectations.yml
+
+    # Tell GE how to fetch the batch of data that should be validated...
+
+    # ... from the result set of a SQL query:
+    # batch_kwargs = {"query": "your SQL query", "datasource": datasource_name}
+
+    # ... or from a database table:
+    batch_kwargs = {"table": "count_providers_by_state", "datasource": datasource_name}
+
+    # ... or from a file:
+    # batch_kwargs = {"path": "path to your data file", "datasource": datasource_name}
+
+    # ... or from a Pandas or PySpark DataFrame
+    # batch_kwargs = {"dataset": "your Pandas or PySpark DataFrame", "datasource": datasource_name}
+
+    # Get the batch of data you want to validate.
+    # Specify the name of the expectation suite that holds the expectations.
+    expectation_suite_name = "count_providers_by_state.critical"  # this is an example of
+    # a suite that you created
+    batch = context.get_batch(batch_kwargs, expectation_suite_name)
+
+    # Call a validation operator to validate the batch.
+    # The operator will evaluate the data against the expectations
+    # and perform a list of actions, such as saving the validation
+    # result, updating Data Docs, and firing a notification (e.g., Slack).
+    run_id = datetime.utcnow().strftime("%Y%m%dT%H%M%S.%fZ")
+    run_id = "airflow:" + kwargs['dag_run'].run_id + ":" + str(kwargs['dag_run'].start_date)
+    results = context.run_validation_operator(
+        "action_list_operator",
+        assets_to_validate=[batch],
+        run_id=run_id)  # e.g., Airflow run id or some run identifier that your pipeline uses.
+
+    if not results["success"]:
+        raise AirflowException("The analytical output does not meet the expectations in the suite: {0:s}".format(expectation_suite_name))
+
+
+# Decide what your pipeline should do in case the data does not
+# meet your expectations.
+
 # def validate(expectation_suite_name, batch_kwargs):
 #     """
 #     Perform validations of the previously defined data assets according to their respective expectation suites.
@@ -121,9 +171,10 @@ task_validate_source_data_load = BashOperator(
     bash_command='', 
     dag=dag)
 
-task_validate_analytical_output = BashOperator(
+task_validate_analytical_output = PythonOperator(
     task_id='task_validate_analytical_output',
-    bash_command='', 
+    python_callable=validate_analytical_output,
+    provide_context=True,
     dag=dag)
 
 # Dependencies

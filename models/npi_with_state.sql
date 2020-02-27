@@ -8,5 +8,8 @@ select
 	n.state_abbreviation,
 	s.state_name
 from {{ ref('stg_npi') }} n
-left join {{ ref('stg_state_abbreviations') }} s
+-- due to the nature of the data some state abbreviations are not valid
+-- which results in state names being null  - in this case,
+-- switch to inner join
+inner join {{ ref('stg_state_abbreviations') }} s
 	on n.state_abbreviation = s.state_abbreviation
