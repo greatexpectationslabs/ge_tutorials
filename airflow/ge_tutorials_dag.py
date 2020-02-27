@@ -6,6 +6,9 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow import DAG
 import os
+import pandas as pd
+from sqlalchemy import create_engine
+
 
 from great_expectations import DataContext
 from great_expectations.datasource.types import BatchKwargs
@@ -28,30 +31,32 @@ dag = DAG(
 
 
 def load_files_into_db(ds, **kwargs):
-    import pandas as pd
-    from sqlalchemy import create_engine
 
     engine = create_engine(GE_TUTORIAL_DB_URL)
 
-    df_npi_small = pd.read_csv(os.path.join(GE_TUTORIAL_PROJECT_PATH, "data/npi_small.csv"))
-    column_rename_dict = {old_column_name: old_column_name.lower() for old_column_name in df_npi_small.columns}
-    df_npi_small.rename(columns=column_rename_dict, inplace=True)
-    df_npi_small.to_sql("npi_small", engine,
-                        schema=None,
-                        if_exists='replace',
-                        index=False,
-                        index_label=None,
-                        chunksize=None,
-                        dtype=None)
+    with engine.connect() as conn:
+        conn.execute("drop table if exists npi_small cascade ")
+        conn.execute("drop table if exists state_abbreviations cascade ")
 
-    df_state_abbreviations = pd.read_csv(os.path.join(GE_TUTORIAL_PROJECT_PATH, "data/state_abbreviations.csv"))
-    df_state_abbreviations.to_sql("state_abbreviations", engine,
-                                  schema=None,
-                                  if_exists='replace',
-                                  index=False,
-                                  index_label=None,
-                                  chunksize=None,
-                                  dtype=None)
+        df_npi_small = pd.read_csv(os.path.join(GE_TUTORIAL_PROJECT_PATH, "data/npi_small.csv"))
+        column_rename_dict = {old_column_name: old_column_name.lower() for old_column_name in df_npi_small.columns}
+        df_npi_small.rename(columns=column_rename_dict, inplace=True)
+        df_npi_small.to_sql("npi_small", engine,
+                            schema=None,
+                            if_exists='replace',
+                            index=False,
+                            index_label=None,
+                            chunksize=None,
+                            dtype=None)
+
+        df_state_abbreviations = pd.read_csv(os.path.join(GE_TUTORIAL_PROJECT_PATH, "data/state_abbreviations.csv"))
+        df_state_abbreviations.to_sql("state_abbreviations", engine,
+                                      schema=None,
+                                      if_exists='replace',
+                                      index=False,
+                                      index_label=None,
+                                      chunksize=None,
+                                      dtype=None)
 
     return 'Loaded files into the database'
 
@@ -71,17 +76,12 @@ task_dbt = BashOperator(
 
 
 def publish_to_prod():
+    engine = create_engine(GE_TUTORIAL_DB_URL)
 
-    import psycopg2
-    conn_string = GE_TUTORIAL_DB_URL
+    with engine.connect() as conn:
+        conn.execute("drop table if exists prod_count_providers_by_state")
+        conn.execute("alter table count_providers_by_state rename to prod_count_providers_by_state")
 
-    conn = psycopg2.connect(conn_string)
-    cursor = conn.cursor()
-    try:
-        cursor.execute("drop table if exists prod_count_providers_by_state;")
-        cursor.execute("alter table count_providers_by_state rename to prod_count_providers_by_state;")
-    except:
-        raise
 
 task_publish = PythonOperator(
     task_id='task_publish',
