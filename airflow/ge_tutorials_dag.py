@@ -28,18 +28,6 @@ def load_files_into_db(ds, **kwargs):
     #TODO: replace with values from config
     engine = create_engine('postgresql://eugenemandel:@localhost:5432/tutorials_db')
 
-    df_provider_taxonomy = pd.read_csv(
-        "/Users/eugenemandel/projects/ge_tutorials/data/healthcare_provider_taxonomy.csv")
-    column_rename_dict = {old_column_name: old_column_name.lower() for old_column_name in df_provider_taxonomy.columns}
-    df_provider_taxonomy.rename(columns=column_rename_dict, inplace=True)
-    df_provider_taxonomy.to_sql("healthcare_provider_taxonomy", engine,
-                                schema=None,
-                                if_exists='replace',
-                                index=False,
-                                index_label=None,
-                                chunksize=None,
-                                dtype=None)
-
     df_npi_small = pd.read_csv("/Users/eugenemandel/projects/ge_tutorials/data/npi_small.csv")
     column_rename_dict = {old_column_name: old_column_name.lower() for old_column_name in df_npi_small.columns}
     df_npi_small.rename(columns=column_rename_dict, inplace=True)
