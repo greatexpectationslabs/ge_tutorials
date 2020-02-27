@@ -5,6 +5,7 @@ from airflow import AirflowException
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow import DAG
+import os
 
 from great_expectations import DataContext
 from great_expectations.datasource.types import BatchKwargs
@@ -25,10 +26,11 @@ def load_files_into_db(ds, **kwargs):
     import pandas as pd
     from sqlalchemy import create_engine
 
-    #TODO: replace with values from config
-    engine = create_engine('postgresql://eugenemandel:@localhost:5432/tutorials_db')
+    db_url = os.getenv('GE_TUTORIAL_DB_URL')
+    input_dir_path = os.getenv('GE_TUTORIAL_PROJECT_PATH')
+    engine = create_engine(db_url)
 
-    df_npi_small = pd.read_csv("/Users/eugenemandel/projects/ge_tutorials/data/npi_small.csv")
+    df_npi_small = pd.read_csv(os.path.join(input_dir_path, "data/npi_small.csv"))
     column_rename_dict = {old_column_name: old_column_name.lower() for old_column_name in df_npi_small.columns}
     df_npi_small.rename(columns=column_rename_dict, inplace=True)
     df_npi_small.to_sql("npi_small", engine,
@@ -39,7 +41,7 @@ def load_files_into_db(ds, **kwargs):
                         chunksize=None,
                         dtype=None)
 
-    df_state_abbreviations = pd.read_csv("/Users/eugenemandel/projects/ge_tutorials/data/state_abbreviations.csv")
+    df_state_abbreviations = pd.read_csv(os.path.join(input_dir_path, "data/state_abbreviations.csv"))
     df_state_abbreviations.to_sql("state_abbreviations", engine,
                                   schema=None,
                                   if_exists='replace',
