@@ -26,12 +26,12 @@ The pipeline simply takes two data input files and processes them in a WAP (writ
 1. Load the source files to a postgres database using SQLAlchemy
 2. Validate the source data files with Great Expectations
 3. Run the dbt DAG to create a simple analytical table, see the dbt DAG snapshot below:
-![The dbt DAG](dbt_dag.png)
+![The dbt DAG](images/dbt_dag.png)
 4. Validate the analytical result
 5. Publish (promote) the analytical table to a "prod" table by renaming it
 
 The entire pipeline is orchestrated with the following airflow DAG:
-![The airflow DAG](airflow_dag.png)
+![The airflow DAG](images/airflow_dag.png)
 
 ## Running the pipeline
 
