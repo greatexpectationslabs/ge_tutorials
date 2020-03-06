@@ -63,6 +63,25 @@ def load_files_into_db(ds, **kwargs):
     return 'Loaded files into the database'
 
 
+def validate_source_data(ds, **kwargs):
+
+    context = ge.data_context.DataContext()
+
+    batch_kwargs_file = {"path": os.path.join(GE_TUTORIAL_PROJECT_PATH, "data/npi_small.csv"),
+                         'datasource': 'input_files'}
+
+    batch_file = context.get_batch(batch_kwargs_file, 'npi_small_file.critical')
+
+
+    results = context.run_validation_operator(
+        "action_list_operator",
+        assets_to_validate=[batch_file],
+        run_id="airflow:" + kwargs['dag_run'].run_id + ":" + str(kwargs['dag_run'].start_date))
+
+    if not results["success"]:
+        raise AirflowException("Validation of the source data is not successful ")
+
+
 def validate_source_data_load(ds, **kwargs):
 
     # Data Context is a GE object that represents your project.
@@ -161,6 +180,12 @@ def publish_to_prod():
         conn.execute("alter table count_providers_by_state rename to prod_count_providers_by_state")
 
 
+task_validate_source_data = PythonOperator(
+    task_id='task_validate_source_data',
+    python_callable=validate_source_data,
+    provide_context=True,
+    dag=dag)
+
 task_load_files_into_db = PythonOperator(
     task_id='task_load_files_into_db',
     provide_context=True,
@@ -194,4 +219,4 @@ task_publish = PythonOperator(
 
 
 # DAG dependencies
-task_load_files_into_db >> task_validate_source_data_load >> task_dbt >> task_validate_analytical_output >> task_publish
+task_validate_source_data >> task_load_files_into_db >> task_validate_source_data_load >> task_dbt >> task_validate_analytical_output >> task_publish
