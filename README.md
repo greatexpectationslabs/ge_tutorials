@@ -22,13 +22,15 @@ The pipeline's configuration variables are passed using environment variables. S
 
 ## Pipeline overview
 
+The pipeline will look familiar to lots of data teams working with ELT pattern. It loads data from files into a database and then transforms it. 
 The pipeline simply takes two data input files and processes them in a WAP (write - audit - publish) type pattern:
-1. Load the source files to a postgres database using SQLAlchemy
-2. Validate the source data files with Great Expectations
-3. Run the dbt DAG to create a simple analytical table, see the dbt DAG snapshot below:
+1. Use GE to validate the input CSV files. Stop if they do not meet our expectations 
+2. Load the source files to a postgres database using SQLAlchemy
+3. Use GE to validate that the data was loaded into the database successfully
+4. Run the dbt DAG to create a simple analytical table, see the dbt DAG snapshot below:
 ![The dbt DAG](images/dbt_dag.png)
-4. Validate the analytical result
-5. Publish (promote) the analytical table to a "prod" table by renaming it
+5. Use GE to validate the analytical result.
+6. If the analytical result is valid, publish (promote) the analytical table to a "prod" table by renaming it
 
 The entire pipeline is orchestrated with the following airflow DAG:
 ![The airflow DAG](images/airflow_dag.png)
