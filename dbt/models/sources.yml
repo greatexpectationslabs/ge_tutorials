@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: source
+    schema: public
+    tables:
+      - name: npi_small
+      - name: state_abbreviations

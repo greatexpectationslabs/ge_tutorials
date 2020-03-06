@@ -6,4 +6,4 @@ select
 	first_name as first_name,
 	state as state_abbreviation,
 	taxonomy_code as taxonomy_code
-from {{ ref('npi_small') }}
+  from {{ source('source', 'npi_small') }}

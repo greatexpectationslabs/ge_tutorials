@@ -1,4 +1,4 @@
 select 
 	name as state_name,
 	abbreviation as state_abbreviation
-from {{ ref('state_abbreviations') }}
+  from {{ source('source', 'state_abbreviations') }}

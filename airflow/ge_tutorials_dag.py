@@ -201,7 +201,7 @@ task_validate_source_data_load = PythonOperator(
 
 task_dbt = BashOperator(
     task_id='task_dbt',
-    bash_command='dbt run --project-dir {}'.format(GE_TUTORIAL_PROJECT_PATH),
+    bash_command='dbt run --project-dir {}'.format(os.path.join(GE_TUTORIAL_PROJECT_PATH, 'dbt')),
     dag=dag)
 
 
