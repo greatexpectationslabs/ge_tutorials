@@ -1,6 +1,8 @@
 # Great Expectations Pipeline Tutorial
 This is a typical end-to-end project with dbt, GE, airflow for the purpose of demonstrating how to implement Great Expectations alongside dbt and airflow. The purpose of this tutorial is simply to show how the individual components work together. Therefore, both the dbt and the Great Expectations components are kept fairly trivial, but hopefully realistic.
 
+**Please note** This tutorial is a proof of concept and (as of March 2020) still new/work in progress. Feel free to provide *feedback via Slack, a GitHub issue, or just fork it and show us your own implementation*, we'll be happy to answer questions and iterate on the content to make it more useful for the community!
+
 ## Setup
 
 In order to run this project, you will need to go through some basic setup steps.
