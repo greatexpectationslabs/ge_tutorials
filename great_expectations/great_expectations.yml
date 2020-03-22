@@ -1,5 +1,5 @@
 # Welcome to Great Expectations! Always know what to expect from your data.
-# 
+#
 # Here you can define datasources, batch kwarg generators, integrations and
 # more. This file is intended to be committed to your repo. For help with
 # configuration please:
@@ -27,7 +27,7 @@ datasources:
     data_asset_type:
       class_name: PandasDataset
       module_name:
-config_variables_file_path: uncommitted/config_variables.yml
+config_variables_file_path: config_variables.yml
 
 # The plugins_directory will be added to your python path for custom modules
 # used to override and extend Great Expectations.
@@ -56,7 +56,7 @@ stores:
 # Stores are configurable places to store things like Expectations, Validations
 # Data Docs, and more. These are for advanced users only - most users can simply
 # leave this section alone.
-# 
+#
 # Three stores are required: expectations, validations, and
 # evaluation_parameters, and must exist with a valid store entry. Additional
 # stores can be configured for uses such as data_docs, validation_operators, etc.
