@@ -6,27 +6,36 @@ services:
             - POSTGRES_USER=airflow
             - POSTGRES_PASSWORD=airflow
             - POSTGRES_DB=airflow
+        ports:
+            - "5432:5432"
+
         logging:
             options:
                 max-size: 10m
                 max-file: "3"
 
     webserver:
-        image: puckel/docker-airflow:1.10.9
+        build: .
         restart: always
         depends_on:
             - postgres
         environment:
             - LOAD_EX=n
             - EXECUTOR=Local
+            # TODO: create a separate schema for real data
+            - GE_TUTORIAL_DB_URL=postgres://airflow:airflow@localhost:5432/airflow
+            - GE_TUTORIAL_PROJECT_PATH=/usr/local/airflow/
         logging:
             options:
                 max-size: 10m
                 max-file: "3"
         volumes:
+            # TODO: Might be better to mount everything at once
             - ./airflow:/usr/local/airflow/dags
+            - ./great_expectations:/usr/local/airflow/great_expectations
+            - ./dbt:/usr/local/airflow/dbt
+            - ./data:/usr/local/airflow/data
             - ./requirements.txt:/requirements.txt
-            # - ./plugins:/usr/local/airflow/plugins
         ports:
             - "8080:8080"
         command: webserver
