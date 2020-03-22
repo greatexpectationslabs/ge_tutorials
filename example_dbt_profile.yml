@@ -11,8 +11,8 @@ ge_tutorials:
       threads: 1
       host: 127.0.0.1
       port: 5432
-      user: my_user
-      pass: my_password 
+      user: airflow
+      pass: airflow
       dbname: tutorials_db
       schema: public
     prod:
@@ -20,8 +20,8 @@ ge_tutorials:
       threads: 1
       host: 127.0.0.1
       port: 5432
-      user: my_user
-      pass: my_password
+      user: airflow
+      pass: airflow
       dbname: tutorials_db
       schema: public
   target: dev
