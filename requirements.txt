@@ -1,2 +1,3 @@
 dbt
-great-expectations
+scipy
+great_expectations

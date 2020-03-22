@@ -24,7 +24,7 @@ services:
                 max-size: 10m
                 max-file: "3"
         volumes:
-            - ./airflow/dags:/usr/local/airflow/dags
+            - ./airflow:/usr/local/airflow/dags
             - ./requirements.txt:/requirements.txt
             # - ./plugins:/usr/local/airflow/plugins
         ports:
