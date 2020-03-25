@@ -23,7 +23,7 @@ services:
             - LOAD_EX=n
             - EXECUTOR=Local
             # TODO: create a separate schema for real data
-            - GE_TUTORIAL_DB_URL=postgres://airflow:airflow@localhost:5432/airflow
+            - GE_TUTORIAL_DB_URL=postgres://airflow:airflow@postgres:5432/airflow
             - GE_TUTORIAL_PROJECT_PATH=/usr/local/airflow/great_expectations
         logging:
             options:
