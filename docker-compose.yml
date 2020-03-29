@@ -24,7 +24,7 @@ services:
             - EXECUTOR=Local
             # TODO: create a separate schema for real data
             - GE_TUTORIAL_DB_URL=postgres://airflow:airflow@postgres:5432/airflow
-            - GE_TUTORIAL_PROJECT_PATH=/usr/local/airflow/great_expectations
+            - GE_TUTORIAL_PROJECT_PATH=/usr/local/airflow/
         logging:
             options:
                 max-size: 10m
@@ -36,6 +36,7 @@ services:
             - ./dbt:/usr/local/airflow/dbt
             - ./data:/usr/local/airflow/data
             - ./requirements.txt:/requirements.txt
+            - ./dbt/example_dbt_profile.yml:/usr/local/airflow/.dbt/profiles.yml
         ports:
             - "8080:8080"
         command: webserver

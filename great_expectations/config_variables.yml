@@ -17,6 +17,6 @@ datawarehouse:
   drivername: postgres
   username: airflow
   password: airflow
-  host: locahost
+  host: postgres
   database: airflow
   port: '5432'
