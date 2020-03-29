@@ -6,27 +6,23 @@
 #   - Read our docs: https://docs.greatexpectations.io/en/latest/reference/data_context_reference.html#configuration
 #   - Join our slack channel: http://greatexpectations.io/slack
 
-config_version: 1
+config_version: 1.0
 
 # Datasources tell Great Expectations where your data lives and how to get it.
 # You can use the CLI command `great_expectations datasource new` to help you
 # add a new datasource. Read more at https://docs.greatexpectations.io/en/latest/features/datasource.html
 datasources:
+  input_files:
+    class_name: PandasDatasource
+    data_asset_type:
+      class_name: PandasDataset
+    module_name: great_expectations.datasource
   datawarehouse:
     class_name: SqlAlchemyDatasource
     data_asset_type:
       class_name: SqlAlchemyDataset
-      module_name:
+    module_name: great_expectations.datasource
     credentials: ${datawarehouse}
-  input_files:
-    class_name: PandasDatasource
-    generators:
-      subdir_reader:
-        class_name: SubdirReaderBatchKwargsGenerator
-        base_directory: ../data
-    data_asset_type:
-      class_name: PandasDataset
-      module_name:
 config_variables_file_path: uncommitted/config_variables.yml
 
 # The plugins_directory will be added to your python path for custom modules
@@ -39,8 +35,6 @@ plugins_directory: plugins/
 # customizing and extending these, read: https://docs.greatexpectations.io/en/latest/features/validation_operators_and_actions.html
 validation_operators:
   action_list_operator:
-    # To learn how to configure sending Slack notifications during evaluation
-    # (and other customizations), read: https://docs.greatexpectations.io/en/latest/reference/validation_operators/action_list_validation_operator.html
     class_name: ActionListValidationOperator
     action_list:
     - name: store_validation_result
