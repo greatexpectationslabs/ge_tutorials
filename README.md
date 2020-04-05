@@ -42,3 +42,23 @@ The entire pipeline is orchestrated with the following airflow DAG:
 You can run each individual task in the airflow DAG with `airflow test ge_tutorials_dag <task_name>`.
 In order to run the entire DAG, use `airflow backfill ge_tutorials_dag -s <start_date> -e <end_date>`.
 
+
+```
+airflow@f780ca38c898:~/great_expectations/notebooks$ jupyter notebook --allow-root --notebook-dir=. --ip=0.0.0.0 --port=8888 --no-browser
+[I 23:13:56.380 NotebookApp] Writing notebook server cookie secret to /usr/local/airflow/.local/share/jupyter/runtime/notebook_cookie_secret
+[I 23:13:56.696 NotebookApp] Serving notebooks from local directory: /usr/local/airflow/great_expectations/notebooks
+[I 23:13:56.697 NotebookApp] The Jupyter Notebook is running at:
+[I 23:13:56.698 NotebookApp] http://f780ca38c898:8888/?token=3759714dd219e6bd2a9ee266d5b55a353785f6dc1ea4e7fe
+[I 23:13:56.698 NotebookApp]  or http://127.0.0.1:8888/?token=3759714dd219e6bd2a9ee266d5b55a353785f6dc1ea4e7fe
+[I 23:13:56.699 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 23:13:56.707 NotebookApp]
+
+    To access the notebook, open this file in a browser:
+        file:///usr/local/airflow/.local/share/jupyter/runtime/nbserver-27198-open.html
+    Or copy and paste one of these URLs:
+        http://f780ca38c898:8888/?token=3759714dd219e6bd2a9ee266d5b55a353785f6dc1ea4e7fe
+```
+
+Should be a Separate PR, beginnings of Airflow Plugin for great expectation
+https://stackoverflow.com/questions/56461918/airlfow-serving-static-html-directory
+https://airflow.apache.org/docs/stable/plugins.html#example
