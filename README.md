@@ -1,32 +1,17 @@
 # Great Expectations Pipeline Tutorial
-This is a typical end-to-end project with dbt, GE, airflow for the purpose of demonstrating how to implement Great Expectations alongside dbt and airflow. The purpose of this tutorial is to show how the individual components work together. Therefore, both the dbt and the Great Expectations components are kept fairly trivial, but hopefully realistic.
 
-**Please note** This tutorial is a proof of concept and (as of March 2020) still new/work in progress. Feel free to provide *feedback via Slack, a GitHub issue, or just fork it and show us your own implementation*, we'll be happy to answer questions and iterate on the content to make it more useful for the community!
+The purpose of this example is to show how [Great Expectations](https://greatexpectations.io) can protect a data pipeline from bad data and code bugs.
 
-## Setup
-
-In order to run this project, you will need to go through some basic setup steps.
-
-### Database setup
-For the purpose of this demo, we assume you have a relational database available that can be accessed using a SQLAlchemy connection URL. We developed the tutorial using a postgres database. Of course, this can be replaced by any other DBMS when working on a real pipeline.
-
-### Install and configure tools
-* airflow - run `airflow initdb`, set up `$AIRFLOW_HOME` and point the dags_folder in airflow.cfg to the project path
-* dbt - set up your database connection in the dbt_profile.yml (see the example_dbt_profile.yml in this project)
-* great_expectations - no further setup needed
-
-### Environment variables
-
-The pipeline's configuration variables are passed using environment variables. Set the following variables:
-* `export GE_TUTORIAL_DB_URL=postgresql://your_user:your_password@your_dh_host:5432/your_db_name`
-* `export GE_TUTORIAL_PIPELINE_ROOT_PATH=your_project_path`
-
+**Please note** This tutorial is work in progress. Feel free to provide *feedback via our [Slack channel](https://greatexpectations.io/slack), a GitHub issue, or just fork it and show us your own implementation*, we'll be happy to answer questions and iterate on the content to make it more useful for the community!
 
 ## Pipeline overview
 
 The pipeline will look familiar to lots of data teams working with ELT pattern. 
 It loads data from files into a database and then transforms it.
 
+Airflow is used to orchestrate the pipeline. dbt is used to transform for the "T" step of ELT.
+
+The purpose of this tutorial is to show how the individual components work together. Therefore, the Airflow setuo and the dbt DAG are kept fairly trivial, but hopefully realistic.
 
 This repo contains two implementations of this data pipeline:
 * before Great Expectations was added - in `pipeline_without_great_expectations` folder
@@ -51,6 +36,40 @@ This repo contains two implementations of this data pipeline:
 4. Run the dbt DAG to create a simple analytical table, see the dbt DAG snapshot below:
 5. Use GE to validate the analytical result.
 6. If the analytical result is valid, publish (promote) the analytical table to a "prod" table by renaming it
+
+## Setup
+
+We assume that you will run the "after" version of the pipeline, with Great Expectations integrated.
+
+In order to run this project, you will need to go through some basic setup steps.
+
+#### Database setup
+For the purpose of this demo, we assume you have a relational database available that can be accessed using a SQLAlchemy connection URL. We developed the tutorial using a postgres database. Of course, this can be replaced by any other DBMS when working on a real pipeline.
+Create an empty database `tutorials_db`
+
+#### Great Expectations
+
+* Install Great Expectations
+
+```
+    pip install great_expectations
+```
+
+#### dbt
+
+* Make sure that you have dbt installed and set up
+* Add your database credentials in the dbt_profile.yml (see the example_dbt_profile.yml in this project)
+
+#### Airflow
+
+* Make sure you have Airflow installed and set up.
+* Point the dags_folder in airflow.cfg to the `pipeline_with_great_expectations` directory in this project
+
+#### Environment variables
+
+The pipeline's configuration variables are passed using environment variables. Set the following variables:
+* `export GE_TUTORIAL_DB_URL=postgresql://your_user:your_password@your_dh_host:5432/your_db_name`
+* `export GE_TUTORIAL_PIPELINE_ROOT_PATH=your_project_path/pipeline_with_great_expectations`
 
 
 ## Running the pipeline
