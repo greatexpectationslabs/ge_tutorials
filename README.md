@@ -13,9 +13,9 @@ Airflow is used to orchestrate the pipeline. dbt is used to transform for the "T
 
 The purpose of this tutorial is to show how the individual components work together. Therefore, the Airflow setuo and the dbt DAG are kept fairly trivial, but hopefully realistic.
 
-This repo contains two implementations of this data pipeline:
-* before Great Expectations was added - in `pipeline_without_great_expectations` folder
-* after Great Expectations was added - in `pipeline_with_great_expectations` folder 
+This repo contains two Airflow DAGs of this data pipeline:
+* before Great Expectations was added - in `ge_tutorials_dag_without_great_expectations.py`
+* after Great Expectations was added - in `airflow/ge_tutorials_dag_with_great_expectations.py` 
 
 ### Without Great Expectations
 
@@ -63,17 +63,17 @@ Create an empty database `tutorials_db`
 #### Airflow
 
 * Make sure you have Airflow installed and set up.
-* Point the dags_folder in airflow.cfg to the `pipeline_with_great_expectations` directory in this project
+* Point the dags_folder in airflow.cfg to the root directory of this project
 
 #### Environment variables
 
 The pipeline's configuration variables are passed using environment variables. Set the following variables:
 * `export GE_TUTORIAL_DB_URL=postgresql://your_user:your_password@your_dh_host:5432/your_db_name`
-* `export GE_TUTORIAL_PIPELINE_ROOT_PATH=your_project_path/pipeline_with_great_expectations`
+* `export GE_TUTORIAL_ROOT_PATH=your_project_path`
 
 
 ## Running the pipeline
 
-You can run each individual task in the airflow DAG with `airflow test ge_tutorials_dag <task_name>`.
-In order to run the entire DAG, use `airflow backfill ge_tutorials_dag -s <start_date> -e <end_date>`.
+You can run each individual task in the airflow DAG with `airflow test ge_tutorials_dag_with_ge <task_name>`.
+In order to run the entire DAG, use `airflow backfill ge_tutorials_dag_with_ge -s <start_date> -e <end_date>`.
 

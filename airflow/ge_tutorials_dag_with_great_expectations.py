@@ -12,7 +12,9 @@ import great_expectations as ge
 
 # Global variables that are set using environment varaiables
 GE_TUTORIAL_DB_URL = os.getenv('GE_TUTORIAL_DB_URL')
-GE_TUTORIAL_PIPELINE_ROOT_PATH = os.getenv('GE_TUTORIAL_PIPELINE_ROOT_PATH')
+GE_TUTORIAL_ROOT_PATH = os.getenv('GE_TUTORIAL_ROOT_PATH')
+
+great_expectations_context_path = os.getenv('GE_TUTORIAL_GE_CONTEXT_PATH') or os.path.join(GE_TUTORIAL_ROOT_PATH, "great_expectations_projects", "final", "great_expectations")
 
 
 default_args = {
@@ -23,7 +25,7 @@ default_args = {
 
 # The DAG definition
 dag = DAG(
-    dag_id='ge_tutorials_dag',
+    dag_id='ge_tutorials_dag_with_ge',
     default_args=default_args,
     schedule_interval=None,
 )
@@ -40,7 +42,7 @@ def load_files_into_db(ds, **kwargs):
         conn.execute("drop table if exists npi_small cascade ")
         conn.execute("drop table if exists state_abbreviations cascade ")
 
-        df_npi_small = pd.read_csv(os.path.join(GE_TUTORIAL_PIPELINE_ROOT_PATH, "..", "data", "npi_small.csv"))
+        df_npi_small = pd.read_csv(os.path.join(GE_TUTORIAL_ROOT_PATH, "data", "npi_small.csv"))
         column_rename_dict = {old_column_name: old_column_name.lower() for old_column_name in df_npi_small.columns}
         df_npi_small.rename(columns=column_rename_dict, inplace=True)
         df_npi_small.to_sql("npi_small", engine,
@@ -51,7 +53,7 @@ def load_files_into_db(ds, **kwargs):
                             chunksize=None,
                             dtype=None)
 
-        df_state_abbreviations = pd.read_csv(os.path.join(GE_TUTORIAL_PIPELINE_ROOT_PATH, "..", "data", "state_abbreviations.csv"))
+        df_state_abbreviations = pd.read_csv(os.path.join(GE_TUTORIAL_ROOT_PATH, "data", "state_abbreviations.csv"))
         df_state_abbreviations.to_sql("state_abbreviations", engine,
                                       schema=None,
                                       if_exists='replace',
@@ -65,9 +67,9 @@ def load_files_into_db(ds, **kwargs):
 
 def validate_source_data(ds, **kwargs):
 
-    context = ge.data_context.DataContext(os.path.join(GE_TUTORIAL_PIPELINE_ROOT_PATH, "great_expectations"))
+    context = ge.data_context.DataContext(great_expectations_context_path)
 
-    batch_kwargs_file = {"path": os.path.join(GE_TUTORIAL_PIPELINE_ROOT_PATH, "..", "data", "npi_small.csv"),
+    batch_kwargs_file = {"path": os.path.join(GE_TUTORIAL_ROOT_PATH, "data", "npi_small.csv"),
                          'datasource': 'input_files'}
 
     batch_file = context.get_batch(batch_kwargs_file, 'npi_small_file.critical')
@@ -87,11 +89,11 @@ def validate_source_data_load(ds, **kwargs):
     # Data Context is a GE object that represents your project.
     # Your project's great_expectations.yml contains all the config
     # options for the project's GE Data Context.
-    context = ge.data_context.DataContext(os.path.join(GE_TUTORIAL_PIPELINE_ROOT_PATH, "great_expectations"))
+    context = ge.data_context.DataContext(great_expectations_context_path)
 
     datasource_name_file = "input_files"
     expectation_suite_name_file = "npi_small_file.critical"
-    batch_kwargs_file = {"path": os.path.join(GE_TUTORIAL_PIPELINE_ROOT_PATH, "..", "data", "npi_small.csv"),
+    batch_kwargs_file = {"path": os.path.join(GE_TUTORIAL_ROOT_PATH, "data", "npi_small.csv"),
                          'datasource': 'input_files'}
     batch_file = context.get_batch(batch_kwargs_file, expectation_suite_name_file)
 
@@ -130,7 +132,7 @@ def validate_analytical_output(ds, **kwargs):
     # Data Context is a GE object that represents your project.
     # Your project's great_expectations.yml contains all the config
     # options for the project's GE Data Context.
-    context = ge.data_context.DataContext(os.path.join(GE_TUTORIAL_PIPELINE_ROOT_PATH, "great_expectations"))
+    context = ge.data_context.DataContext(great_expectations_context_path)
 
     datasource_name = "datawarehouse"  # a datasource configured in your great_expectations.yml
 
@@ -201,7 +203,7 @@ task_validate_source_data_load = PythonOperator(
 
 task_transform_data_in_db = BashOperator(
     task_id='task_transform_data_in_db',
-    bash_command='dbt run --project-dir {}'.format(os.path.join(GE_TUTORIAL_PIPELINE_ROOT_PATH, 'dbt')),
+    bash_command='dbt run --project-dir {}'.format(os.path.join(GE_TUTORIAL_ROOT_PATH, 'dbt')),
     dag=dag)
 
 
