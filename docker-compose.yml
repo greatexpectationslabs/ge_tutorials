@@ -37,7 +37,7 @@ services:
             - ./dbt:/usr/local/airflow/dbt
             - ./data:/usr/local/airflow/data
             - ./requirements.txt:/requirements.txt
-            - ./dbt/example_dbt_profile.yml:/usr/local/airflow/.dbt/profiles.yml
+            - ./example_dbt_profile.yml:/usr/local/airflow/.dbt/profiles.yml
         ports:
             - "8080:8080"
             - "8888:8888"
@@ -47,3 +47,10 @@ services:
             interval: 30s
             timeout: 30s
             retries: 3
+    ge_data_docs:
+        image: flashspys/nginx-static
+        container_name: ge_data_docs
+        ports:
+            - 8081:80
+        volumes: 
+            - ./great_expectations_projects/final/great_expectations/uncommitted/data_docs/local_site:/static

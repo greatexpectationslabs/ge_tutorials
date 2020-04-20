@@ -23,7 +23,7 @@ datasources:
       class_name: SqlAlchemyDataset
     module_name: great_expectations.datasource
     credentials: ${datawarehouse}
-config_variables_file_path: uncommitted/config_variables.yml
+config_variables_file_path: config_variables.yml
 
 # The plugins_directory will be added to your python path for custom modules
 # used to override and extend Great Expectations.
