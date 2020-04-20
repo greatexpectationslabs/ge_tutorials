@@ -53,7 +53,7 @@ docker-compose up
 ```
 
 You can visit the following:
-- Airflow will be running at http://localhost:8080
+- Airflow will be running at http://localhost:8080/admin/
 - Great Expectations Data Docs at http://localhost:8081 
 
 From there, the container servers will reload on modification made to dbt, great expectations final expectations and the airflow dags. Don’t forget to reload the page to take the new frontend into account though.
