@@ -83,7 +83,10 @@ EXPOSE 8080 5555 8793
 RUN set -ex \
     && pip install scipy \
     && pip install great_expectations \
-    && pip install dbt
+    && pip install dbt \
+    && pip uninstall -y SQLAlchemy \
+    && pip install SQLAlchemy==1.3.15
+
 USER airflow
 WORKDIR ${AIRFLOW_USER_HOME}
 ENTRYPOINT ["/entrypoint.sh"]
