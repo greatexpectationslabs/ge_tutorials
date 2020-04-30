@@ -9,19 +9,19 @@ ge_tutorials:
     dev:
       type: postgres
       threads: 1
-      host: 127.0.0.1
+      host: postgres
       port: 5432
-      user: my_user
-      pass: my_password 
-      dbname: tutorials_db
+      user: airflow
+      pass: airflow
+      dbname: airflow
       schema: public
     prod:
       type: postgres
       threads: 1
-      host: 127.0.0.1
+      host: postgres
       port: 5432
-      user: my_user
-      pass: my_password
-      dbname: tutorials_db
+      user: airflow
+      pass: airflow
+      dbname: airflow
       schema: public
   target: dev

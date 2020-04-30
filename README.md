@@ -41,6 +41,31 @@ This repo contains two Airflow DAGs of this data pipeline:
 
 We assume that you will run the "after" version of the pipeline, with Great Expectations integrated.
 
+### Setup with Docker
+
+If you want to setup docker to quickly get started, get docker. If you already know docker, then we have shortcut road for you to run your project:
+
+```
+git clone https://github.com/superconductive/ge_tutorials.git
+cd ge_tutorials
+# you can run this command everytime you need to start superset now:
+docker-compose up
+docker exec ge_tutorials_webserver_1 airflow upgradedb
+```
+
+You can visit the following:
+- Airflow will be running at http://localhost:8080/admin/
+- Great Expectations Data Docs at http://localhost:8081 
+
+To trigger a dag you can navigate to the UI and click the trigger button. See the gif below.
+https://share.getcloudapp.com/7Ku0oygJ
+![Screen Recording](https://p91.f3.n0.cdn.getcloudapp.com/items/7Ku0oygJ/Screen%20Recording%202020-04-30%20at%2003.04%20pm.gif)
+
+
+From there, the container servers will reload on modification made to dbt, great expectations final expectations and the airflow dags. Don’t forget to reload the page to take the new frontend into account though.
+
+### Setup without Docker
+
 In order to run this project, you will need to go through some basic setup steps.
 
 #### Database setup

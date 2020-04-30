@@ -1,0 +1,56 @@
+version: '3.7'
+services:
+    postgres:
+        image: postgres:9.6
+        environment:
+            - POSTGRES_USER=airflow
+            - POSTGRES_PASSWORD=airflow
+            - POSTGRES_DB=airflow
+        ports:
+            - "5432:5432"
+
+        logging:
+            options:
+                max-size: 10m
+                max-file: "3"
+
+    webserver:
+        build: .
+        restart: always
+        depends_on:
+            - postgres
+        environment:
+            - LOAD_EX=n
+            - EXECUTOR=Local
+            # TODO: create a separate schema for real data
+            - GE_TUTORIAL_DB_URL=postgres://airflow:airflow@postgres:5432/airflow
+            - GE_TUTORIAL_ROOT_PATH=/usr/local/airflow/
+            - GE_TUTORIAL_PROJECT_PATH=/usr/local/airflow/
+        logging:
+            options:
+                max-size: 10m
+                max-file: "3"
+        volumes:
+            # TODO: Might be better to mount everything at once
+            - ./airflow:/usr/local/airflow/dags
+            - ./great_expectations_projects/final/great_expectations:/usr/local/airflow/great_expectations_projects/final/great_expectations
+            - ./dbt:/usr/local/airflow/dbt
+            - ./data:/usr/local/airflow/data
+            - ./requirements.txt:/requirements.txt
+            - ./example_dbt_profile.yml:/usr/local/airflow/.dbt/profiles.yml
+        ports:
+            - "8080:8080"
+            - "8888:8888"
+        command: webserver
+        healthcheck:
+            test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
+            interval: 30s
+            timeout: 30s
+            retries: 3
+    ge_data_docs:
+        image: flashspys/nginx-static
+        container_name: ge_data_docs
+        ports:
+            - 8081:80
+        volumes: 
+            - ./great_expectations_projects/final/great_expectations/uncommitted/data_docs/local_site:/static
