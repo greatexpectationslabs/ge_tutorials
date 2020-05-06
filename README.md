@@ -41,9 +41,11 @@ This repo contains two Airflow DAGs of this data pipeline:
 
 We assume that you will run the "after" version of the pipeline, with Great Expectations integrated.
 
+Instructions are provided below to setup this tutorial either with or without using Docker.
+
 ### Setup with Docker
 
-If you want to setup docker to quickly get started, get docker. If you already know docker, then we have shortcut road for you to run your project:
+If you want to quickly get started, use Docker. If you already know Docker, then we have shortcut road for you to run your project:
 
 ```
 git clone https://github.com/superconductive/ge_tutorials.git
@@ -53,16 +55,18 @@ docker-compose up
 docker exec ge_tutorials_webserver_1 airflow upgradedb
 ```
 
-You can visit the following:
-- Airflow will be running at http://localhost:8080/admin/
-- Great Expectations Data Docs at http://localhost:8081 
+Once these steps are completed, you can access Airflow at http://localhost:8080/admin/.
 
-To trigger a dag you can navigate to the UI and click the trigger button. See the gif below.
-https://share.getcloudapp.com/7Ku0oygJ
+To run the DAG, you first need to turn it on, then manually trigger it. You can do so through the UI: 
+
 ![Screen Recording](https://p91.f3.n0.cdn.getcloudapp.com/items/7Ku0oygJ/Screen%20Recording%202020-04-30%20at%2003.04%20pm.gif)
+(https://share.getcloudapp.com/7Ku0oygJ)
 
+Once the DAG has run successfully, you'll be able to access the Great Expectations Data Docs at the following URL: http://localhost:8081 
 
 From there, the container servers will reload on modification made to dbt, great expectations final expectations and the airflow dags. Don’t forget to reload the page to take the new frontend into account though.
+
+----
 
 ### Setup without Docker
 
@@ -93,9 +97,10 @@ Create an empty database `tutorials_db`
 #### Environment variables
 
 The pipeline's configuration variables are passed using environment variables. Set the following variables:
-* `export GE_TUTORIAL_DB_URL=postgresql://your_user:your_password@your_dh_host:5432/your_db_name`
-* `export GE_TUTORIAL_ROOT_PATH=your_project_path`
-
+```
+export GE_TUTORIAL_DB_URL=postgresql://your_user:your_password@your_dh_host:5432/your_db_name
+export GE_TUTORIAL_ROOT_PATH=your_project_path
+```
 
 ## Running the pipeline
 
