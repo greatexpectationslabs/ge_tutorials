@@ -59,7 +59,7 @@ Once these steps are completed, you can access Airflow at http://localhost:8080/
 
 To run the DAG, you first need to turn it on, then manually trigger it. You can do so through the UI: 
 
-![Screen Recording](https://p91.f3.n0.cdn.getcloudapp.com/items/7Ku0oygJ/Screen%20Recording%202020-04-30%20at%2003.04%20pm.gif)
+![Screen Recording](./images/enable_dag.gif)
 (https://share.getcloudapp.com/7Ku0oygJ)
 
 Once the DAG has run successfully, you'll be able to access the Great Expectations Data Docs at the following URL: http://localhost:8081 
