@@ -6,23 +6,23 @@
 #   - Read our docs: https://docs.greatexpectations.io/en/latest/reference/data_context_reference.html#configuration
 #   - Join our slack channel: http://greatexpectations.io/slack
 
-config_version: 1.0
+config_version: 2
 
 # Datasources tell Great Expectations where your data lives and how to get it.
 # You can use the CLI command `great_expectations datasource new` to help you
 # add a new datasource. Read more at https://docs.greatexpectations.io/en/latest/features/datasource.html
 datasources:
   input_files:
-    class_name: PandasDatasource
     data_asset_type:
       class_name: PandasDataset
+    class_name: PandasDatasource
     module_name: great_expectations.datasource
   datawarehouse:
-    class_name: SqlAlchemyDatasource
+    credentials: ${datawarehouse}
     data_asset_type:
       class_name: SqlAlchemyDataset
+    class_name: SqlAlchemyDatasource
     module_name: great_expectations.datasource
-    credentials: ${datawarehouse}
 config_variables_file_path: config_variables.yml
 
 # The plugins_directory will be added to your python path for custom modules
@@ -37,15 +37,15 @@ validation_operators:
   action_list_operator:
     class_name: ActionListValidationOperator
     action_list:
-    - name: store_validation_result
-      action:
-        class_name: StoreValidationResultAction
-    - name: store_evaluation_params
-      action:
-        class_name: StoreEvaluationParametersAction
-    - name: update_data_docs
-      action:
-        class_name: UpdateDataDocsAction
+      - name: store_validation_result
+        action:
+          class_name: StoreValidationResultAction
+      - name: store_evaluation_params
+        action:
+          class_name: StoreEvaluationParametersAction
+      - name: update_data_docs
+        action:
+          class_name: UpdateDataDocsAction
 stores:
 # Stores are configurable places to store things like Expectations, Validations
 # Data Docs, and more. These are for advanced users only - most users can simply
@@ -88,3 +88,7 @@ data_docs_sites:
     site_index_builder:
       class_name: DefaultSiteIndexBuilder
       show_cta_footer: true
+anonymous_usage_statistics:
+  data_context_id: a3454240-fa69-4c9a-904b-726fac29c60b
+  enabled: true
+notebooks:
