@@ -15,7 +15,7 @@ services:
                 max-file: "3"
 
     webserver:
-        build: .
+        build: ..
         restart: always
         depends_on:
             - postgres
