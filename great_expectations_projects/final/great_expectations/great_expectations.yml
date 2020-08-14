@@ -90,5 +90,5 @@ data_docs_sites:
       show_cta_footer: true
 anonymous_usage_statistics:
   data_context_id: a3454240-fa69-4c9a-904b-726fac29c60b
-  enabled: true
+  enabled: false
 notebooks:
