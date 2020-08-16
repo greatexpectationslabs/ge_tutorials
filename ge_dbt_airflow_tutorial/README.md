@@ -13,7 +13,7 @@ Airflow is used to orchestrate the pipeline. dbt is used to transform for the "T
 
 The purpose of this tutorial is to show how the individual components work together. Therefore, the Airflow setuo and the dbt DAG are kept fairly trivial, but hopefully realistic.
 
-This repo contains two Airflow DAGs of this data pipeline:
+This tutorial directory contains two Airflow DAGs of this data pipeline:
 * before Great Expectations was added - in `ge_tutorials_dag_without_great_expectations.py`
 * after Great Expectations was added - in `airflow/ge_tutorials_dag_with_great_expectations.py` 
 
@@ -49,10 +49,10 @@ If you want to quickly get started, use Docker. If you already know Docker, then
 
 ```
 git clone https://github.com/superconductive/ge_tutorials.git
-cd ge_tutorials
+cd ge_tutorials/ge_dbt_airflow_tutorial
 # you can run this command everytime you need to start superset now:
 docker-compose up
-docker exec ge_tutorials_webserver_1 airflow upgradedb
+docker exec ge_dbt_airflow_tutorial_webserver_1 airflow upgradedb
 ```
 
 Once these steps are completed, you can access Airflow at http://localhost:8080/admin/.

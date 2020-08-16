@@ -8,4 +8,4 @@ services:
             - POSTGRES_PASSWORD=ge_tutorials
             - POSTGRES_DB=ge_tutorials
         ports:
-            - "5555:5432"
+            - "65432:5432"

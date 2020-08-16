@@ -1,0 +1,164 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "taxi.demo",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "fare_amount",
+        "max_value": 20,
+        "min_value": 5
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "fare_amount"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "passenger_count",
+        "max_value": 6,
+        "min_value": 1
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "vendor_id"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_distinct_values_to_be_in_set",
+      "kwargs": {
+        "column": "vendor_id",
+        "value_set": [
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "trip_distance"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "pickup_datetime"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "dropoff_datetime"
+      },
+      "meta": {}
+    }
+  ],
+  "meta": {
+    "BasicSuiteBuilderProfiler": {
+      "batch_kwargs": {
+        "data_asset_name": "yellow_tripdata_sample_2019_01",
+        "datasource": "my_postgres_db",
+        "limit": 1000,
+        "schema": "public",
+        "table": "yellow_tripdata_sample_2019_01"
+      },
+      "created_at": 1596034839.4532008,
+      "created_by": "BasicSuiteBuilderProfiler"
+    },
+    "citations": [
+      {
+        "batch_kwargs": {
+          "data_asset_name": "yellow_tripdata_sample_2019_01",
+          "datasource": "my_postgres_db",
+          "limit": 1000,
+          "schema": "public",
+          "table": "yellow_tripdata_sample_2019_01"
+        },
+        "batch_markers": {
+          "ge_load_time": "20200729T150032.721907Z"
+        },
+        "batch_parameters": null,
+        "citation_date": "20200729T150040.417532Z",
+        "comment": "BasicSuiteBuilderProfiler added a citation based on the current batch."
+      }
+    ],
+    "columns": {
+      "congestion_surcharge": {
+        "description": ""
+      },
+      "dropoff_datetime": {
+        "description": ""
+      },
+      "dropoff_location_id": {
+        "description": ""
+      },
+      "extra": {
+        "description": ""
+      },
+      "fare_amount": {
+        "description": ""
+      },
+      "improvement_surcharge": {
+        "description": ""
+      },
+      "mta_tax": {
+        "description": ""
+      },
+      "passenger_count": {
+        "description": ""
+      },
+      "payment_type": {
+        "description": ""
+      },
+      "pickup_datetime": {
+        "description": ""
+      },
+      "pickup_location_id": {
+        "description": ""
+      },
+      "rate_code_id": {
+        "description": ""
+      },
+      "store_and_fwd_flag": {
+        "description": ""
+      },
+      "tip_amount": {
+        "description": ""
+      },
+      "tolls_amount": {
+        "description": ""
+      },
+      "total_amount": {
+        "description": ""
+      },
+      "trip_distance": {
+        "description": ""
+      },
+      "vendor_id": {
+        "description": ""
+      }
+    },
+    "great_expectations.__version__": "0.11.8+5.g2844804a",
+    "notes": {
+      "content": [
+        "#### This is an _example_ suite\n\n- This suite was made by quickly glancing at 1000 rows of your data.\n- This is **not a production suite**. It is meant to show examples of expectations.\n- Because this suite was auto-generated using a very basic profiler that does not know your data like you do, many of the expectations may not be meaningful.\n"
+      ],
+      "format": "markdown"
+    }
+  }
+}

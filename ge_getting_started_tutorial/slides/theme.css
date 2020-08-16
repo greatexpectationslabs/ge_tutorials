@@ -1,0 +1,63 @@
+/* @theme superconductive */
+
+@import 'gaia';
+
+section {
+	background-image: url("../img/ge_slides_top.png");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-color: #fff;
+	color: #246;
+	padding: 60px;
+	font-family: 'Avenir', 'Trebuchet MS', 'Segoe UI', sans-serif;
+	margin: -10px 0;
+ }
+
+h1 {
+	font-size: 1.6em;
+}
+
+h2 {
+	font-size: 1.3em;
+	margin-bottom: 0.5em;
+}
+
+h3 {
+	font-size: 1em;
+	color: #555;
+}
+
+p, ul, ol {
+    font-size: 0.9em;
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+}
+
+section pre {
+    margin: 0;
+}
+
+img {
+  display: block;
+  margin: 1em auto;
+}
+
+footer {
+	position: absolute;
+	padding: 0px;
+	left: 30px;
+	bottom: 30px;
+	height: 32px;
+	width: 100%;
+	background-image: url("../img/superconductive-logo.png");
+	background-repeat: no-repeat;
+	background-position: left;
+	color: #fff;
+}
+
+header {
+    padding-top: 20px;
+    text-align: left;
+    color: #f00;
+    font-size: 0.6em;
+}

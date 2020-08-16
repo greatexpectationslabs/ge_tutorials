@@ -72,9 +72,9 @@ RUN set -ex \
         /usr/share/doc \
         /usr/share/doc-base
 
-COPY deploy /entrypoint.sh
+COPY deploy/script/entrypoint.sh /entrypoint.sh
 
-COPY deploy ${AIRFLOW_USER_HOME}/airflow.cfg
+COPY deploy/config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
 
 RUN chown -R airflow: ${AIRFLOW_USER_HOME}
 
