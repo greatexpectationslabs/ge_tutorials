@@ -1,7 +1,7 @@
 venv/
-ge_airflow_tutorial/target/
+ge_dbt_airflow_tutorial/target/
+ge_dbt_airflow_tutorial/dbt_modules/
 logs/
-ge_airflow_tutorial/dbt_modules/
 .venv/
 __pycache__/
 .ipynb_checkpoints
