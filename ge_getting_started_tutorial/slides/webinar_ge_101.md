@@ -9,7 +9,7 @@ marp: true
 	p {font-size: 0.8em; margin-top:2em;}
 </style>
 
-![bg right:40% 80%](../img/generic_dickens_protagonist.png)
+![bg right:40% 80%](img/generic_dickens_protagonist.png)
 
 # Great Expectations 101: Getting Started
 
@@ -56,7 +56,7 @@ marp: true
 
 Let's assume we have an analytics pipeline tracking NYC taxi data...
 
-![width:900px](../img/pipeline1.png)
+![width:900px](img/pipeline1.png)
 
 ---
 
@@ -64,7 +64,7 @@ Let's assume we have an analytics pipeline tracking NYC taxi data...
 
 Based on our data, we expect between 1 and 6 passengers per ride
 
-![width:500px](../img/passengers1.png)
+![width:500px](img/passengers1.png)
 
 ---
 
@@ -72,7 +72,7 @@ Based on our data, we expect between 1 and 6 passengers per ride
 
 Something happened this month - we didn't expect 0 passengers?
 
-![width:500px](../img/passengers2.png)
+![width:500px](img/passengers2.png)
 
 
 ---
@@ -81,23 +81,23 @@ Something happened this month - we didn't expect 0 passengers?
 
 How can we test the monthly update before it gets to the dashboard?
 
-![width:1000px](../img/pipeline2.png)
+![width:1000px](img/pipeline2.png)
 
 ---
 
 ## Data validation with Great Expectations
 
-![width:1100px](../img/datadocs1.png)
+![width:1100px](img/datadocs1.png)
 
 ---
 
 ## Data validation with Great Expectations (GE)
 
-![width:1100px](../img/datadocs2.png)
+![width:1100px](img/datadocs2.png)
 
 ---
 
-![bg right:30% 80%](../img/generic_dickens_protagonist.png)
+![bg right:30% 80%](img/generic_dickens_protagonist.png)
 
 
 ## Let's dive into Great Expectations
@@ -107,7 +107,7 @@ How can we test the monthly update before it gets to the dashboard?
 - How do we validate our staging data?
 
 
-![width:450px](../img/demotime.png)
+![width:450px](img/demotime.png)
 
 
 ---
@@ -129,14 +129,14 @@ How can we test the monthly update before it gets to the dashboard?
 
 ## GE in a real-world pipeline
  
-![width:1100px](../img/ge_architecture.png)
+![width:1100px](img/ge_architecture.png)
 
 
 ---
 
 
 
-![bg right:30% 80%](../img/generic_dickens_protagonist.png)
+![bg right:30% 80%](img/generic_dickens_protagonist.png)
 
 
 ## More powerful features!
@@ -153,7 +153,7 @@ How can we test the monthly update before it gets to the dashboard?
 ---
 
 
-![bg right:30% 80%](../img/generic_dickens_protagonist.png)
+![bg right:30% 80%](img/generic_dickens_protagonist.png)
 
 
 ## Recap and wrap-up
@@ -176,4 +176,4 @@ How can we test the monthly update before it gets to the dashboard?
 - **Please fill in the survey (posted in the Zoom chat) after the session**!
 - **We offer partnerships & consulting services: superconductive.com** 
 
-![width:220px](../img/generic_dickens_protagonist.png)
+![width:220px](img/generic_dickens_protagonist.png)
