@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+    postgres:
+        build:
+          context: .
+        environment:
+            - POSTGRES_USER=ge_tutorials
+            - POSTGRES_PASSWORD=ge_tutorials
+            - POSTGRES_DB=ge_tutorials
+        ports:
+            - "65432:5432"
