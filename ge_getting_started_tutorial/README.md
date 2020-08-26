@@ -10,7 +10,7 @@ This repository contains the final version of the "Getting started with Great Ex
 ## 2. How to use this repo to explore and demo Great Expectations
 
 ### About the Docker image
-The tutorial assumes you are using a local installation of Great Expectations (`pip install great_expectations`). We provide the sample data in a Postgres database as a Docker image to save you the data loading step. In order to run the Postgres server, do the following:
+The tutorial assumes you are using a local installation of Great Expectations (`pip install great-expectations`). We provide the sample data in a Postgres database as a Docker image to save you the data loading step. In order to run the Postgres server, do the following:
 - Make sure you have Docker and docker-compose installed on your machine
 - In a terminal, run `docker-compose up`, which will start up the Postgres server on `localhost` (on a non-default port, so it won't clash with any existing Postgres servers you might be running)
 - The great_expectations.yml in this tutorial is already configured to connect to this Postgres database, so you won't need to do anything else
