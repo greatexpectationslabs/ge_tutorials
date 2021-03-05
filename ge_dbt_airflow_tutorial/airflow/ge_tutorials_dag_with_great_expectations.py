@@ -18,7 +18,7 @@ great_expectations_context_path = os.getenv('GE_TUTORIAL_GE_CONTEXT_PATH') or os
 
 
 default_args = {
-    "owner":` "Airflow",
+    "owner": "Airflow",
     "start_date": airflow.utils.dates.days_ago(1)
 }
 
