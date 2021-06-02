@@ -1,3 +1,16 @@
+"""
+Example of custom expectation with renderer.
+
+This custom expectation can be run as part of a checkpoint with the script run_checkpoint_with_custom_expectation.py
+in the getting_started_tutorial_final_v3_api directory, e.g.
+
+getting_started_tutorial_final_v3_api$ python run_checkpoint_with_custom_expectation.py
+
+See corresponding documentation:
+* https://docs.greatexpectations.io/en/latest/guides/how_to_guides/creating_and_editing_expectations/how_to_create_custom_expectations.html
+* https://docs.greatexpectations.io/en/latest/guides/how_to_guides/configuring_data_docs/how_to_create_renderers_for_custom_expectations.html
+"""
+
 from great_expectations.core import ExpectationConfiguration, ExpectationValidationResult
 from great_expectations.execution_engine import (
    ExecutionEngine,
