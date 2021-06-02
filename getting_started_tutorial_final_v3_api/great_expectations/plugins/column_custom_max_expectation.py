@@ -28,7 +28,7 @@ class ExpectColumnMaxToBeBetweenCustom(ColumnExpectation):
       execution_engine: ExecutionEngine = None,
    ):
       """Validates the given data against the set minimum and maximum value thresholds for the column max"""
-      column_max = metrics.get("column.aggregate.max")
+      column_max = metrics["column.aggregate.custom.max"]
 
       # Obtaining components needed for validation
       min_value = self.get_success_kwargs(configuration).get("min_value")
