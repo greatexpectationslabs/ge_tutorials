@@ -1,4 +1,3 @@
-# todo(jdimatteo) are these imports needed? also fixed missing except and messed up whitespace
 from great_expectations.core import ExpectationConfiguration
 from typing import Optional
 

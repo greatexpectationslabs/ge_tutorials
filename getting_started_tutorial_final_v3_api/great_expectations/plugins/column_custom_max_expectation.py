@@ -1,4 +1,3 @@
-# todo(jdimatteo) is this import needed? if so, update the doc
 from great_expectations.core import ExpectationConfiguration
 from great_expectations.execution_engine import ExecutionEngine 
 from great_expectations.expectations.expectation import ColumnExpectation
@@ -21,7 +20,6 @@ class ExpectColumnMaxToBeBetweenCustom(ColumnExpectation):
        "mostly": 1
    }
 
-   # todo(jdimatteo) update doc to clarify that _validate should be a member of ExpectColumnMaxToBeBetweenCustom. really need a full working example somewhere
    def _validate(
       self,
       configuration: ExpectationConfiguration,
