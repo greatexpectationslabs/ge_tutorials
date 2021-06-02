@@ -1,7 +1,12 @@
-from great_expectations.core import ExpectationConfiguration
+from great_expectations.core import ExpectationConfiguration, ExpectationValidationResult
 from great_expectations.execution_engine import ExecutionEngine
 from great_expectations.expectations.expectation import ColumnExpectation
-from typing import Dict, Optional
+from great_expectations.expectations.util import render_evaluation_parameter_string
+from great_expectations.render.renderer.renderer import renderer
+from great_expectations.render.types import RenderedStringTemplateContent, RenderedTableContent, RenderedBulletListContent, RenderedGraphContent
+from great_expectations.render.util import substitute_none_for_missing 
+
+from typing import Any, Dict, List, Optional, Union
 
 
 class ExpectColumnMaxToBeBetweenCustom(ColumnExpectation):
@@ -104,3 +109,97 @@ class ExpectColumnMaxToBeBetweenCustom(ColumnExpectation):
             ), "Provided max threshold must be a number"
         except AssertionError as e:
             raise InvalidExpectationConfigurationError(str(e))
+
+    @classmethod
+    @renderer(renderer_type="renderer.prescriptive")
+    @render_evaluation_parameter_string
+    def _prescriptive_renderer(
+            cls,
+            configuration: ExpectationConfiguration = None,
+            result: ExpectationValidationResult = None,
+            language: str = None,
+            runtime_configuration: dict = None,
+            **kwargs,
+    ) -> List[Union[dict, str, RenderedStringTemplateContent, RenderedTableContent, RenderedBulletListContent,
+                    RenderedGraphContent, Any]]:
+        runtime_configuration = runtime_configuration or {}
+        include_column_name = runtime_configuration.get("include_column_name", True)
+        include_column_name = (
+            include_column_name if include_column_name is not None else True
+        )
+        styling = runtime_configuration.get("styling")
+        # get params dict with all expected kwargs
+        params = substitute_none_for_missing(
+            configuration.kwargs,
+            [
+                "column",
+                "min_value",
+                "max_value",
+                "mostly",
+                "row_condition",
+                "condition_parser",
+                "strict_min",
+                "strict_max",
+            ],
+        )
+
+        # build string template
+        if (params["min_value"] is None) and (params["max_value"] is None):
+            template_str = "values may have any length."
+        else:
+            at_least_str = (
+                "greater than"
+                if params.get("strict_min") is True
+                else "greater than or equal to"
+            )
+            at_most_str = (
+                "less than" if params.get("strict_max") is True else "less than or equal to"
+            )
+
+            if params["mostly"] is not None:
+                params["mostly_pct"] = num_to_str(
+                    params["mostly"] * 100, precision=15, no_scientific=True
+                )
+
+                if params["min_value"] is not None and params["max_value"] is not None:
+                    template_str = f"values must be {at_least_str} $min_value and {at_most_str} $max_value characters long, at least $mostly_pct % of the time."
+
+                elif params["min_value"] is None:
+                    template_str = f"values must be {at_most_str} $max_value characters long, at least $mostly_pct % of the time."
+
+                elif params["max_value"] is None:
+                    template_str = f"values must be {at_least_str} $min_value characters long, at least $mostly_pct % of the time."
+            else:
+                if params["min_value"] is not None and params["max_value"] is not None:
+                    template_str = f"values must always be {at_least_str} $min_value and {at_most_str} $max_value characters long."
+
+                elif params["min_value"] is None:
+                    template_str = f"values must always be {at_most_str} $max_value characters long."
+
+                elif params["max_value"] is None:
+                    template_str = f"values must always be {at_least_str} $min_value characters long."
+
+        if include_column_name:
+            template_str = "$column " + template_str
+
+        if params["row_condition"] is not None:
+            (
+                conditional_template_str,
+                conditional_params,
+            ) = parse_row_condition_string_pandas_engine(params["row_condition"])
+            template_str = conditional_template_str + ", then " + template_str
+            params.update(conditional_params)
+
+        # return simple string
+        return [
+            RenderedStringTemplateContent(
+                **{
+                    "content_block_type": "string_template",
+                    "string_template": {
+                        "template": template_str,
+                        "params": params,
+                        "styling": styling,
+                    },
+                }
+            )
+        ]
