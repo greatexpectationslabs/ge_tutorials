@@ -1,12 +1,44 @@
 from great_expectations.core import ExpectationConfiguration, ExpectationValidationResult
-from great_expectations.execution_engine import ExecutionEngine
+from great_expectations.execution_engine import (
+   ExecutionEngine,
+   PandasExecutionEngine,
+   SparkDFExecutionEngine,
+   SqlAlchemyExecutionEngine,
+)
 from great_expectations.expectations.expectation import ColumnExpectation
+from great_expectations.expectations.metrics import (
+   ColumnMetricProvider,
+   column_aggregate_value, column_aggregate_partial,
+)
+from great_expectations.expectations.metrics.import_manager import F, sa
 from great_expectations.expectations.util import render_evaluation_parameter_string
 from great_expectations.render.renderer.renderer import renderer
 from great_expectations.render.types import RenderedStringTemplateContent, RenderedTableContent, RenderedBulletListContent, RenderedGraphContent
 from great_expectations.render.util import substitute_none_for_missing 
 
 from typing import Any, Dict, List, Optional, Union
+
+
+class ColumnCustomMax(ColumnMetricProvider):
+    """MetricProvider Class for Custom Aggregate Max MetricProvider"""
+
+    metric_name = "column.aggregate.custom.max"
+
+    @column_aggregate_value(engine=PandasExecutionEngine)
+    def _pandas(cls, column, **kwargs):
+        """Pandas Max Implementation"""
+        return column.max()
+
+    @column_aggregate_partial(engine=SqlAlchemyExecutionEngine)
+    def _sqlalchemy(cls, column, **kwargs):
+        """SqlAlchemy Max Implementation"""
+        return sa.func.max(column)
+
+    @column_aggregate_partial(engine=SparkDFExecutionEngine)
+    def _spark(cls, column, _table, _column_name, **kwargs):
+        """Spark Max Implementation"""
+        types = dict(_table.dtypes)
+        return F.maxcolumn()
 
 
 class ExpectColumnMaxToBeBetweenCustom(ColumnExpectation):
