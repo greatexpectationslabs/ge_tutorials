@@ -1,3 +1,5 @@
+*This repository is no longer maintained. Please see our current guides at https://docs.greatexpectations.io/docs/guides/setup/get_started_lp to get started.*
+
 # Great Expectations tutorials
 
 This repository contains the material for a number of Great Expectations tutorials. They all contain instructions in the respective README files.
