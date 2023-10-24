@@ -7,7 +7,7 @@ Expectations docs. This repo can be used as a demo and to explore a complete Gre
 version 0.13.x and above. 
 
 ## 1. How to run through the tutorial
-[Please follow the tutorial in our docs for instructions!](https://docs.greatexpectations.io/en/latest/guides/tutorials/getting_started_v3_api.html)
+[Please follow the tutorial in our docs for instructions!](https://docs.greatexpectations.io/docs/tutorials/getting_started/tutorial_overview)
 
 ## 2. How to use this repo to explore and demo Great Expectations
 
@@ -17,7 +17,7 @@ The CSV files in the data directory are yellow taxi trip data that have been dow
 * [TLC trip record data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 * [Data dictionary](https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf)
 
-We created 10,000 row samples (using the Pandas ``sample`` function) from teh original CSV files for convenience and manually added some breaking changes (0s in the passenger_count column) to demonstrate potential data issues. 
+We created 10,000 row samples (using the Pandas ``sample`` function) from the original CSV files for convenience and manually added some breaking changes (0s in the passenger_count column) to demonstrate potential data issues. 
 
 In a future version of this tutorial, we might use "naturally occurring" data bugs :)
 
